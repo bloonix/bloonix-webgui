@@ -1,3 +1,9 @@
+bloonix-webgui (0.79-1) unstable; urgency=low
+
+    * Added lang italiana.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 09 Feb 2016 05:36:47 +0100
+
 bloonix-webgui (0.78-1) unstable; urgency=low
 
     * Fixed dashboard resizing.

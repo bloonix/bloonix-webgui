@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.78
+Version: 0.79
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Feb 09 2016 Jonny Schulz <js@bloonix.de> - 0.79-1
+- Added lang italiana.
 * Wed Nov 25 2015 Jonny Schulz <js@bloonix.de> - 0.78-1
 - Fixed dashboard resizing.
 - Disallow host registrations for company id 1.
