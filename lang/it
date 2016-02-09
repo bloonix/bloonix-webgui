@@ -1,0 +1,1322 @@
+word.Language: Lingua
+word.Settings: Impostazioni
+word.debug: Debug
+word.Preset: Programmazione
+word.From: Da
+word.To: A
+word.yes: si
+word.no: no
+word.Yes: Si
+word.No: No
+word.Hosts: Host
+word.Services: Servizi
+word.Absolute: Assoluto
+word.Relative: Relativo
+word.Filter: Filtro
+word.inactive: inattivo
+word.active: attivo
+word.Timezone: Fuso orario
+word.Timeslice: Timeslice
+word.Type: Tipo
+word.Days: Giorni
+word.days: giorni
+word.day: giorno
+word.Hours: Ore
+word.hours: ore
+word.hour: ora
+word.Minutes: Minuti
+word.minutes: minuti
+word.minute: minuto
+word.Seconds: Secondi
+word.seconds: secondi
+word.second: secondo
+word.resize: Ridimensiona
+word.Message: Messaggio
+
+nav.main.dashboard: BACHECA
+nav.main.monitoring: CONTROLLO
+nav.main.notifications: NOTIFICHE
+nav.main.administration: GESTIONE
+nav.main.report: REPORT
+nav.main.help: AIUTO
+nav.sub.hosts: Host
+nav.sub.services: Servizi
+nav.sub.charts: Diagrammi
+nav.sub.templates: Template
+nav.sub.registration: Registrazione
+nav.sub.screen: Schermo
+nav.sub.contacts: Contatti
+nav.sub.contactgroups: Gruppo contatti
+nav.sub.timeperiods: Periodi
+nav.sub.rosters: Elenchi
+nav.sub.users: Utenti
+nav.sub.groups: Gruppi
+nav.sub.companies: Aziende
+nav.sub.variables: Variabili
+nav.sub.locations: Località
+nav.sub.events: Eventi
+nav.sub.reports: Report
+nav.sub.dependencies: Dipendenze
+nav.sub.downtimes: Fuori servizio programmati
+nav.sub.mtr: MTR
+nav.sub.notifications: Notifiche
+nav.sub.group_settings: Impostazioni gruppo
+nav.sub.host_group_settings: Impostazioni gruppo host
+nav.sub.user_group_settings: Impostazioni gruppo utenti
+nav.sub.contactgroup_settings: Impostazioni gruppo contatti
+nav.sub.contactgroup_members: Contatti in gruppo contatti group
+nav.sub.contactgroup_host_members: Host in gruppo contatti
+nav.sub.contactgroup_service_members: Servizi in gruppo contatti
+
+err-400: Accesso negato, riprovare.
+err-405: La tua sessione è scaduta.
+err-410: L'URL richiesto non è stato trovato.
+err-411: Il servizion non è disponibile.
+err-412: Superato il numero massimo di host permessi nella coda di registrazione.
+err-413: Registrazione di host non permessa per l'azienda con id 1.
+err-415: Accesso non autorizzato.
+err-416: Non hai sufficienti privilegi di accesso per questa operazione.
+err-417: Non hai sufficienti privilegi per creare un oggetto.
+err-418: Non hai sufficienti privilegi per modificare gli oggetti.
+err-419: Non hai sufficienti privilegi per eliminare gli oggetti.
+err-420: L'azione è fallita.
+err-425: Il tuo token di sessione è scaduto.
+err-426: Questa azione richiede un token.
+err-427: I servizi ereditati da template di host non possono venir eliminati.
+err-428: La località non può essere rimossa in quanto almeno un servizio è configurato per farne parte.
+err-500: Si è verificato un errore  interno. Si prega di contattare l'amministratore.
+err-600: L'oggetto che hai richiesto non esiste.
+err-601: Gli oggetti che hai richiesto non esistono.
+err-605: Si prega di selezionare almeno un oggetto.
+err-610: Si prega di riempire correttamente i campi marchiati di rosso.
+err-620: Questo oggetto è già esistente.
+err-630: Trovato parametro d'impostazione non valido.
+err-631: La compensazione del parametro dev'essere un valore numerico, minimo 0.
+err-632: Il limite del parametro dev'essere un valore numerico, minimo 0 e massimo <b>%s</b>.
+err-633: Il parametro ordina_per deve cominciare con un carattere a-z. Inoltre può contenere caratteri a-z, numeri 0-9 e trattini bassi. La lunghezza massima dev'essere di 63 caratteri.
+err-634: Il parametro ordina_tipo accetta come valore solo "asc" o "disc".
+err-640: Nessun dato disponibile.
+err-700: Si prega di cambiare la password.
+err-701: Password errata.
+err-702: La password è troppo lunga (massimo 128 tra caratteri e simboli).
+err-703: La password è troppo corta (minimo 8 tra caratteri e simboli).
+err-704: Le password non coincidono.
+err-705: La nuova e la vecchia password non possono essere uguali.
+err-802: Ci dispiace, questa caratteristica non è disponibile.!
+err-810: Ci dispiace, non si possono aggiungere più %s dashlet alla bacheca.
+err-811: Ci dispiace, non si possono creare più di %s bacheche.
+err-815: Ci dispiace, non si possono creare più %s diagrammi.
+err-816: Ci dispiace, non si possono più aggiungere di %s metriche ad un diagramma.
+err-817: Ci dispiace, non si possono creare più di %s viste per diagrammi.
+err-821: Ci dispiace, non si possono creare più di %s fuori servizi per host.
+err-823: Ci dispiace, non si possono creare più di %s fuori servizio di host per l'host con id %s!
+err-825: Ci dispiace, non si possono creare più %s template per host.
+err-826: Ci dispiace, non si possono creare più %s servizi per template.
+err-827: Ci dispiace, non si possono creare più %s servizi per il template id %s.
+err-831: Ci dispiace, non si possono creare più %s host.
+err-832: Ci dispiace, non si possono creare più %s servizi.
+err-833: Ci dispiace, non si possono creare più %s servizi per singolo host.
+err-834: Ci dispiace, non si possono creare più %s serviizi per l'host id %s.
+err-835: Ci dispiace, non si possono creare più %s contatti.
+err-836: Ci dispiace, non si possono creare più %s gruppi di contatti.
+err-840: Ci dispiace, non si possono creare più %s periodi temporali.
+err-841: Ci dispiace, non si possono creare più %s periodi temporali per oggetto.
+err-845: Ci dispiace, non si possono creare più %s gruppi.
+err-846: Ci dispiace, non si possono creare più %s utenti.
+err-847: Ci dispiace, non si possono creare più %s dipendenze per singolo host.
+
+action.action: Azione
+action.create: Crea
+action.update: Aggiorna
+action.settings: Impostazioni
+action.view: Vista
+action.overview: Panoramica
+action.edit: Modifica
+action.delete: Cancella
+action.submit: Invia
+action.cancel: Annulla
+action.clear: Pulisci
+action.close: Chiudi
+action.abort: Abbandona
+action.clone: Clona
+action.reload: Ricarica
+action.resize: Ridimensiona
+action.list: Elenca
+action.login: Accedi
+action.logout: Esci
+action.move_box: Muovi il riquadro
+action.genstr: Genera stringa
+action.schedule: Orario
+action.members: Elenca membri
+action.timeslices: Elenca timeslice
+action.add: Aggiungi
+action.remove: Rimuovi
+action.generate: Genera
+action.help: Aiuto
+action.search: Cerca
+action.quicksearch: Ricerca veloce
+action.extsearch: Ricerca estesa
+action.filter: Filtra
+action.refresh: ricarica
+action.replace: Sostituisci
+action.configure: Configura
+action.yes_delete: <b>Si, elimina.</b>
+action.yes_remove: <b>Si, rimuovi.</b>
+action.no_abort: <b>No, abbandona.</b>
+action.show_selected_objects: Mostra gli ogetti selezionati
+action.display_from_to_rows: Visualizzate <b>%s</b>-<b>%s</b> su <b>%s</b> risposte
+action.view_selected_objects: Visualizza gli oggetti selezionati
+action.select: Seleziona
+action.unselect: Deseleziona
+action.operate_as: Opera come
+action.generate_string: Generate una stringa casuale
+action.redirect: Reindirizza
+action.save: Salva
+
+bool.yesno.0: no
+bool.yesno.1: si
+
+info.no_chart_data: Non sono disponibili dati per diagrammi.
+info.go-back: Torna indietro
+info.this-year: Quest'anno
+info.last-year: L'anno scorso
+info.add-further-options: Aggiungi ulteriori opzioni
+info.update_success: L'aggiornamento è andato a buon fine.
+info.update_failed: L'aggiornamento non è andato a buon fine.
+info.create_success: La creazione ha avuto successo.
+info.create_failed: La creazione non ha avuto successo.
+info.search_syntax: <p><bCerca sintassi:</b></p>
+ <p>pianeta <i>AND</i> marte</p>
+ <p>marte <i>OR</i> plutone</p>
+ <p>pianeta <i>AND</i> marte <i>OR</i> plutone</p>
+info.extended_search_syntax_for_hosts: <p>È possibile filtrare l'elenco degli host tramite un'interrogazione di ricerca. La sintassi è molto semplice:</p>
+ <pre>chiave:valore</pre>
+ <p>La chiave è il campo della tabella dove ricercare il valore.</p>
+ <p>Esempi di ricerca:</p>
+ <p>- Ricerca host aventi stato CRITICO o IGNOTO</p>
+ <pre>stato:CRITICO OR stato:IGNOTO</pre>
+ <p>- Ricerca host in datacenter 12 con stato CRITICO</p>
+ <pre>ubicazione:"Datacenter 12" AND stato:CRITICO</pre>
+ <p>Le seguenti chiavi sono disponibili per ricerche in campi specifici:</p>
+info.move_with_mouse: Premi e mantieni premuto il pulsante sinistro del mouse per spostare il riquadro in giro./p>
+info.new_version: <h4>Disponibile una nuova versione</h4>
+ <p>Una nuova versione di Bloonix-WebGUI è disponibile.</p>
+ <p>Si prega di ricaricare il sito.</p>
+info.hosts_ready_for_registration: Host pronti per esere registrati
+
+text.dashlet_width: Larghezza dashlet
+text.dashlet_height: Altezza dashlet
+text.show_legend: Mostra legenda
+text.change_nav_to_horizontal: Sposta navigazione in alto
+text.change_nav_to_vertical: Sposta navigazione a sinistra
+text.radial_graph: Diagramma radiale
+text.hypertree: Hypertree
+text.plugin: Plugin
+text.command: Comando
+text.selected_objects: Oggetti selezionati
+text.min_length: Lunghezza minima: <b>%s</b>
+text.max_length: Lunghezza massima: <b>%s</b>
+text.min_value: Valore minimo: <b>%s</b>
+text.max_value: Valore massimo: <b>%s</b>
+text.range_value: Estensione: %s - %s
+text.unlimited: Illimitato
+text.undefined: Indefinito
+text.inherited_from_host: Ereditato dall'host
+text.never: Mai
+text.click_me: Cliccami
+text.click_to_delete_seletion: Cliccare per eliminare la selezione
+text.browsers_heap_size: Mostra dimensione dell'heap nel tuo browser
+text.selected_locations_counter: Hai <b>%s</b> punti di controllo selezionati.
+text.selected_locations_costs: Si prega di notare che ogni punto di controllo verrà addebitato ulteriormente.
+text.sort_by_dots: Ordina per...
+text.filter_by_category_dots: Filtra per categoria...
+text.option_examples: Esempi di opzione
+text.services: servizi
+text.thresholds: Limiti
+text.plugin_info: Informazione plugin
+text.chart_info: Informazione diagramma
+text.fixed_checkpoint: Punto di controllo fisso
+text.first_failover_checkpoint: Primo punto di controllo failover
+text.second_failover_checkpoint: Secondo punto di controllo failover
+text.change_your_password: Cambia la tua password
+text.change_the_language: Cambia la lingua
+text.please_select_objects: Si prega di selezionare almeno un oggetto.
+text.default: Predefinito
+text.satellite_hostname: Hostname satellite: %s
+text.target_ip: Indirizzo IP obiettivo: %s
+text.from_now_to_1h: Da adesso + 1 ora
+text.from_now_to_2h: Da adesso + 2 ore
+text.from_now_to_4h: Da adesso + 4 ore
+text.from_now_to_8h: Da adesso + 8 ore
+text.from_now_to_12h: Da adesso + 12 ore
+text.from_now_to_16h: Da adesso + 16 ore
+text.from_now_to_20h: Da adesso + 20 ore
+text.from_now_to_1d: Da adesso + 1 giorno
+text.from_now_to_2d: Da adesso + 2 giorni
+text.from_now_to_4d: Da adesso + 4 giorni
+text.from_now_to_7d: Da adesso + 7 giorni
+text.from_now_to_14d: From now + 14 giorni
+text.last_30d: Ultimi 30 giorni
+text.last_60d: Ultimi 60 giorni
+text.last_90d: Ultimi 90 giorni
+text.last_180d: Ultimi 180 giorni
+text.report.title.host_from_to: Report per l'host <b>%s</b> da <b>%s</b> a <b>%s</b>
+text.report.title.total_availability: Disponibilità totale dei servizi
+text.report.title.number_of_events: Numero totale degli eventi
+text.report.title.total_status_duration: Durata totale dello stato del servizio
+text.report.title.number_of_events_by_duration: Numero egli eventi per durata
+text.report.title.number_of_events_by_tags: Numero egli eventi per tag
+text.report.title.status_duration_by_hour: Durata degli stati per arco di tempo
+text.report.title.no_data: Non ci sono dati dsponibili in questo arco di tempo per i seguenti servizi
+text.report.service_has_a_availabilty_of: Il servizio <b>%s</b> ha una disponibilità di
+text.report.availability.detailed_report_onclick: Cliccare su un servizio per avere un report dettagliato sulla disponibilità.
+text.report.availability.Service: Cliccare sul servizio per avere un report dettagliato sulla disponibilità.
+text.report.availability.Availability: Disponibilità totale.
+text.report.availability.AV-O: Percentuale del tempo in cui il servizio è in stato OK.
+text.report.availability.AV-I: Percentuale del tempo in cui il servizio è in stato INFO.
+text.report.availability.AV-W: Percentuale del tempo in cui il servizio è in stato ALLERTA.
+text.report.availability.AV-C: Percentuale del tempo in cui il servizio è in stato CRITICO.
+text.report.availability.AV-U: Percentuale del tempo in cui il servizio è in stato SCONOSCIUTO.
+text.report.availability.Events: Numero totale degli eventi.
+text.report.availability.EV-O: Numero degli eventi con stato OK.
+text.report.availability.EV-I: Numero degli eventi con stato INFO.
+text.report.availability.EV-W: Numero degli eventi con stato ALLERTA.
+text.report.availability.EV-C: Numero degli eventi con stato CRITICO.
+text.report.availability.EV-U: Numero degli eventi con stato SCONOSCIUTO.
+text.report.availability.EV-LT15: Numero degli eventi con durata stato inferiore a 15 minuti.
+text.report.availability.EV-LT30: Numero degli eventi con durata stato inferiore a 30 minuti.
+text.report.availability.EV-LT60: Numero degli eventi con durata stato inferiore a 60 minuti.
+text.report.availability.EV-LT180: Numero degli eventi con durata stato inferiore a 3 ore.
+text.report.availability.EV-LT300: Numero degli eventi con durata stato inferiore a 5 ore.
+text.report.availability.EV-GE300: Numero degli eventi con durata stato inferiore a 5 ore.
+text.report.availability.LT15: Filtra eventi con durata stato inferiore a 15 minuti.
+text.report.availability.LT30: Filtra eventi con durata stato inferiore a 30 minuti.
+text.report.availability.LT60: Filtra eventi con durata stato inferiore a 60 minuti.
+text.report.availability.LT180: Filtra eventi con durata stato inferiore a 3 ore.
+text.report.availability.LT300: Filtra eventi con durata stato inferiore a 5 ore.
+text.report.availability.GE300: Filtra eventi con durata stato inferiore a 5 ore.
+text.report.availability.lt15: Tra 0 e 15 minuti
+text.report.availability.lt30: Tra 15 e 30 minuti
+text.report.availability.lt60: Tra 30 e 60 minuti
+text.report.availability.lt180: Tra 1 e 3 ore
+text.report.availability.lt300: Tra 3 e 5 ore
+text.report.availability.ge300: Oltre 3 ore
+text.report.availability.flapping: Flapping
+text.report.availability.volatile: Discontinuità
+text.report.availability.timeout: Timeout
+text.report.availability.agent_dead: Agente inattivo
+text.report.availability.security: Problema di sicurezza
+text.report.availability.fatal: Problema fatale
+text.report.availability.h00: 00:00 - 00:59
+text.report.availability.h01: 01:00 - 01:59
+text.report.availability.h02: 02:00 - 02:59
+text.report.availability.h03: 03:00 - 03:59
+text.report.availability.h04: 04:00 - 04:59
+text.report.availability.h05: 05:00 - 05:59
+text.report.availability.h06: 06:00 - 06:59
+text.report.availability.h07: 07:00 - 07:59
+text.report.availability.h08: 08:00 - 08:59
+text.report.availability.h09: 09:00 - 09:59
+text.report.availability.h10: 10:00 - 10:59
+text.report.availability.h11: 11:00 - 11:59
+text.report.availability.h12: 12:00 - 12:59
+text.report.availability.h13: 13:00 - 13:59
+text.report.availability.h14: 14:00 - 14:59
+text.report.availability.h15: 15:00 - 15:59
+text.report.availability.h16: 16:00 - 16:59
+text.report.availability.h17: 17:00 - 17:59
+text.report.availability.h18: 18:00 - 18:59
+text.report.availability.h19: 19:00 - 19:59
+text.report.availability.h20: 20:00 - 20:59
+text.report.availability.h21: 21:00 - 21:59
+text.report.availability.h22: 22:00 - 22:59
+text.report.availability.h23: 23:00 - 23:59
+text.dashboard.title: Bacheca
+text.dashboard.choose_content_box: Seleziona una dashlet
+text.dashboard.replace_dashlet: Sostituisci la dashlet
+text.dashboard.remove_dashlet: Rimuovi la dashlet
+text.dashboard.hosts_availability: Disponibilità di tutti gli host
+text.dashboard.dashlet_configuration: Configurazione dashlet
+text.dashboard.dashlet_select_chart_title: Seleziona un diagramma per la dashlet.
+text.dashboard.dashlet_select_chart: Seleziona un diagramma
+text.dashboard.reconfigure_dashlet: Configura dashlet
+text.dashboard.services_availability: Disponibilità di tutti i servizi
+text.dashboard.services_notification: Stato di notifica di tutti i servizi
+text.dashboard.services_flapping: Flapping
+text.dashboard.services_downtimes: Fuori servizio
+text.dashboard.services_acknowledged: Riconosciuto
+text.dashboard.num_services_flapping: %s servizi sono in flapping
+text.dashboard.num_services_downtime: %s servizi con tempo d'inattività
+text.dashboard.num_services_acknowledged: %s servizi sono riconosciuti
+text.dashboard.one_service_flapping: %s servizio in flapping
+text.dashboard.one_service_downtime: %s servizio con tempo d'inattività
+text.dashboard.one_service_acknowledged: %s lo stato del servizio è riconosciuto
+text.dashboard.map_title: Mappa globale dello stato degli host
+text.dashboard.double_click_or_mouse_wheel_to_zoom: Fare doppio click o usare la rotella del mouse per ingrandire o rimpicciolire.
+text.dashboard.use_mouse_wheel_to_zoom: Usa la rotella del mouse per ingrandire o rimpicciolire.
+text.dashboard.list_top_hosts: Panoramica degli host principali
+text.dashboard.list_top_services: Panoramica dei servizi principali
+text.dashboard.top_hosts_events: Eventi principali di tutti gli host
+text.dashboard.service_chart: Diagramma servizi
+text.dashboard.user_chart: Diagramma autocreato
+text.dashboard.add_new_dashlet: Aggiungi nuova dashlet
+text.dashboard.save_dashboard: Salva bacheca
+text.dashboard.open_dashboard: Apri una bacheca
+text.dashboard.create_dashboard: Crea una bacheca vuota
+text.dashboard.delete_dashboard: Elimina la bacheca
+text.dashboard.rename_dashboard: Rinomina la bacheca
+text.dashboard.clone_dashboard: Clona la bacheca
+text.dashboard.really_delete_dashboard: Vuoi veramente eliminare la bacheca %s?
+text.dashboard.default_dashboard_cannot_deleted: La bacheca predefinita non può essere eliminata.
+text.dashboard.name: Nome della bacheca
+text.dashboard.data_format: Con quale formato visualizzare i dati?
+text.dashboard.show_as_chart: Visualizza come diagramma
+text.dashboard.show_as_text: Visualizza come testo
+text.allow_from_desc: La parola chiave <i>all</i> è uguale a <i>0.0.0.0/0, ::/0</i> e significa che l'accesso è permesso da tutti gli indirizzi IP.
+ Esempi:
+ <br/><br/>192.168.10.0/24, 192.168.14.10/32
+ <br/><br/>Si segnala che non è consentito anteporre degli zeri:
+ <br/><br/><i>010.005.008.001</i> o <i>0001::0001</i> non sono consentiti
+ <br/><i>10.5.8.1</i> o <i>1::1</i> sono consentiti
+
+site.login.welcome: Benvenuto su Bloonix, si prega di accedere.
+site.login.title: Accedi al sistema di monitoraggio
+site.login.username: Email
+site.login.password: Password
+site.login.error: Accesso errato, riprova.
+site.login.login: Accedi con il tuo nome utente e password:
+site.login.forgot_password: Scordata la password?
+site.login.want_to_login: Vuoi accedere?
+site.login.request_password: Richiedi una nuova password.
+site.login.forgot_password_info: Si prega di notare che la nuova password non verrà spedita
+ automaticamente alla propria casella registrata di email. Un amministratore verificherà
+ prima la richiesta e poi ti contatterà il prima possibile.
+site.login.request_success: La tua richiesta è stata presa in carico.<br/>
+ Un amministratore ti contatterà il prima possibile.
+site.login.request_failed: La tua richiesta non ha avuto esito positivo. Si prega di riprovare.
+site.login.follow: Segui Bloonix
+site.login.sign_up: Registrati per un account Bloonix
+site.login.documentation: Documentazione per Bloonix
+site.login.contact: Ci sono delle domande?
+site.login.choose_your_language: Seleziona la tua lingua
+
+site.help.title: Die Bloonix Hilfe
+site.help.doc.bloonix-webgui: Grundlegendes zur Bloonix-WebGUI
+site.help.doc.how-does-bloonix-checks-your-hosts-and-services: Wie überwacht Bloonix Hosts und Services
+site.help.doc.add-new-host: Einen neuen Host anlegen
+site.help.doc.host-parameter: Host Parameter im Detail
+site.help.doc.host-variables: Host Variablen
+site.help.doc.host-classes: Bauklasse von Hosts
+site.help.doc.add-new-service: Einen neuen Service anlegen
+site.help.doc.service-parameter: Service Parameter im Detail
+site.help.doc.host-alive-check: Was ist ein Host-Alive-Check?
+site.help.doc.web-transactions: Web-Transactions
+site.help.doc.host-templates: Host Templates einrichten und verwalten
+site.help.doc.host-and-service-dependencies: Abhängigkeiten zwischen Hosts und Services
+site.help.doc.scheduled-downtimes: Geplante Wartungsarbeiten einrichten
+site.help.doc.contacts-and-notifications: Kontakte und Benachrichtigungen
+site.help.doc.users-and-groups: Die Benutzer- und Gruppenverwaltung
+site.help.doc.bloonix-agent-installation: Den Bloonix-Agenten installieren
+site.help.doc.bloonix-agent-configuration: Den Bloonix-Agenten konfigurieren
+site.help.doc.notification-screen: Notification Screen
+site.help.doc.json-api: Die Bloonix JSON API
+site.help.doc.user-charts: Eigene Charts erstellen
+
+schema.company.attr.alt_company_id: ID azienda reale
+schema.company.attr.id: ID azienda
+schema.company.attr.company: Azienda
+schema.company.attr.title: Titolo
+schema.company.attr.name: Nome
+schema.company.attr.surname: Cognome
+schema.company.attr.address1: Indirizzo 1
+schema.company.attr.address2: Indirizzo 2
+schema.company.attr.zipcode: CAP
+schema.company.attr.city: Città
+schema.company.attr.state: Stato/Provincia
+schema.company.attr.country: Nazione
+schema.company.attr.phone: Telefono
+schema.company.attr.fax: Fax
+schema.company.attr.email: Email
+schema.company.attr.max_templates: Massimo template
+schema.company.attr.max_hosts: Massimo host
+schema.company.attr.max_services: Massimo servizi
+schema.company.attr.max_services_per_host: Massimo servizi per host
+schema.company.attr.max_contacts: Massimo contatti
+schema.company.attr.max_contactgroups: Massimo gruppicontatti
+schema.company.attr.max_timeperiods: Massimo periodi
+schema.company.attr.max_timeslices_per_object: Massimo timeslice
+schema.company.attr.max_groups: Massimo gruppi
+schema.company.attr.max_users: Massimo utenti
+schema.company.attr.max_dependencies_per_host: Massimo dipendenze per host
+schema.company.attr.max_downtimes_per_host: Massimo fuori servizio per host
+schema.company.attr.max_chart_views_per_user: Massimo viste diagramma per utente
+schema.company.attr.max_charts_per_user: Massimo diagrammi per utente
+schema.company.attr.max_metrics_per_chart: Massimo metriche per diagramma
+schema.company.attr.max_dashboards_per_user: Massimo bacheche per utente
+schema.company.attr.max_dashlets_per_dashboard: Massimo dashlet per bacheca
+schema.company.attr.max_sms: Numero massimo SMS
+schema.company.attr.max_hosts_in_reg_queue: Numero massimo di hosts in coda per la registrazione
+schema.company.attr.host_reg_authkey: Authkey perla registrazione dell'host
+schema.company.attr.host_reg_enabled: Registrazione host abilitata
+schema.company.attr.host_reg_allow_from: Permetti la registrazione di host da
+schema.company.attr.data_retention: Conservazione dati
+schema.company.attr.sms_enabled: Notifiche SMS abilitate
+schema.company.attr.active: Attivo
+schema.company.attr.comment: Commento
+schema.company.attr.sla: SLA
+schema.company.attr.variables: Variabili globali
+schema.company.desc.variables: In questo campo puoi definire variabili globali per tutti gli host. Queste variabili possono venir usate come soglie per i controlli dei servizi. Per esempio: <br/><br/>HTTP.PORT=9000<br/><br/>Questa variabile può venir usata nel formato <i>%HTTP.PORT%</i> per le soglie. Si prega di notare che due variabili sono predefinite: <i>IPADDR</i> e <i>HOSTNAME</i>. Queste variabili sono sostituite dall'indirizzo IP e hostname dell'host. Per maggiori informazioni consultare l'aiuto. <br/><br/>Caratteri ammessi: a-z, A-Z, 0-9, punti e trattini bassi
+schema.company.desc.active: Attiva o disattiva tutti gli oggetti dell'azienda.
+schema.company.desc.max_templates: Numero massimo di template che si possono creare.
+schema.company.desc.max_hosts: Numero massimo di host che si possono creare. Immettere 0 (null) se illimitati.
+schema.company.desc.max_services: Numero massimo di servizi che si possono creare. Immettere 0 (null) se illimitati.
+schema.company.desc.max_services_per_host: Numero massimo di servizi che si possono creare per host.
+schema.company.desc.max_contacts: Numero massimo di contatti che si possono creare.
+schema.company.desc.max_contactgroups: Numero massimo di gruppi-contatti che si possono creare.
+schema.company.desc.max_timeperiods: Numero massimo di periodi che si possono creare
+schema.company.desc.max_timeslices_per_object: Numero massimo di timeslice che si possono creare per periodo.
+schema.company.desc.max_groups: Numero massimo di gruppi che si possono creare.
+schema.company.desc.max_users: Numero massimo di utenti che si possono creare.
+schema.company.desc.max_dependencies_per_host: Numero massimo di dipendenze che si possono creare per host.
+schema.company.desc.max_downtimes_per_host: Numero massimo di fuori servizio che si possono creare per host.
+schema.company.desc.max_chart_views_per_user: Numero massimo di viste diagramma che si possono creare per utente.
+schema.company.desc.max_charts_per_user: Numero massimo di diagrammi-utente che si possono creare per utente.
+schema.company.desc.max_metrics_per_chart: Numero massimo di metriche che si possono creare per diagramma-utente.
+schema.company.desc.max_dashboards_per_user: Numero massimo di bacheche che si possono creare per utente.
+schema.company.desc.max_dashlets_per_dashboard: Numero massimo di dashlet che si possono aggiungere ad una bacheca.
+schema.company.desc.max_sms: Numero massimo di SMS che si possono inviare al mese. Immettere 0 (null) se illimitati.
+schema.company.desc.max_hosts_in_reg_queue: Numero massimo di host in attesa permessi nella coda per la registrazione.
+schema.company.desc.host_reg_authkey: Questa chiave può venir usata in combinazione con l'ID dell'azienda per registrare nuovi host.
+schema.company.desc.host_reg_enabled: Con questa opzione è possibile abilitare o disabilitare la funzionalità di registrazione host.
+schema.company.desc.host_reg_allow_from: Inserire una lista di IP o network separati da virgole da cui è permessa la registrazione di un host.
+schema.company.desc.data_retention: Conservazione in giorni dei dati di tutti gli host e servizi. Se un host ha una conservazione di dati troppo alta, verrà usata quella impostata per l'azienda.
+schema.company.text.edit_variables: Variabili globali
+schema.company.text.list: Panoramica di tutte le aziende
+schema.company.text.create: Crea una nuova azienda
+schema.company.text.delete: Elimina azienda
+schema.company.text.settings: Impostazioni azienda
+schema.company.text.view: Azienda %s
+schema.company.text.data_retention_info: La durata del tuo account è limitata a %s giorni.
+schema.company.text.simulate_as: Simula un'azienda
+
+schema.user.attr.id: ID utente
+schema.user.attr.username: Nome-utente
+schema.user.attr.name: Nome
+schema.user.attr.phone: Telefono
+schema.user.attr.timezone: Timezone
+schema.user.attr.authentication_key: Chiave d'autenticazione
+schema.user.attr.password: Password
+schema.user.attr.password_changed: Cambiare la password?
+schema.user.attr.manage_contacts: Gestire i contatti?
+schema.user.attr.manage_templates: Gestire i template?
+schema.user.attr.last_login: Ultimo accesso
+schema.user.attr.locked: Bloccato
+schema.user.attr.role: Ruolo
+schema.user.attr.comment: Commento
+schema.user.attr.allow_from: Permetti da
+schema.user.desc.company: Selezionare l'azienda a cui appartiene l'utente.
+schema.user.desc.username: Inserire il nome-utente nella forma <i>utente@dominio.test</i>.
+schema.user.desc.name: Questo è il nome completo dell'utente.
+schema.user.desc.phone: Il numero di telefono può essere di notevole aiuto in caso di emergenza per i colleghi del supporto di Bloonix.
+schema.user.desc.timezone: Seleziona la timezone dell'utente.
+schema.user.desc.authentication_key: Con questa chiave è possibile visitare la schermata delle notifiche senza autenticazione con password. La stringa d'interrogazione per visitare la schermata delle notifiche assomiglia a <br/><br/><b>/screen/?nome-utente=XXX;authkey=XXX</b>
+schema.user.desc.password: Inserire la password d'accesso dell'utente.
+schema.user.desc.password_changed: Imposta il valore a <i>no</i> se vuoi forzare l'utente a cambiare la password al primo accesso.
+schema.user.desc.manage_contacts: L'utente è abilitato a gestire i contatti?
+schema.user.desc.manage_templates: L'utente è abilitato a gestire i template per host?
+schema.user.desc.locked: Blocca o sblocca l'utente. Gli utenti bloccati non possono accedere all'interfaccia di monitoraggio.
+schema.user.desc.role: Qual'é il ruolo dell'utente? Gli utenti con il ruolo <i>operatore</i> sono utenti avanzati che possono gestire sia gli account utente che i gruppi di utenti. Gli utenti con il ruolo <i>utente</i> non sono autorizzati a gestire altri utenti o gruppi.
+schema.user.desc.comment: Questo campo può venir usato per inserire un commento riservato sull'utente.
+schema.user.desc.allow_from: It's possible to set a comma separated list of ip addresses from which the user is restricted to login. With the keyword <i>all</i> the login has no restriction.
+schema.user.text.list: Panoramica di tutti gli utenti
+schema.user.text.create: Crea nuovo utente
+schema.user.text.delete: Elimina utente
+schema.user.text.view: Utente %s
+schema.user.text.password_update: Per favore inserire una nuova password.
+schema.user.text.current_password: Password attuale
+schema.user.text.new_password: Nuova password
+schema.user.text.repeat_password: Ripetere la password
+schema.user.text.select_language: Seleziona la tua lingua preferita
+schema.user.desc.select_language: Si segnala che selezionando una lingua viene ricaricata l'interfaccia web e si viene reindirizzati alla Bacheca.
+schema.user.text.is_logged_in: Accesso effettuato
+schema.user.text.session_expires: La sessione scade
+
+schema.roster.attr.id: ID elenco
+schema.roster.attr.roster: Elenco
+schema.roster.attr.description: Descrizione
+schema.roster.attr.active: Attivo
+schema.roster.text.list: Panoramica di tutti gli elenchi
+
+schema.group.attr.id: ID Gruppo
+schema.group.attr.company_id: ID azineda
+schema.group.attr.groupname: Groupname
+schema.group.attr.description: Descrizione
+schema.group.desc.company: Seleziona l'azienda di cui il gruppo fa parte.
+schema.group.desc.groupname: Questo è il nome del gruppo e dovrebbe essere unico.
+schema.group.desc.description: Inserire una breve descrizione riguardo il gruppo.
+schema.group.text.list: Panoramica di tutti i gruppi
+schema.group.text.create: Crea un nuovo gruppo
+schema.group.text.delete: Elimina gruppo
+schema.group.text.settings: Impostazioni gruppo
+schema.group.text.group_members: Membri del gruppo <b>%s</b>
+schema.group.text.host_members: Membri del gruppo
+schema.group.text.host_nonmembers: Non membri del gruppo
+schema.group.text.selected_hosts: Host selezionati
+schema.group.text.add: Aggiungi un nuovo utente al gruppo
+schema.group.text.add_user: Aggiungi un utente al gruppo
+schema.group.text.remove_user: Rimuovi l'utente dal gruppo
+schema.group.text.update_user: Modifica diritti d'accesso
+schema.group.text.may_create_services: Può creare servizi
+schema.group.text.may_modify_services: Può modificare servizi
+schema.group.text.may_delete_services: Può eliminare servizi
+
+schema.hs_downtime.attr.id: ID
+schema.hs_downtime.attr.begin_time: Orario d'inizio
+schema.hs_downtime.attr.end_time: Orario di fine
+schema.hs_downtime.attr.timeslice: Timeslice
+schema.hs_downtime.attr.description: Descrizione
+schema.hs_downtime.attr.username: Aggiunto da
+schema.hs_downtime.attr.timezone: Timezone
+schema.hs_downtime.text.create: Crea un fuori servizio pianificato
+schema.hs_downtime.text.delete: Elimina un fuori servizio pianificato
+schema.hs_downtime.text.preset: Attività prestabilite
+schema.hs_downtime.text.select_services: Services<br/><small>Do not select any servives if you want to<br/>create a downtime for the complete host.</small>
+
+schema.host_downtime.text.title: Fuori servizo pianificati per l'host %s
+schema.service_downtime.text.title: Inattività di servizio pianificate per l'host %s
+
+schema.host.attr.id: ID host
+schema.host.attr.company_id: ID azienda
+schema.host.attr.password: Password
+schema.host.attr.hostname: Hostname
+schema.host.attr.description: Descrizione
+schema.host.attr.ipaddr: Indirizzo IP
+schema.host.attr.ipaddr6: Indirizzo IP v6
+schema.host.attr.comment: Commento
+schema.host.attr.sysgroup: Gruppo apparato
+schema.host.attr.sysinfo: Informazioni apparato
+schema.host.attr.host_class: Categoria host
+schema.host.attr.system_class: Categoria apparato
+schema.host.attr.location_class: Categoria ubicazione
+schema.host.attr.os_class: Categoria sistema operativo
+schema.host.attr.hw_class: Categoria hardware
+schema.host.attr.env_class: Categoria ambiente
+schema.host.attr.hw_manufacturer: Produttore HW
+schema.host.attr.hw_product: Prodotto HW
+schema.host.attr.os_manufacturer: Produttore OS
+schema.host.attr.os_product: Prodotto OS
+schema.host.attr.virt_manufacturer: Produttore di virtualizzazione
+schema.host.attr.virt_product: Prodotto di virtualizazione
+schema.host.attr.location: Ubicazione
+schema.host.attr.coordinates: Coordinate
+schema.host.attr.active: Attivo
+schema.host.attr.allow_from: Permetti da
+schema.host.attr.max_sms: Massimo numero SMS al mese
+schema.host.attr.status: Stato
+schema.host.attr.interval: Intervallo
+schema.host.attr.retry_interval: Intervallo tentativi
+schema.host.attr.timeout: Timeout
+schema.host.attr.notification: notifiche abilitate
+schema.host.attr.notification_interval: Intervallo notifiche
+schema.host.attr.last_check: Ultimo controllo
+schema.host.attr.max_services: Numero massimo di servizi
+schema.host.attr.variables: Variabili host
+schema.host.attr.data_retention: Conservazione dati
+schema.host.desc.company_id: Selezionare l'azienda a cui appartiene l'host.
+schema.host.desc.password: Questa password è usata dagli agenti Bloonix. Se un agente vuole connettersi al server Bloonix per inoltrare le sue statistiche, può farlo solo se conosce l'id dell'host e la password.
+schema.host.desc.hostname: Questo è il nome completo e abilitato dell'hostname.
+schema.host.desc.status: Stato dell'host. Valori possibili sono OK, INFO, ALLERTA, CRITICO o SCONOSCIUTO.
+schema.host.desc.description: Questa è la descrizione breve dell'host.
+schema.host.desc.ipaddr: Questo è l'indirizzo IP principale dell'host.
+ <br/><br/>Si segnala che non è consentito anteporre degli zeri:
+ <br/><br/><i>010.005.008.001</i> o <i>0001::0001</i> non sono consentiti
+ <br/><i>10.5.8.1</i> o <i>1::1</i> sono consentiti
+schema.host.desc.ipaddr6: Questo è l'indirizzo IP v6 principale dell'host.
+ <br/><br/>Si segnala che non è consentito anteporre degli zeri:
+ <br/><br/><i>010.005.008.001</i> o <i>0001::0001</i> non sono consentiti
+ <br/><i>10.5.8.1</i> o <i>1::1</i> sono consentiti
+schema.host.desc.comment: Questo campo può venir usato per inserire un breve commento sull'host.
+schema.host.desc.sysgroup: Questo è un campo da usare liberamente senza restrizioni.
+schema.host.desc.sysinfo: Questo campo permette d'inserire un link esterno alla tua documentazione per l'host, p.e.: <br/><br/>Testolink=https://miosito.test/?id=12345.<br/><br/>Caratteri non permessi: " e \
+schema.host.desc.host_class: Esempi categorie di host:<br/>
+ <br/>/Network/Router
+ <br/>/Network/Switch
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.system_class: Esempi categorie di apparato;<br/>
+ <br/>/Fisico
+ <br/>/Virtuale
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.location_class: Esempi categorie di ubicazione:<br/>
+ <br/>/EU/Germania/Amburgo/DC1/Rack10
+ <br/>/EU/Francia/Nancy/DC3/Rack12
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.os_class: Esempi categorie di sistemi operativi:<br/>
+ <br/>/Linux/CentOS/7
+ <br/>/Windows/Server/2012
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.hw_class: Esempi categorie di hardware:<br/>
+ <br/>/Server/Dell/R730
+ <br/>/Stampante/Canon/ip2770
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.env_class: Environment class examples:<br/>
+ <br/>/Project A/Subproject A1
+ <br/>/Project B/Subproject B1
+ <br/><br/>Caratteri non ammessi le virgolette: "
+schema.host.desc.hw_manufacturer: p.e. IBM, HP, Dell, Fujitsu Siemens
+schema.host.desc.hw_product: p.e. Dell Power Edge 2950
+schema.host.desc.os_manufacturer: p.e. Red Hat, Microsoft, CISCO
+schema.host.desc.os_product: p.e. RHEL5, Debian Lenny, Windows Server 2003
+schema.host.desc.virt_manufacturer: p.e. VMware, Parallels
+schema.host.desc.virt_product: p.e. VMware-Server, Virtuozzo
+schema.host.desc.location: p.e. New York, Datacenter 3, Stanza 6, Rack A29
+schema.host.desc.coordinates: Seleziona l'ubicazione dell'host tramite il prefisso internazionale.
+schema.host.desc.active: Attiva o disattiva l'host e tutti i servizi.
+schema.host.desc.allow_from: Con questo campo è possibile impostare una lista d'indirizzi IP, separati da virgole, da cui gli agenti Bloonix sono autorizzati ad inviare statistiche sull'host. Impostare la parola chiave <i>all</i> per autorizzare tutti gli indirizzi IP.
+schema.host.desc.max_sms: In questo campo si può definire il numero massimo di SMS che possono venir inviati al mese.
+schema.host.desc.interval: Questo è l'intervallo di controllo di tutti i servizi dell'host.
+schema.host.desc.retry_interval: Questo è l'intervallo dei tentativi per tutti i servizi dell'host. Se un servizio non è nello stato OK, allora l'intervallo è forzato a questo valore.
+schema.host.desc.timeout: Questo è il timeout per tutti i servizi dell'host. Il contatore del timeout inizia dopo l'intervallo. Se lo stato del servizio non viene aggiornato entro questo tempo, allora viene impostato a critico assieme all'informazione che sembra che un agente Bloonix non sta funzionando.
+schema.host.desc.notification: Abilita o disabilita le notifiche per tutti i servizi.
+schema.host.desc.max_services: Imposta il numero massimo di servizi che possono venir configurati per l'host. 0 significa illimitati.
+schema.host.desc.variables: In questo campo puoi definire le variabili per l'host. Queste variabili possono venir usate come limiti dalle configurazioni dei controlli sui servizi. Per esempio:<br/><br/>HTTP.PORT=9000<br/><br/>Questa variabile può venir usata nel formato <i>%HTTP.PORT%</i> per i limiti. Si segnala che due variabili sono predefinite: <i>IPADDR</i> e <i>HOSTNAME</i>. Queste variabili sono sostituite con l'inirizzo IP e hostanem dell'host. Per ulteriori informazioni leggere l'aiuto.<br/><br/>Caratteri permessi: a-z, A-Z, 0-9, punti e trattini bassi
+schema.host.desc.data_retention: Conservazione in giorni di tutti i dati dell'host e suoi servizi. 
+schema.host.text.list: Panoramica di tutti gli host
+schema.host.text.registered_host_list: Panoramica di tutti gli host pronti per la registrazione
+schema.host.text.view: Host %s
+schema.host.text.create: Crea un nuovo host
+schema.host.text.delete: Elimina host
+schema.host.text.settings: Impostazioni host
+schema.host.text.list_host_classes: Categorie host
+schema.host.text.host_class_help_link: Leggi come opera questa funzionalità
+schema.host.text.multiple_selection_help: <h4>Quest'attività richiede che venga selezionato almeno un host.</h4>
+ Per evidenziare un singolo host cliccare sulla riga. Se si vogliono evidenziare più host
+ tenere premuto il tasto <i>CTRL</i> sulla tastiera. Se si tiene premuto il tasto sinistro del mouse
+ si può evidenziare una serie di host.
+schema.host.text.multiple_downtimes: Programma un fuori servizio per più host
+schema.host.text.multiple_notification: Abilita o disabilita le notifiche per più host
+schema.host.text.multiple_activate: Attiva o disattiva più host
+schema.host.text.multiple_edit: Modifica la configurazione per più host
+schema.host.text.multiple_edit_info: Nota: i campi vuoti verranno ignorati.
+schema.host.text.add_hosts_to_group: Aggiungi gli host selezionati ad un gruppo
+schema.host.text.delete_reg_hosts: Elimina host
+schema.host.text.mtr_output: Risultato MTR per l'host %s
+schema.host.text.mtr_chart: Diagramma MTR
+schema.host.text.report_title: Report per l'host %s
+schema.host.text.add_hosts_to_group: Aggiungi gli host ad un gruppo
+schema.host.text.add_host_to_group: Aggiungi l'host ad un gruppo utenti
+schema.host.desc.add_host_to_group: Aggiungi l'host ad almeno un gruppo.
+schema.host.text.add_host_to_contactgroup: Aggiungi l'host ad un gruppo contatti
+schema.host.desc.add_host_to_contactgroup: Aggiungi l'host ad un gruppo contatti per ricevere notifiche sugli eventi via email o SMS.
+schema.host.text.add_host_to_host_template: Aggiungi l'host ad un template per host
+schema.host.desc.add_host_to_host_template: L'host eredita tutti i servizi dal template per host.
+schema.host.text.list_templates: L'host %s ha configurati i seguenti template
+schema.host.action.delete_reg_hosts: Elimina gli host selezionati.
+schema.host.action.disable_notifications_multiple: Disabilita notifiche per gli host selezionati
+schema.host.action.enable_notifications_multiple: Aabilita notifiche per gli host selezionati
+schema.host.action.activate_multiple: Attiva gli host selezionati
+schema.host.action.deactivate_multiple: Disttiva gli host selezionati
+schema.host.action.remove_template: Rimuovi template
+schema.host.text.remove_template_warning: Si prega di notare che i servizi del template verranno rimossi da tutti gli host che hanno i loro servizi ereditati da questo template.
+schema.host.text.templates_not_assigned: Template non assegnati
+schema.host.action.add_template: Aggiungi template
+schema.host.info.notification_disabled: Notifiche disabilitate per l'host.
+schema.host.info.notification_disabled_short: Notifiche disabilitate
+schema.host.info.inactive: L'host non è attivo.
+schema.host.info.sysinfo: Disponibili informazioni da apparato esterno.
+schema.host.menu.host_class: Host
+schema.host.menu.system_class: Apparato
+schema.host.menu.location_class: Ubicazione
+schema.host.menu.os_class: Sistema operativo
+schema.host.menu.hw_class: Hardware
+schema.host.menu.env_class: Ambiente
+
+schema.timeperiod.attr.id: ID periodo
+schema.timeperiod.attr.name: Periodo
+schema.timeperiod.attr.description: Descrizione
+schema.timeperiod.desc.name: Questo è il nome del periodo.
+schema.timeperiod.desc.description: Questa è una breve descrizione del periodo.
+schema.timeperiod.text.list: Panoramica di tutti i periodi.
+schema.timeperiod.text.create: Crea un nuovo periodo
+schema.timeperiod.text.delete: Elimina un periodo
+schema.timeperiod.text.settings: Impostazioni periodo
+schema.timeperiod.text.examples: Esempi di periodo
+schema.timeperiod.examples: <p><b>Sintassi: GIORNO-ESTENSIONE TEMPO-ESTENSIONE</b></p></br>
+ <pre>
+ INTERVALLO GIORNI               ESEMPI
+ ------------------------------------------------------------
+ Giorno                          Monday
+ Giorno - Giorno                 Monday - Friday
+ Mese                            Januar
+ Mese - Mese                     Januar - July
+ Mese Giorno                     Januar 1
+ Mese Giorno - Mese Giorno       Januar 1 - July 15
+ Anno                            2010
+ Anno - Anno                     2010 - 2012
+ AAAA-MM-GG                      2010-01-01
+ AAAA-MM-GG - AAAA-MM-GG         2010-01-01 - 2012-06-15
+ </pre></br>
+ <pre>
+ INTERVALLO ORARI                ESEMPI
+ ------------------------------------------------------------
+ OO:MM - OO:MM                   09:00 - 17:00
+ OO:MM - OO:MM, OO:MM - OO:MM    00:00 - 08:59, 17:01 - 23:59
+ </pre></br>
+ <p><b>Esempi:</b></p></br>
+ <pre>
+ Monday - Friday    09:00 - 17:00
+ Monday - Friday    00:00 - 08:59, 17:01 - 23:59
+ Saturday - Sunday  00:00 - 23:59
+ </pre></br>
+
+schema.timeslice.attr.id: ID timeslice
+schema.timeslice.attr.timeslice: Timeslice
+schema.timeslice.text.list: Panoramica di tutti i timeslice
+schema.timeslice.text.delete: Elimina timeslice
+
+schema.host_template.attr.id: ID template
+schema.host_template.attr.name: Nome template
+schema.host_template.attr.description: Descrizione
+schema.host_template.attr.tags: Tag
+schema.host_template.desc.name: Questo è il nome del template.
+schema.host_template.desc.description: Inserisci una breve descrizione per il template.
+schema.host_template.desc.tags: I tag sono usati per aggiungere host registrati a template per host.
+schema.host_template.text.list: Panoramica di tutti i template per host
+schema.host_template.text.delete: Elimina un template
+schema.host_template.text.create: Crea un nuovo template
+schema.host_template.text.setting: Impostazioni template
+schema.host_template.text.view: Template %s
+schema.host_template.text.view_services: VIsualizza servizi
+schema.host_template.text.view_members: Aggiungi / Rimuovi host
+schema.host_template.text.delete_service: Elimina un servizio dal template
+schema.host_template.text.delete_service_warning: Si prega di notare che il servizio verrà eliminato da tutti gli host che lo hanno ereditato da questo template.
+schema.host_template.test.host_members: Host nel gruppo
+schema.host_template.test.host_nonmembers: Hosts non nel gruppo
+schema.host_template.text.selected_hosts: Host selezionati
+schema.host_template.text.clone: Clona il template
+schema.host_template.text.clone_title: Clona template %s
+schema.host_template.text.templates: Template
+
+schema.contact.attr.id: ID contatto
+schema.contact.attr.company_id: ID azienda
+schema.contact.attr.name: Nome
+schema.contact.attr.mail_to: Email
+schema.contact.attr.mail_notifications_enabled: Email abilitato globalmente
+schema.contact.attr.mail_notification_level: Livello notifica email
+schema.contact.attr.sms_to: Cellulare
+schema.contact.attr.sms_notifications_enabled: SMS abilitato globalmente
+schema.contact.attr.sms_notification_level: Livello notifica SMS
+schema.contact.attr.escalation_time: Livello d'incremento
+schema.contact.desc.company_id: Seleziona l'azienda di appartenenza del contatto.
+schema.contact.desc.name: Questo è il nome completo del contatto.
+schema.contact.desc.escalation_time: Seleziona un livello d'incremento per il contatto. Attraverso i livelli d'incremento è possibile controllare quando un contatto riceverà una notifica. Per esempio un livello d'incremento di 30 minuti significa che il contatto verrà notificato se il servizio non è ancora in stato di OK dopo 30 minuti.
+schema.contact.text.list: Panoramica di tutti i contatti
+schema.contact.text.create: Crea un nuovo contatto
+schema.contact.text.delete: Elimina contatto
+schema.contact.text.settings: Impostazioni contatto
+schema.contact.text.timeperiods: Periodi contatto
+schema.contact.text.message_services: Servizi messaggistica contatto
+schema.contact.text.remove_timeperiod: Rimuovi i periodi dal contatto
+schema.contact.text.remove_message_service: Rimuovi il servizio di messaggistica dal contatto
+schema.contact.text.escalation_time_null: Notifica immediatamente
+schema.contact_timeperiod.attr.message_service: Servizio di messaggistica
+schema.contact_timeperiod.attr.exclude: Escludi
+schema.contact_timeperiod.text.add: Aggiungi un periodo al contatto
+schema.contact_message_services.attr.message_service: Servizio di messaggistica
+schema.contact_message_services.attr.enabled: Abilitato
+schema.contact_message_services.attr.send_to: Invia a
+schema.contact_message_services.attr.notification_level: Livello di notifica
+schema.contact_message_services.desc.message_service: Il servizio di messaggistica.
+schema.contact_message_services.desc.enabled: Abilita o disabilita il servizio di messaggistica.
+schema.contact_message_services.desc.send_to: Il destinatario del messaggio.
+schema.contact_message_services.desc.notification_level: Seleziona il livello di stato per cui si vuole ricevere notifiche.
+schema.contact_message_services.text.add: Aggiungi un servizio di messaggistica al contatto
+schema.contact_message_services.text.remove: Rimuovi un servizio di messaggistica
+
+schema.contactgroup.attr.id: ID gruppo-contatti
+schema.contactgroup.attr.name: Nome
+schema.contactgroup.attr.description: Descrizione
+schema.contactgroup.desc.name: Questo è il nome del gruppo di contatti. Il nome dev'essere unico.
+schema.contactgroup.desc.description: Inserisci una breve descrizione per il gruppo.
+schema.contactgroup.text.list: Panoramica di tutti i gruppo-contatti
+schema.contactgroup.text.create: Crea un nuovo gruppo contatti
+schema.contactgroup.text.delete: Elimina gruppo contatti
+schema.contactgroup.text.settings: Impostazioni gruppo contatti
+schema.contactgroup.text.contact_members: Contatti nel gruppo
+schema.contactgroup.text.contact_nonmembers: Contatti non nel gruppo
+schema.contactgroup.text.group_members: Membri del gruppo contatti '<b>%s</b>'
+schema.contactgroup.text.host_members: Host nel gruppo
+schema.contactgroup.text.host_nonmembers: Host non nel gruppo
+schema.contactgroup.text.selected_hosts: Host selezionati
+
+schema.contactgroup.text.service_members: Servizi nel gruppo contatti
+schema.contactgroup.text.service_nonmembers: Servizi non nel gruppo
+schema.contactgroup.text.selected_services: Servizi selezionati
+
+schema.notification.attr.time: Timestamp
+schema.notification.attr.send_to: Destinatario
+schema.notification.attr.subject: Oggetto
+schema.notification.attr.message: Messaggio
+schema.notification.attr.message_service: Tipo
+schema.notification.text.list: Notifiche inviate per l'host %s
+schema.notification.text.search: Cerca notifiche
+schema.notification.text.filter_message: Filtra messaggio
+schema.notification.text.filter_message_service: SMS, mail, ...
+
+schema.chart.attr.id: ID diagramma
+schema.chart.attr.title: Titolo diagramma
+schema.chart.attr.subtitle: Chart subtitle
+schema.chart.attr.options: Opzioni diagramma
+schema.chart.attr.preset_last: Programmato: ultimo
+schema.chart.attr.refresh: Aggiorna
+schema.chart.attr.preset: Programmato
+schema.chart.attr.chart_size: Dimensione
+schema.chart.attr.from: Da
+schema.chart.attr.to: A
+schema.chart.attr.datetime: Data e ora
+schema.chart.attr.from_to: Da <b>%s</b> a <b>%s</b>
+schema.chart.attr.charts: Diagrammi
+schema.chart.desc.charts: <b>Seleziona più diagrammi con</b><br/><br/>
+ <i>CTRL + click</i><br/>o<br/><i>premi + mantieni il pulsante sinistro del mouse + muovi il puntatore</i>
+schema.chart.text.multiple_view: Vista diagramma
+schema.chart.text.view: Diagrammi per l'host <b>%s</b>
+schema.chart.text.multiview: Visualizza più diagrammi
+schema.chart.text.select: Selezione diagrammi per l'host %s
+schema.chart.text.multiselect: Seleziona diagrammi per più host
+schema.chart.text.alignment: Allineamento diagrammi
+schema.chart.text.chart_views: Viste diagramma
+schema.chart.text.save_view: Salva vista
+schema.chart.text.load_view: Carica vista
+schema.chart.text.delete_view: Elimina vista diagramma
+schema.chart.text.really_delete_view: Do you really want to delete chart view <b><b>%s</b></b>?
+schema.chart.text.selected: selezionato
+schema.chart.text.selected_max_reached: (massimo) selezionati
+schema.chart.text.back_to_selection: Back to the chart selection
+schema.chart.text.chart_information: Informazioni diagramma
+schema.chart.text.chart_id: ID-diagramma: %s
+schema.chart.text.service_charts: Diagrammi servizio
+schema.chart.text.user_charts: Diagrammi utente
+schema.chart.text.chart_type: Seleziona il tipo di diagramma
+schema.chart.text.charts: Diagrammi
+
+schema.dependency.attr.id: ID dipendenza
+schema.dependency.attr.host_id: ID host
+schema.dependency.attr.service_id: ID Servizio
+schema.dependency.attr.on_host_id: Dipende dall'ID host
+schema.dependency.attr.on_service_id: Dipende dall'ID servizio
+schema.dependency.attr.status: Stato
+schema.dependency.attr.on_status: Stato padre
+schema.dependency.attr.inherit: Eredità
+schema.dependency.attr.timeslice: Timeslice
+schema.dependency.attr.timezone: Timezone
+schema.dependency.text.list: Dipendenze per l'host %s
+schema.dependency.text.create_from: Crea una nuova dipendenza da
+schema.dependency.text.create: Crea una nuova dipendenza per l'host <b>%s</b>
+schema.dependency.text.really_delete: Vuoi veramente eliminare la dipendenza <b>%s</b>?
+schema.dependency.text.host_to_host: host ad host
+schema.dependency.text.host_to_service: host a servizio
+schema.dependency.text.service_to_host: servizio ad host
+schema.dependency.text.service_to_service: servizio a servizio
+schema.dependency.text.for_node: Dipendenze per il nodo <b>%s</b>
+schema.dependency.text.no_dependencies: Non ci sono dipendenze configurate.
+schema.dependency.text.dependencies: Dipendenze
+schema.dependency.text.host: Host
+schema.dependency.text.service: Servizio
+schema.dependency.text.depends_on_host: dipende dall'host
+schema.dependency.text.depends_on_service: dipende dal servizio
+schema.dependency.text.active_time: Tempo attività
+schema.dependency.text.workflow_from_host: Da host
+schema.dependency.text.workflow_from_service: e da servizio
+schema.dependency.text.workflow_to_host: ad host
+schema.dependency.text.workflow_to_service: e a servizio
+schema.dependency.text.workflow_from_host_status: Seleziona lo stato dell'host che attiva il flusso di dipendenza
+schema.dependency.text.workflow_from_service_status: Seleziona lo stato del servizio che attiva il flusso di dipendenza
+schema.dependency.text.workflow_to_host_status: Seleziona lo stato dell'host che evita la notifica
+schema.dependency.text.workflow_to_service_status: Seleziona lo stato del servizio padre che evita la notifica
+schema.dependency.text.workflow_inherit: Attiva ereditarietà
+schema.dependency.text.workflow_timezone: Imposta la timezone per il timeslice
+schema.dependency.text.workflow_timeslice: Imposta il timeslice quando la dipendenza è attiva
+
+schema.event.attr.id: ID evento
+schema.event.attr.time: Timestamp
+schema.event.attr.last_status: Ultimo stato
+schema.event.attr.status: Stato
+schema.event.attr.duration: Durata
+schema.event.attr.attempts: Tentativi
+schema.event.attr.tags: Tag
+schema.event.text.list: Eventi dell'host %s
+schema.event.text.filter_message: Filtra messaggio
+schema.event.text.host_service: Host / Servizio
+schema.event.text.filter_by_status: Filtra per stato
+schema.event.text.filter_by_duration: Filtra per durata
+schema.event.text.filter_by_query: Filtra messaggi per interrogazione
+schema.event.text.filter_by_service: Filtra per servizi
+
+schema.service.attr.id: ID servizio
+schema.service.attr.ref_id: ID
+schema.service.attr.agent_id: Ubicazione agente
+schema.service.attr.service_name: Nome servizio
+schema.service.attr.command: Comando
+schema.service.attr.command_options: Controlla impostazioni
+schema.service.attr.timeout: Timeout
+schema.service.attr.interval: Intervallo
+schema.service.attr.retry_interval: Intervallo nuovo tentativo
+schema.service.attr.description: Descrizione
+schema.service.attr.plugin: Plugin
+schema.service.attr.comment: Commento
+schema.service.attr.attempt_warn2crit: Cambia ALLERTA in CRITICO
+schema.service.attr.attempt_counter: Contatore tentativi
+schema.service.attr.attempt_max: Notifica dopo X tentativi
+schema.service.attr.active: Attivo
+schema.service.attr.acknowledged: Stato servizio accertato
+schema.service.attr.notification: Notifiche abilitate
+schema.service.attr.notification_interval: Intervallo notifiche
+schema.service.attr.last_check: Ultimo controllo
+schema.service.attr.fd_enabled: Rilevamento flapping attivato
+schema.service.attr.fd_time_range: Intervallo rilevamento flapping
+schema.service.attr.fd_flap_count: Notifica dopo X cambi di stato
+schema.service.attr.next_check: Prossimo controllo
+schema.service.attr.last_event: Ultimo evento
+schema.service.attr.is_volatile: Il servizio è discontinuo
+schema.service.attr.volatile_status: L'attuale stato discontinuo del servizio
+schema.service.attr.volatile_retain: Tempo ritenuta discontinuità
+schema.service.attr.volatile_since: Da quando lo stato è discontinuo
+schema.service.attr.status: Stato
+schema.service.attr.message: Informazioni sullo stato
+schema.service.attr.result: Informazioni avanzate sullo stato
+schema.service.attr.status_since: Stato da
+schema.service.attr.check_by_location: Controlla per ubicazione (ID agente)
+schema.service.attr.default_location: Ubicazione predefinita
+schema.service.attr.flapping: Flapping
+schema.service.attr.scheduled: Indisponibilità
+schema.service.attr.host_alive_check: È questo un controllo di host attivo?
+schema.service.attr.passive_check: È questo un controllo passivo?
+schema.service.attr.agent_options.timeout: Timeout controllo globale
+schema.service.desc.agent_options.timeout: Questo è il timeout globale di esecuzione del controllo: dopo il timeout il controllo viene soppresso e attivato lo stato CRITICO. Questo è molto utile per i controlli appesi che non riescono a fermarsi.<br/><br/>Predefinito: 30 secondi
+schema.service.attr.agent_options.set_tags: Imposta tag
+schema.service.desc.agent_options.set_tags: Quale tag deve venir impostatose il controllo restituisce uno stato ALLERTA, CRITICO o SCONOSCIUTO.
+schema.service.desc.agent_id: Questa è l'ubicazione da dove viene eseguito il controllo.
+schema.service.desc.service_name: Questo è il nome visualizzato del servizio.
+schema.service.desc.description: Questa è una breve descrizione sul controllo.
+schema.service.desc.comment: Questo è un breve riservato commento sul controllo.
+schema.service.desc.interval: Questo è l'intervallo di controllo del servizio. Se non è impostato alcun valore, allora l'intervallo per l'host verrà ereditato.
+schema.service.desc.retry_interval: Questo è l'intervallo per i tentativi del servizio. Se un servizio non è in stato OK, allora l'intervallo viene forzato a questo valore. Se non è impostato alcun valore, allora l'intervallo per i nuovi tentativi dell'host verrà ereditato.
+schema.service.desc.timeout: Questo è il timeout del servizio, il cui conteggio partirà dopo l'intervallo. Se lo stato del servizio non si aggiorna entro questo tempo, allora verrà impostato uno stato critico per il servizio con l'informazione che l'agente Bloonix sembra non essere attivo. Se non è impostato alcun valore, allora il timeout dell'host verrà ereditato.
+schema.service.desc.attempt_warn2crit: Questa opzione è utile se si vuole che lo stato del servizio si aggiorni a CRITICO quando lo stato reale è ALLERTA ed è stato raggiunto il numero massimo di tentativi.
+schema.service.desc.attempt_max: Questa opzione gestisce quando ricevere una notifica per i servizi che non sono in stato OK. Per esempio un valore di 3 significa che si riceverà una notifica quando il controllo del servizio restituisce per tre volte di fila uno stato non OK.
+schema.service.desc.active: Questa opzione attiva o disattiva il controllo del servizio.
+schema.service.desc.acknowledged: Questa opzione è utile se un servizio non è OK e si vogliono temporaneamente disattivare le notifiche. Le notifiche torneranno ad abilitarsi se il servizio cambia di nuovo lo stato in OK.
+schema.service.desc.notification: Questa opzione attiva o disattiva le notifiche per email o SMS.
+schema.service.desc.notification_interval: Questo è l'intervallo di notifica per le email. Fino a quando lo stato non è OK si verrà notificati con questo intervallo. Se non è impostato alcun valore, allora l'intervallo dell'host verrà ereditato.
+schema.service.desc.fd_enabled: Questa opzione abilita o disabilita il rilevamento del flapping. Il rilevamento del flapping è molto utile per riconoscere i servizi che passano dallo stato OK e non OK in tempi brevi ed il contatore <i>massimo tentativi</i> non viene raggiunto. Il rilevamento del flapping controlla quante volte il servizio ha cambiato stato nel tempo impostato. Se lo stato cambia troppe volte, allora una notifica verrà attivata.
+schema.service.desc.fd_time_range: Questo è il periodo in cui il rilevamento del flapping controlla i cambi di stato.
+schema.service.desc.fd_flap_count: Questa è la soglia per il rilevamento del flapping. Se lo stato cambia più x volte nel dato tempo, una notifica verrà attivata.
+schema.service.desc.is_volatile: Con questa impostazione si può definire se il controllo dev'essere discontinuo. Alcuni controlli hanno la peculiarità di essere nello stato CRITICO solo per un breve periodo. Ad esempio se si cerca in un file di log la presenza di una stringa specifica, tipo <i>possibile tentativo d'intrusione</i> ed il controllo restituisce uno stato CRITICO, sarà molto probabile che nella ricerca successiva non verrà più ritrovata la stringa fornendo quindi uno stato OK. In questo caso probabilmente non ci si accorgerà mai che qualcuno ha cercato d'introdursi. Per questo motivo si può impostare il servizio come <i>discontinuo</i> mantenendo lo stato del servizio in CRITICO o ALLERTA fino a quando non lo si azzeri manualmente.
+schema.service.desc.volatile_retain: Imposta un tempo dopo il quale lo stato discontinuo viene automaticamente azzerato.
+schema.service.desc.host_alive_check: Un controllo di host vivo determina se un host è giù o attivo. Se questo controllo restituisce uno stato critico, allora si riceve una notifica particolare. Se un successivo controllo di servizio restituisce ancora uno stato critico, allora le notifiche vengono soppresse. Si raccomanda di usare il controllo del ping come controllo per host vivo.
+schema.service.desc.passive_check: Un controllo passivo è una verifica che non viene effettuata da Bloonix, bensì da un servizio o script esterno. I controlli passivi non hanno timeout e sono molto utili, per esempio nel caso di SNMP trap (notifiche senza ACK). Il servizio esterno deve fornire uno stato critico all'agente Bloonix, che di conseguenza lo girerà al server Bloonix.
+schema.service.text.services: Servizi
+schema.service.text.list: Dettaglio servizi per tutti gli host
+schema.service.text.title: Servizi
+schema.service.text.create: Crea un nuovo servizio
+schema.service.text.settings: Impostazioni del servizo <b>%s</b>
+schema.service.text.delete: Elimina servizio
+schema.service.text.clone: Clona servizio
+schema.service.text.clone_service: Clona servizio %s
+schema.service.text.clone_to_the_same_host: Clona il servizio sullo stesso host
+schema.service.text.clone_select_host: Seleziona un altro host
+schema.service.text.choose_plugin: Seleziona un plugin
+schema.service.text.attempt: Tentativi
+schema.service.text.host_alive_check: Controllo host vivo
+schema.service.text.select_location_check_type: Seleziona tipo di controllo
+schema.service.text.select_location_check_type_info: Premere sui pulsanti per vedere una breve descrizione per ogni tipo
+schema.service.text.multiple_help: <h4>Quest'azione richiede di selezionare almeno un servizio.</h4>
+ Per selezionare un singolo servizio basta fare click sulla sua riga. Se si vuole effettuare una selezione multipla di servizi
+ premere e mantenere il tasto <i>CTRL</i> sulla tastiera. Se premi e mantieni il pulsante sinistro del mouse
+ puoi evidenziare una serie di servizi.
+schema.service.text.multiple_downtimes: Programma un fuori servizio per più servizi
+schema.service.text.multiple_notification: Abilita o disabilita le notifiche per più servizi
+schema.service.text.multiple_activate: Abilita o disabilita più servizi
+schema.service.text.multiple_acknowledge: Riconosci o azzera riconoscimento per più servizi
+schema.service.text.multiple_volatile: Azzera lo stato di discontinuità per più servizi
+schema.service.text.multiple: Azioni servizio
+schema.service.text.default_location_check_button: Controllo predefinito
+schema.service.text.failover_location_check_button: Controllo failover
+schema.service.text.rotate_location_check_button: Controllo rotazione
+schema.service.text.multiple_location_check_button: Controlli multipli
+schema.service.text.command_options: Impostazioni controllo
+schema.service.text.no_command_options: Questo controllo non ha impostazioni.
+schema.service.text.notification_settings: Impostazioni notifiche
+schema.service.text.view_location_report: Visualizza report ubicazione
+schema.service.text.view_wtrm_report: Visualizza report transazioni web
+schema.service.text.wtrm_result_steps: Transazioni web - Risultato fasi
+schema.service.text.sla_requirements: Si prega di notare che per gli account gratuiti è disponibile solo il controllo predefinito.
+schema.service.text.host_template: Template host
+schema.service.text.multiple_force_next_check: Azzera l'intervallo e forza il prossimo controllo del servizio
+schema.service.action.activate_multiple: Attiva i servizi selezionati
+schema.service.action.deactivate_multiple: Disattiva i servizi selezionati
+schema.service.action.enable_notifications_multiple: Abilita le notifiche per i servizi selezionati
+schema.service.action.disable_notifications_multiple: Disabilita le notifiche per i servizi selezionati
+schema.service.action.acknowledge_multiple: Riconosci lo stato dei servizi selezionati
+schema.service.action.clear_acknowledgement_multiple: Azzera il riconoscimento dei servizi selezionati
+schema.service.action.clear_volatile_multiple: Azzera lo stato di discontinuità dei servizi selezionati
+schema.service.action.multiple_force_next_check: Azzera l'intervallo e forza il prossimo controllo del servizio
+schema.service.info.notification: Le notifiche del servizio sono disabilitate.
+schema.service.info.active: Il servizio non è attivo.
+schema.service.info.acknowledged: Il servizio è riconosciuto.
+schema.service.info.flapping: Il servizio è in flapping.
+schema.service.info.is_volatile: Il servizio è in stato di discontinuità.
+schema.service.info.host_alive_check: Questo è il controllo di host vivo.
+schema.service.info.has_result: Questo servizio ha uno informazioni avanzate sullo stato. Cliccami :-)
+schema.service.info.inactive: Il servizio è inattivo.
+schema.service.info.notification_disabled: Le notifiche del servizio sono disabilitate.
+schema.service.info.inherits_from_host_template: Questo servizio è erediatato dal template host '%s'.
+schema.service.info.status_nok_since: Il servizio non era OK negli ultimi 60 minuti.
+schema.service.desc.agent_tooltip: <h3>Installazione dell'agente Bloonix</h3>
+ <p>
+ Questo controllo viene eseguito sul server e richiede l'installazione dell'agente Bloonix
+ e del plugin sul server stesso.
+ </p>
+schema.service.desc.agent_id_tooltip: <h3>Da quale ubicazione dev'essere eseguito il controllo?</h3>
+ <p>
+ Puoi scegliere tra le opzioni <i>localhost</i>, <i>intranet</i> e <i>remote</i>.
+ </p>
+ <h3>localhost</h3>
+ <p>
+ Con l'opzione <i>localhost</i> il controllo viene eseguito in locale sul server.
+ Per quest'azione è necessario che l'agente Bloonix sia installato sul server.
+ Questa opzione è utile se si vogliono monitorare le prestazioni del sistema come CPU,
+ uso della memoria o del disco.
+ </p>
+ <h3>intranet</h3>
+ <p>
+ L'opzione <i>intranet</i> si riferisce alla rete locale. Se si vuole monitorare il servizio
+ dalla propria rete locale, allora è necessario installare l'agente Bloonix su un server
+ centrale nella propria rete. I controlli verranno eseguiti da questo server.
+ Quest'opzione torna utile se si vogliono monitorare apparati che non sono connessi ad internet
+ direttamente come router, switch e così via.
+ </p>
+ <h3>remote</h3>
+ <p>
+ Con l'opzione <i>remote</i> il controllo viene eseguito da un server Bloonix esterno. Questo è molto
+ utile se si vogliono monitorare il proprio web server, sito, server di posta e altri servizi internet.
+ </p>
+schema.service.desc.default_check_type_title: Checkpoint predefinito
+schema.service.desc.default_check_type: Un controllo predefinito ha un checkpoint predefinito.
+ Da questo checkpoint il servizio viene controllato.
+schema.service.desc.default_check_type_location: Il tuo servizio viene controllatodal seguente checkpoint:
+schema.service.desc.failover_check_type_title: Checkpoint failover
+schema.service.desc.failover_check_type: Con i controlli failover è possibile selezionare un checkpoint
+ fisso da cui viene controllato il servizio. In aggiunta è possibile selezionare due checkpoint
+ failover, da cui viene controllato il servizio se il controllo dal primo checkpoint fisso ritorna
+ uno stato di non OK. Se lo stato di tutti e tre i checkpoint non è OK, viene aumentato il contatore di
+ <i>massimo tentativi</i>.
+schema.service.desc.failover_check_type_locations: Seleziona un checkpoint fisso e due di failover
+schema.service.desc.rotate_check_type_title: Ruota i checkpoint
+schema.service.desc.rotate_check_type: Il controllo di rotazione non ha un checkpoint fisso.
+ Al suo posto il controllo del servizio ruoterà sui checkpoint selezionati. Se il controllo
+ di un checkpoint non è OK, allora il controllo salterà immediatamente a quello successivo.
+ Se il terzo checkpoint ritorna anch'esso uno stato non OK, allora il contatore <i>massimo tentativi</i>
+ verrà incrementato.
+schema.service.desc.rotate_check_type_locations: Il tuo servizio è controllato dai seguenti checkpoint:
+schema.service.desc.multiple_check_type_title: Checkpoint multipli
+schema.service.desc.multiple_check_type: Con questa opzione è possibile selezionare
+ più checkpoint da cui il servizio verrà controllato. Se tre checkpoint
+ ritornano uno stato critico allora il contatore <i>massimo tentativi</i> verrà incrementato.
+schema.service.desc.multiple_check_concurrency_title: Controlli in contemporanea
+schema.service.desc.multiple_check_concurrency: Si prega di notare che i controlli sono eseguiti
+ contemporaneamente da più checkpoint. Per evitare di sovraccaricare il servizio, si può specificare
+ il numero massimo di esecuzioni in contemporanea.
+schema.service.desc.multiple_check_select_concurrency: Seleziona la contemporaneità:
+schema.service.desc.multiple_check_type_locations: Seleziona almeno tre checkpoint:
+
+schema.plugin.attr.id: ID plugin
+schema.plugin.attr.plugin: Plugin
+schema.plugin.attr.categories: Categorie
+schema.plugin.attr.description: Descrizione
+schema.plugin.attr.command: Comando
+schema.plugin.attr.info: Informazioni
+schema.plugin.text.list: Plugin
+
+schema.plugin_stats.attr.alias: Nome
+schema.plugin_stats.attr.statkey: Chiave
+schema.plugin_stats.attr.datatype: Tipo dati
+schema.plugin_stats.attr.description: Descrizione
+schema.plugin_stats.text.list: Metriche del plugin %s
+
+schema.user_chart.attr.id: ID
+schema.user_chart.attr.description: Descrizione
+schema.user_chart.desc.description: Descrizione del diagramma.
+schema.user_chart.attr.title: Titolo
+schema.user_chart.desc.title: Il Titolo del diagramma.
+schema.user_chart.attr.subtitle: Sottotitolo
+schema.user_chart.desc.subtitle: Il Titolo del diagramma.
+schema.user_chart.attr.yaxis_label: Etichetta asse delle Y
+schema.user_chart.desc.yaxis_label: L'etichetta dell'asse delle Y.
+schema.user_chart.text.title: Diagrammi utente
+schema.user_chart.text.user_chart: Editor diagramma
+schema.user_chart.text.editor: Editor diagramma utente
+schema.user_chart.text.delete: Elimina diagramma
+schema.user_chart.text.create: Crea un diagramma
+schema.user_chart.text.update: Aggiorna un diagramma
+schema.user_chart.text.add_metric: Aggiungi metrica
+schema.user_chart.text.chart_metrics: Metriche diagramma
+schema.user_chart.text.click_to_add_metric: Clicca per aggiungere una metrica
+
+schema.location.attr.id: ID
+schema.location.attr.ipaddr: Indirizzo IP
+schema.location.attr.hostname: Hostname
+schema.location.attr.city: Città
+schema.location.attr.country: Nazione
+schema.location.attr.country_code: Codice nazione
+schema.location.attr.continent: Continente
+schema.location.attr.coordinates: Coordinate
+schema.location.attr.is_default: Ubicazione predefinita
+schema.location.attr.authkey: Authkey
+schema.location.attr.description: Descrizione
+schema.location.text.list: Ubicazioni
+schema.location.text.create: Crea una nuova ubicazione
+schema.location.text.view: Ubicazione %s
+schema.location.text.delete: Elimina ubicazione %s
+
+site.wtrm.action.doAuth: Imposta <b>nome utente</b> e <b>password</b> di base per l'autenticazione
+site.wtrm.action.doUserAgent: Imposta lo <b>user agent</b> per la richiesta
+site.wtrm.action.doUrl: Vai all'<b>URL</b>
+site.wtrm.action.doFill: Inserisci i dati nel campo di <b>input</b> o <b>area di testo</b>
+site.wtrm.action.doTriggerEvent: Innesca un evento su un elemento
+site.wtrm.action.doClick: <b>Clicca</b> su un elemento
+site.wtrm.action.doSubmit: <b>Invia</b> un modulo
+site.wtrm.action.doCheck: Seleziona <b>radio button</b> o <b>checkbox</b>
+site.wtrm.action.doUncheck: Deseleziona <b>radio button</b> o <b>checkbox</b>
+site.wtrm.action.doSelect: <b>Seleziona</b> un valore dalla selectbox
+site.wtrm.action.doWaitForElement: Attendi per l'elemento
+site.wtrm.action.doSleep: <b>Attendi</b> un attimo
+site.wtrm.action.doSwitchToFrame: <b>Passa</b> al frame
+site.wtrm.action.doSwitchToParentFrame: <b>Passa</b> al frame padre
+site.wtrm.action.doSwitchToNewPage: <b>Passa</b> alla nuova pagina creata
+site.wtrm.action.doSwitchToMainPage: <b>Passa</b> alla pagina principale
+site.wtrm.action.checkUrl: Controlla l'<b>URL</b> nella barra degli indirizzi
+site.wtrm.action.checkIfElementExists: Controlla se un <b>elemento esiste</b>
+site.wtrm.action.checkIfElementNotExists: Controlla se un <b>elemento <i>NON</i> esiste</b>
+site.wtrm.action.checkIfElementHasText: Controlla se un <b>elemento</b> contiene <b>testo</b> 
+site.wtrm.action.checkIfElementHasNotText: Controlla se un <b>elemento <i>NON</i></b> contiene <b>testo</b>
+site.wtrm.action.checkIfElementHasHTML: Controlla se un <b>elemento</b> contiene <b>HTML</b>
+site.wtrm.action.checkIfElementHasNotHTML: Controlla se un <b>elemento <i>NON</i></b> contiene <b>HTML</b>
+site.wtrm.action.checkIfElementHasValue: Controlla il <b>valore</b> di un campo di <b>input</b> o <b>area di testo</b>
+site.wtrm.action.checkIfElementHasNotValue: Controlla se un campo di <b>input</b> o <b>area di testo <i>NON</i> ha</b> un <b>valore</b> specifico
+site.wtrm.action.checkIfElementIsChecked: Controlla se un <b>radio button</b> o <b>checkbox</b> è <b>selezionata</b>
+site.wtrm.action.checkIfElementIsNotChecked: Controlla se un <b>radio button</b> o <b>checkbox <i>NON</i> è selezionata</b>
+site.wtrm.action.checkIfElementIsSelected: Controlla se un <b>valore</b> è <b>selezionato</b> in una selectbox
+site.wtrm.action.checkIfElementIsNotSelected: Controlla se un <b>valore <i>NON</i> è selezionato</b> in una selectbox
+site.wtrm.text.wtrm_workflow: Workflow transazioni web
+site.wtrm.text.check_it: Controlla.
+site.wtrm.text.quick_check: Controllo veloce.
+site.wtrm.text.service_report: Report transazioni web per il servizio %s
+site.wtrm.text.click_for_details: Cliccare su una riga per ottenere un report dettagliato
+site.wtrm.attr.username: Nome utente
+site.wtrm.attr.password: Password
+site.wtrm.attr.userAgent: User agent
+site.wtrm.attr.url: URL
+site.wtrm.attr.contentType: Content-Type
+site.wtrm.attr.status: Codice di stato HTTP
+site.wtrm.attr.parent: ID padre
+site.wtrm.attr.element: Elemento
+site.wtrm.attr.value: Valore
+site.wtrm.attr.hidden: Nascondi
+site.wtrm.attr.event: Evento
+site.wtrm.attr.text: Testo interno
+site.wtrm.attr.html: HTML interno
+site.wtrm.attr.ms: Millisecondi
+site.wtrm.attr.name: Nome
+site.wtrm.desc.username: Questo nome utente per l'autenticazione di base.
+site.wtrm.desc.password: Questa password per l'autenticazione di base.
+site.wtrm.desc.userAgent: Questo lo user agent da inviare per tutte le richieste.
+site.wtrm.desc.url: Questo è l'URL completo per la richiesta. Come esempio: http://www.bloonix.org/
+site.wtrm.desc.contentType: Inserire il content-type che ci si aspetta dall'URL.
+site.wtrm.desc.status: Inserire il codice di stato http che ci si aspetta dall'URL.
+site.wtrm.desc.parent: È possibile impostare un ID padre. L'ID, classe o nome vengono cercati all'interno dellìelemento dell'ID padre.
+site.wtrm.desc.element: L'elemento che vuoi selezionare. Come esempio: #id, .classe, nome<br/><br/>
+ È anche possibile effettuare ricerche per tag e attributi. Esempi:<br/><br/>
+ &lt;a&gt; - ottieni il primo tag 'a'<br/><br/>
+ &lt;a[5]&gt; - ottieni il quinto tag 'a'<br/><br/>
+ &lt;a a="hello" b="world"&gt; - cerca un tag 'a' con gli attributi e valori specificati
+site.wtrm.desc.value: Il valore dell'elemento che si desidera riempire o controllare.
+site.wtrm.desc.hidden: Vuoi nascondere il valore perché è una password o stringa segreta?
+site.wtrm.desc.event: Innesca un evento.
+site.wtrm.desc.text: Il testo interno ad un elemento che si desidera controllare.
+site.wtrm.desc.html: L'HTML interno ad un elemento che si desidera controllare.
+site.wtrm.desc.ms: Questo è il tempo di attesa in millisecondi tra le azioni.
+site.wtrm.desc.name: Questo è il nome dell'elemento.
+site.wtrm.placeholder.username: Nome utente
+site.wtrm.placeholder.password: Segreto
+site.wtrm.placeholder.userAgent: User-Agent
+site.wtrm.placeholder.url: http://www.bloonix.org/
+site.wtrm.placeholder.contentType: text/html
+site.wtrm.placeholder.status: 200
+site.wtrm.placeholder.parent: #id-padre (facoltativo)
+site.wtrm.placeholder.element: #id-elemento O .nome-classe O name
+site.wtrm.placeholder.value: valore
+site.wtrm.placeholder.hidden: Nascondi questo valore?
+site.wtrm.placeholder.text: Lorem ipsum...
+site.wtrm.placeholder.html: <span>Loren ipsum...</span>
+site.wtrm.placeholder.ms: 5000
+site.wtrm.command.doAuth: Usa autenticazione di base con nome utente <b>%s</b> e password <b>%s</b>
+site.wtrm.command.doUserAgent: Imposta user agent a <b>%s</b>
+site.wtrm.command.doUrl: Vai all'URL <b>%s</b>
+site.wtrm.command.doFill: Riempi l'elemento <b>%s</b> con il valore <b>%s</b>
+site.wtrm.command.doTriggerEvent: Attiva l'evento <b>%s</b> sull'elemento <b>%s</b>
+site.wtrm.command.doClick: Clicca sull'elemento <b>%s</b>
+site.wtrm.command.doSubmit: Invia modulo <b>%s</b>
+site.wtrm.command.doCheck: Seleziona il radio button o checkbox dell'elemento <b>%s</b> avente valore <b>%s</b>
+site.wtrm.command.doUncheck: Deseleziona il radio button o checkbox <b>%s</b> avente valore <b>%s</b>
+site.wtrm.command.doSelect: Seleziona il valore <b>%s</b> dalla selectbox <b>%s</b>
+site.wtrm.command.doWaitForElement: Attendi per l'elemento <b>%s</b>
+site.wtrm.command.doWaitForElementWithText: Attendi per l'elemento <b>%s</b> con testo <b>%s</b>
+site.wtrm.command.doSleep: Attendi <b>%s</b>ms
+site.wtrm.command.doSwitchToFrame: Passa al frame <b>%s</b>
+site.wtrm.command.doSwitchToParentFrame: Passa al frame padre
+site.wtrm.command.doSwitchToNewPage: Passa alla nuova pagina creata
+site.wtrm.command.doSwitchToMainPage: Passa alla pagina principale
+site.wtrm.command.checkUrl: Controlla se l'URL nella barra è <b>%s</b>
+site.wtrm.command.checkUrlWithContentType: Controlla se l'URL <b>%s</b> ha il content type %s
+site.wtrm.command.checkIfElementExists: Controlla se l'elemento <b>%s</b> esiste
+site.wtrm.command.checkIfElementNotExists: Controlla se l'elemento <b>%s</b> <i>NON</i> esiste
+site.wtrm.command.checkIfElementHasText: Controlla se l'elemento <b>%s</b> contiene <b>%s</b>
+site.wtrm.command.checkIfElementHasNotText: Controlla se l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
+site.wtrm.command.checkIfElementHasHTML: Controlla se l'elemento <b>%s</b> contiene <b>%s</b>
+site.wtrm.command.checkIfElementHasNotHTML: Controlla se l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
+site.wtrm.command.checkIfElementHasValue: Controlla se il campo d'input o area di testo con l'elemento <b>%s</b> contiene <b>%s</b>
+site.wtrm.command.checkIfElementHasNotValue: Controlla se il campo d'input o area di testo con l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
+site.wtrm.command.checkIfElementIsChecked: Controlla se il radio button o checkbox <b>%s</b> è selezionato
+site.wtrm.command.checkIfElementIsNotChecked:Controlla se il radio button o checkbox <b>%s</b> <i>NON</i> è selezionato
+site.wtrm.command.checkIfElementIsSelected: Controlla se il valore <b>%s</b> della selectbox <b>%s</b> è selezionato
+site.wtrm.command.checkIfElementIsNotSelected: Controlla se il valore <b>%s</b> della selectbox <b>%s</b> <i>NON</i> è selezionato
+
+site.screen.configure.title: Configura schermata
+site.screen.attr.scale: Scala
+site.screen.attr.show_hostname: Mostra hostname
+site.screen.attr.show_ipaddr: Mostra indirizzo IP
+site.screen.attr.show_company: Mostra azienda
+site.screen.attr.show_sla: Mostra SLA
+site.screen.attr.show_services: Mostra i servizi
+site.screen.attr.show_service_summary: Mostra riepilogo servizi
+site.screen.attr.show_acknowledged: Mostra servizi riconosciuti
+site.screen.attr.sort_by_sla: Ordina per SLA
+site.screen.attr.bg_color: Colore sfondo
+site.screen.attr.bg_color_ok: Colore sfondo OK
+site.screen.attr.text_color_ok: Colore testo OK
+site.screen.attr.bg_color_info: Colore sfondo INFO
+site.screen.attr.text_color_info: Colore testo INFO
+site.screen.attr.bg_color_warning: Colore sfondo ALLERTA
+site.screen.attr.text_color_warning: Colore testo ALLERTA
+site.screen.attr.bg_color_critical: Colore sfondo CRITICO
+site.screen.attr.text_color_critical: Colore testo CRITICO
+site.screen.attr.bg_color_unknown: Colore sfondo SCONOSCIUTO
+site.screen.attr.text_color_unknown: Colore testo SCONOSCIUTO
+site.screen.attr.bg_color_time: Colore sfondo TEMPO
+site.screen.attr.text_color_time: Colore testo TEMPO
+
+site.maintenance.text.tooltip: Abilita o disabilita modalità manutenzione.
+site.maintenance.text.enable: Abilita modalità manutenzione
+site.maintenance.text.disable: Disabilita modalità manutenzione
+site.maintenance.desc.warning: Attenzione!<br/><br/>Se si abilita la modalità manutenzione tutto il sistema di notifiche verrà disattivato fino alla disabilitazione manuale della modalità.
+site.maintenance.text.enabled: Attenzione!<br/><br/>La modalità manutenzione di Bloonix è attivaed il sistema di notifiche è disattivato. Si prega di contattare l'amministratore per maggiori informazioni.

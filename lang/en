@@ -93,13 +93,13 @@ err-620: This object already exists!
 err-630: Invalid parameter settings found!
 err-631: The parameter offset must be an numeric value, min 0.
 err-632: The parameter limit must be an numeric value, min 0, max <b>%s</b>.
-err-633: The parameter sort_by must begin with a character of a-z and only characters from a-z, 0-9 and a underscore are allowed. The maximum length is 63 characters.
-err-634: For the parameter sort_type only "asc" or "desc" is allowed as value.
+err-633: The parameter sort_by must begin with a character of a-z and only characters from a-z, 0-9 and an underscore are allowed. The maximum length is 63 characters.
+err-634: For the parameter sort_type only "asc" or "desc" are allowed as values.
 err-640: No data available!
 err-700: Please change your password!
 err-701: Incorrect password!
-err-702: The new password is to long (max 128 signs)!
-err-703: The new password is to short (min 8 signs)!
+err-702: The new password is too long (max 128 signs)!
+err-703: The new password is too short (min 8 signs)!
 err-704: The passwords doesn't match!
 err-705: The new and the old password cannot be the same!
 err-802: Sorry, but this feature is not available!
@@ -376,8 +376,8 @@ text.allow_from_desc: The keyword <i>all</i> is equal to <i>0.0.0.0/0, ::/0</i> 
  Examples:
  <br/><br/>192.168.10.0/24, 192.168.14.10/32
  <br/><br/>Note that prepend zeros are not allowed:
- <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> is not allowed
- <br/><i>10.5.8.1</i> or <i>1::1</i> is allowed
+ <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> are not allowed
+ <br/><i>10.5.8.1</i> or <i>1::1</i> are allowed
 
 site.login.welcome: Welcome to Bloonix! Please log in.
 site.login.title: Login to the monitoring system
@@ -485,7 +485,7 @@ schema.company.desc.max_metrics_per_chart: The maximum number of metrics per use
 schema.company.desc.max_dashboards_per_user: The maximum number of dashboards that can be created by a user.
 schema.company.desc.max_dashlets_per_dashboard: The maximum number of dashlets that can be added to a dashboard.
 schema.company.desc.max_sms: The maximum number of SMS that can be sent per month. Set 0 (null) if unlimited.
-schema.company.desc.max_hosts_in_reg_queue: The maximum number of hosts that are allowed to wait in the queue for for registration.
+schema.company.desc.max_hosts_in_reg_queue: The maximum number of hosts that are allowed to wait in the queue for registration.
 schema.company.desc.host_reg_authkey: This key can be used in combination with the company ID to register new hosts.
 schema.company.desc.host_reg_enabled: With this option it's possible to enable or disable the host registration feature.
 schema.company.desc.host_reg_allow_from: Enter a comma separated list of IPs or networks from which a host registration is allowed.
@@ -516,7 +516,7 @@ schema.user.attr.comment: Comment
 schema.user.attr.allow_from: Allow from
 schema.user.desc.company: Select the company the user belongs to.
 schema.user.desc.username: Enter the username in the format <i>user@domain.test</i>.
-schema.user.desc.name: This is the users full name.
+schema.user.desc.name: This is the user full name.
 schema.user.desc.phone: The phone number can be very helpful for colleagues or the Bloonix support in emergency situations.
 schema.user.desc.timezone: Select the timezone of the user.
 schema.user.desc.authentication_key: With this key it's possible to visit the notification screen without password authentification. The query string to visit the notification screen looks like<br/><br/><b>/screen/?username=XXX;authkey=XXX</b>
@@ -629,12 +629,12 @@ schema.host.desc.status: The status of the host. Possible values are OK, INFO, W
 schema.host.desc.description: This is a short description of the host.
 schema.host.desc.ipaddr: This is the main IP address of the host.
  <br/><br/>Note that prepend zeros are not allowed:
- <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> is not allowed
- <br/><i>10.5.8.1</i> or <i>1::1</i> is allowed
+ <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> are not allowed
+ <br/><i>10.5.8.1</i> or <i>1::1</i> are allowed
 schema.host.desc.ipaddr6: This is the main IP v6 address of the host.
  <br/><br/>Note that prepend zeros are not allowed:
- <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> is not allowed
- <br/><i>10.5.8.1</i> or <i>1::1</i> is allowed
+ <br/><br/><i>010.005.008.001</i> or <i>0001::0001</i> are not allowed
+ <br/><i>10.5.8.1</i> or <i>1::1</i> are allowed
 schema.host.desc.comment: This field can be used to set a short comment to the host.
 schema.host.desc.sysgroup: This is a complete free to use field with no restrictions.
 schema.host.desc.sysinfo: This field allows you to set an external link to you own host documentation, e.g.:<br/><br/>Linktext=https://mysite.test/?id=12345.<br/><br/>Not allowed characters: "\
@@ -716,10 +716,10 @@ schema.host.action.enable_notifications_multiple: Enable notifications of the se
 schema.host.action.activate_multiple: Activate the selected hosts
 schema.host.action.deactivate_multiple: Deactivate the selected hosts
 schema.host.action.remove_template: Remove template
-schema.host.text.remove_template_warning: Please note that all services of the template will be removed from all hosts that has its services inherited from this template!
+schema.host.text.remove_template_warning: Please note that all services of the template will be removed from all hosts that have their services inherited from this template!
 schema.host.text.templates_not_assigned: Not assigned templates
 schema.host.action.add_template: Add template
-schema.host.info.notification_disabled: Notifications are disabled of the host.
+schema.host.info.notification_disabled: Notifications of the host are disabled .
 schema.host.info.notification_disabled_short: Notifications disabled
 schema.host.info.inactive: The host is not active.
 schema.host.info.sysinfo: External system information available.
@@ -808,7 +808,7 @@ schema.contact.attr.sms_notification_level: SMS notification level
 schema.contact.attr.escalation_time: Escalation level
 schema.contact.desc.company_id: Select the company the contact belongs to.
 schema.contact.desc.name: This is the full name of the contact.
-schema.contact.desc.escalation_time: Select an escalation level for the contact. With the escalation level it's possible to control when a contact gets a notification. As example the escalation level of 30 minutes means that the contact is notfied if the service is still not OK after 30 minutes.
+schema.contact.desc.escalation_time: Select an escalation level for the contact. With the escalation level it's possible to control when a contact gets a notification. As example the escalation level of 30 minutes means that the contact is notified if the service is still not OK after 30 minutes.
 schema.contact.text.list: Overview of all contacts
 schema.contact.text.create: Create a new contact
 schema.contact.text.delete: Delete contact
@@ -853,7 +853,7 @@ schema.contactgroup.text.service_nonmembers: Services not in contact group
 schema.contactgroup.text.selected_services: Selected services
 
 schema.notification.attr.time: Timestamp
-schema.notification.attr.send_to: Receipient
+schema.notification.attr.send_to: Recipient
 schema.notification.attr.subject: Subject
 schema.notification.attr.message: Message
 schema.notification.attr.message_service: Type
@@ -1002,18 +1002,18 @@ schema.service.desc.interval: This is the check interval of the service. If no v
 schema.service.desc.retry_interval: This is the retry interval of the service. If a service is not in OK status then the interval is forced to this value. If no value is set, then the retry interval setting of the host is inherited.
 schema.service.desc.timeout: This is the timeout of the service and begins to count after the interval. If the status of the service is not updated in this time then a critical status is set for the service with the information that it seems that the Bloonix agent is not working. If no value is set, then the timeout of the host is inherited.
 schema.service.desc.attempt_warn2crit: This option is useful if you want that the status of the service upgrades to CRITICAL if the real status is WARNING and maximum attempts were reached.
-schema.service.desc.attempt_max: This option controls when you gets a notification of services that are not in status OK. As example a value of 3 means that you get a notification first if the service check returns 3 times in a row a not OK status.
+schema.service.desc.attempt_max: This option controls when you get a notification of services that are not in status OK. As example a value of 3 means that you get a notification first if the service check returns 3 times in a row a not OK status.
 schema.service.desc.active: This option activates or de-activates the service check.
 schema.service.desc.acknowledged: This option is useful if a service is not OK and if you want to disable the notifications temporary. The notifications will be enabled again if the services switched to the status OK.
 schema.service.desc.notification: This option activates or de-activates the notifications per email or SMS.
 schema.service.desc.notification_interval: This is the notification interval for emails. As long as the service is not OK you will be re-notified in this interval. If no value is set, then the interval of the host is inherited.
-schema.service.desc.fd_enabled: This option enables or disables the flap detection. The flap detection is very useful to detect services that switches between OK and not OK in a very short time and when the counter of <i>attempt max</i> is never reached. The flap detection checkes how many times a service switched between different states in a given time. If the status switched to many times, then a notification will be triggered.
+schema.service.desc.fd_enabled: This option enables or disables the flap detection. The flap detection is very useful to detect services that switches between OK and not OK in a very short time and when the counter of <i>attempt max</i> is never reached. The flap detection checkes how many times a service switched between different states in a given time. If the status switched too many times, then a notification will be triggered.
 schema.service.desc.fd_time_range: This is the period the flap detection checks for status switches.
 schema.service.desc.fd_flap_count: This is the threshold for the flap detection. If more than x-times the status switched in a given time a notificaton is triggered.
 schema.service.desc.is_volatile: With this option you can define if the check is <i>volatile</i>. Some checks has the peculiarity that they are only for a very short time in a CRITICAL status. As example if you check a logfile for specific strings, like <i>possible break-in attempt</i> and the check returns a CRITICAL status because the string were found, then it's possible that the next check does not find the string any more and would return the status OK. In this case maybe you would never notice that someone tried to break in. For this purpose you can define that the service is <i>volatile</i>. That means that the service stays in a CRITICAL or WARNING state until you clear the volatile status manually.
 schema.service.desc.volatile_retain: Set a time after the volatile status is automatically cleared.
-schema.service.desc.host_alive_check: A host alive check is a check that determines if a host is down or alive. If this check returns a critical status then you get a special notification. If other service checks returns a critical status at the same time then the notifications will be suppressed. It's recommended you use the ping check as host alive check.
-schema.service.desc.passive_check: A passive check is a check which is not checked by Bloonix itself, but by a external service or script. Passive checks has no timeout and are very useful, for example, for SNMP traps. The external service has to report a critical state to the Bloonix-Agent, which in turn reports the state to the Bloonix-Server.
+schema.service.desc.host_alive_check: A host alive check is a check that determines if a host is down or alive. If this check returns a critical status then you get a special notification. If another service checks returns a critical status at the same time then the notifications will be suppressed. It's recommended you use the ping check as host alive check.
+schema.service.desc.passive_check: A passive check is a check which is not checked by Bloonix itself, but by an external service or script. Passive checks have no timeout and are very useful, for example, for SNMP traps. The external service has to report a critical state to the Bloonix-Agent, which in turn reports the state to the Bloonix-Server.
 schema.service.text.services: Services
 schema.service.text.list: Service details for all hosts
 schema.service.text.title: Services
@@ -1060,7 +1060,7 @@ schema.service.action.acknowledge_multiple: Acknowledge the status of the select
 schema.service.action.clear_acknowledgement_multiple: Clear the acknowledgement of the selected services
 schema.service.action.clear_volatile_multiple: Clear the volatile status of the selected services
 schema.service.action.multiple_force_next_check: Reset the interval and force the next check of the service
-schema.service.info.notification: Notifications are disabled of the service.
+schema.service.info.notification: Notifications of the service are disabled.
 schema.service.info.active: The service is not active.
 schema.service.info.acknowledged: The service is acknowledged.
 schema.service.info.flapping: The service is flapping.
@@ -1227,11 +1227,11 @@ site.wtrm.attr.text: Inner text
 site.wtrm.attr.html: Inner HTML
 site.wtrm.attr.ms: Milliseconds
 site.wtrm.attr.name: Name
-site.wtrm.desc.username: This username for the auth basic authentification.
-site.wtrm.desc.password: This password for the auth basic authentification.
+site.wtrm.desc.username: This username for the auth basic authentication.
+site.wtrm.desc.password: This password for the auth basic authentication.
 site.wtrm.desc.userAgent: This is the User-Agent to send for all requests.
 site.wtrm.desc.url: This is the full URL to request. As example: http://www.bloonix.de/
-site.wtrm.desc.contentType: Enter content type that is expeced for the URL.
+site.wtrm.desc.contentType: Enter content type that is expected for the URL.
 site.wtrm.desc.status: Enter the expected http status for the URL.
 site.wtrm.desc.parent: It's possible to set a parent ID. The ID, class or name is searched within the element of the parent ID.
 site.wtrm.desc.element: The element you want to select. As example: #id, .class, name<br/><br/>
