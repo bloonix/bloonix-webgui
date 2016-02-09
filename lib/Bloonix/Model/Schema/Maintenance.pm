@@ -547,4 +547,16 @@ sub v12 {
     $sth->finish;
 }
 
+sub v13 {
+    my $self = shift;
+
+    $self->update("alter table host drop column hw_manufacturer");
+    $self->update("alter table host drop column hw_product");
+    $self->update("alter table host drop column os_manufacturer");
+    $self->update("alter table host drop column os_product");
+    $self->update("alter table host drop column virt_manufacturer");
+    $self->update("alter table host drop column virt_product");
+    $self->update("alter table host drop column location");
+}
+
 1;

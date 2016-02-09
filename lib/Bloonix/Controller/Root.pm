@@ -142,7 +142,7 @@ sub startup {
     my ($self, $c) = @_;
 
     $c->route->map("/")->to("index");
-    $c->route->map("/lang/:lang(de|en)")->to("lang");
+    $c->route->map("/lang/:lang(en|de|it)")->to("lang");
     $c->route->map("/operateas/:id")->to("operateas");
     $c->route->map("/whoami")->to("whoami");
     $c->route->map("/login")->to("login");

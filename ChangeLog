@@ -17,7 +17,7 @@ bloonix-webgui (0.75) released at 2015-11-15
     * New Feature: It's now possible to configure the authkey for each
       location in the webgui.
     * Kicked deprecated host parameters: hw_manufacturer, hw_product
-      os_manufacturer, os_product, virt_manufacturer,j virt_product,
+      os_manufacturer, os_product, virt_manufacturer, virt_product,
       location.
     * Implemented Bloonix::NetAddr to change IP ranges.
     * Implemented the feature to set bloonix into maintenance.

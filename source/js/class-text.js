@@ -86,12 +86,22 @@ Text.dateFormat = {
     },
     de: {
         dayNames: [
-          "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
+            "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
             "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
         ],
         monthNames: [
             "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ]
+    },
+    it: {
+        dayNames: [
+            "Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab",
+            "Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"
+        ],
+        monthNames: [
+            "Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic",
+            "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
         ]
     }
 };

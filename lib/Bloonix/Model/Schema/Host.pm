@@ -1033,9 +1033,9 @@ sub system_categories {
     my @cols = qw(
         sysgroup sysinfo host_class system_class location_class
         os_class hw_class env_class
-        hw_manufacturer hw_product os_manufacturer
-        os_product virt_manufacturer virt_product location
     );
+    # hw_manufacturer hw_product os_manufacturer
+    # os_product virt_manufacturer virt_product location
 
     foreach my $col (@cols) {
         $data{$col} = [];

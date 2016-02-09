@@ -1287,7 +1287,7 @@ site.wtrm.command.checkIfElementHasNotHTML: Controlla se l'elemento <b>%s</b> <i
 site.wtrm.command.checkIfElementHasValue: Controlla se il campo d'input o area di testo con l'elemento <b>%s</b> contiene <b>%s</b>
 site.wtrm.command.checkIfElementHasNotValue: Controlla se il campo d'input o area di testo con l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
 site.wtrm.command.checkIfElementIsChecked: Controlla se il radio button o checkbox <b>%s</b> è selezionato
-site.wtrm.command.checkIfElementIsNotChecked:Controlla se il radio button o checkbox <b>%s</b> <i>NON</i> è selezionato
+site.wtrm.command.checkIfElementIsNotChecked: Controlla se il radio button o checkbox <b>%s</b> <i>NON</i> è selezionato
 site.wtrm.command.checkIfElementIsSelected: Controlla se il valore <b>%s</b> della selectbox <b>%s</b> è selezionato
 site.wtrm.command.checkIfElementIsNotSelected: Controlla se il valore <b>%s</b> della selectbox <b>%s</b> <i>NON</i> è selezionato
 

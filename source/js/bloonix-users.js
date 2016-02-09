@@ -404,7 +404,8 @@ Bloonix.changeUserLanguage = function() {
 
     $.each([
         { text: "English", flag: "gb", lang: "en" },
-        { text: "Deutsch", flag: "de", lang: "de" }
+        { text: "Deutsch", flag: "de", lang: "de" },
+        { text: "Italiana", flag: "it", lang: "it" }
     ], function(i, item) {
         var row = table.createFormRow(
             Utils.create("span")

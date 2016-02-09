@@ -42,9 +42,10 @@ sub new {
         host => [qw(
             id ipaddr description comment status last_check sysgroup sysinfo
             host_class system_class location_class os_class hw_class env_class
-            hw_manufacturer hw_product os_manufacturer os_product virt_manufacturer
-            virt_product location coordinates interval retry_interval data_retention
+            coordinates interval retry_interval data_retention
         )],
+        # hw_manufacturer hw_product os_manufacturer os_product virt_manufacturer
+        # virt_product location
         service => [qw(
             id command plugin agent_id description active acknowledged
             notification flapping scheduled message
