@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.79
+Version: 0.80
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,10 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Fri Feb 12 2016 Jonny Schulz <js@bloonix.de> - 0.80-1
+- Kicked field "authkey" for locations. The database column
+  will be dropped.
+- Some italian lang fixes.
 * Tue Feb 09 2016 Jonny Schulz <js@bloonix.de> - 0.79-1
 - Added lang italiana.
 * Wed Nov 25 2015 Jonny Schulz <js@bloonix.de> - 0.78-1

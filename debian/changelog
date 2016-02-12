@@ -1,3 +1,11 @@
+bloonix-webgui (0.80-1) unstable; urgency=low
+
+    * Kicked field "authkey" for locations. The database column
+      will be dropped.
+    * Some italian lang fixes.
+
+ -- Jonny Schulz <js@bloonix.de>  Fri, 12 Feb 2016 17:41:08 +0100
+
 bloonix-webgui (0.79-1) unstable; urgency=low
 
     * Added lang italiana.

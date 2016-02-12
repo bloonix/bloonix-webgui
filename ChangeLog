@@ -1,3 +1,9 @@
+bloonix-webgui (0.80) released at 2016-02-11
+
+    * Kicked field "authkey" for locations. The database column
+      will be dropped.
+    * Some italian lang fixes.
+
 bloonix-webgui (0.79) released at 2016-02-09
 
     * Added lang italiana.

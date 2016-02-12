@@ -349,6 +349,8 @@ Bloonix.changeUserPassword = function(o) {
         showButton: false
     }).create();
 
+    form.form.attr("autocomplete", "off");
+
     form.input({
         name: "current",
         type: "password",

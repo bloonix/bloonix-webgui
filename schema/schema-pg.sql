@@ -474,8 +474,7 @@ CREATE TABLE "location" (
     "country"      VARCHAR(50) NOT NULL,
     "continent"    VARCHAR(13) NOT NULL,
     "coordinates"  VARCHAR(500) NOT NULL DEFAULT '0,0',
-    "description"  VARCHAR(500),
-    "authkey"      VARCHAR(1024) NOT NULL DEFAULT ''
+    "description"  VARCHAR(500)
 );
 
 -- Host and service dependencies

@@ -8,7 +8,7 @@ use base qw(Bloonix::DBI::CRUD);
 sub init {
     my $self = shift;
 
-    $self->{schema_version} = 12;
+    $self->{schema_version} = 13;
     $self->log->warning("start database upgrade");
     $self->dbi->reconnect;
     $self->run_upgrade;
@@ -557,6 +557,7 @@ sub v13 {
     $self->update("alter table host drop column virt_manufacturer");
     $self->update("alter table host drop column virt_product");
     $self->update("alter table host drop column location");
+    $self->update("alter table location drop column authkey");
 }
 
 1;

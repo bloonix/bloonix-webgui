@@ -33,11 +33,6 @@ sub init {
             min_size => 0,
             max_size => 500,
             optional => 1
-        },
-        authkey => {
-            min_size => 0,
-            max_size => 1024,
-            optional => 1
         }
     );
 }

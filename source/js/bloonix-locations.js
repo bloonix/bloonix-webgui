@@ -112,12 +112,6 @@ Bloonix.getLocationFormElements = function() {
             name: "description",
             text: Text.get("schema.location.attr.description"),
             maxlength: 500
-        },{
-            element: "textarea",
-            name: "authkey",
-            text: Text.get("schema.location.attr.authkey"),
-            maxlength: 1024,
-            genString: 64
         }
     ];
 };
