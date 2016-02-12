@@ -156,6 +156,7 @@ action.help: Aiuto
 action.search: Cerca
 action.quicksearch: Ricerca veloce
 action.extsearch: Ricerca estesa
+action.filter: Filtra
 action.refresh: ricarica
 action.replace: Sostituisci
 action.configure: Configura
@@ -1149,6 +1150,7 @@ schema.user_chart.attr.title: Titolo
 schema.user_chart.desc.title: Il Titolo del diagramma.
 schema.user_chart.attr.subtitle: Sottotitolo
 schema.user_chart.desc.subtitle: Il Titolo del diagramma.
+schema.user_chart.attr.yaxis_label: Etichetta asse delle Y
 schema.user_chart.desc.yaxis_label: L'etichetta dell'asse delle Y.
 schema.user_chart.text.title: Diagrammi utente
 schema.user_chart.text.user_chart: Editor diagramma
