@@ -14,6 +14,10 @@ sub set {
     my ($self, $action) = @_;
     my $c = $self->{c};
 
+    if ($c->config->{webapp}->{enable_check_token} == 0) {
+        return 1;
+    }
+
     my $token = $c->plugin->util->sha256;
     $action //= "n/a";
 
@@ -32,6 +36,11 @@ sub set {
 sub check {
     my ($self, $action, $token) = @_;
     my $c = $self->{c};
+
+    if ($c->config->{webapp}->{enable_check_token} == 0) {
+        return 1;
+    }
+
     $token ||= $c->req->param("token");
     $action ||= "n/a";
 

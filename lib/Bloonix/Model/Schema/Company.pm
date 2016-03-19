@@ -250,7 +250,6 @@ sub get_companies_for_selection {
 sub create_new_structure {
     my ($self, $data) = @_;
 
-    my $old = $self->dbi->autocommit(0);
     my $company;
     $data->{variables} = "{}";
 
@@ -275,7 +274,7 @@ sub create_new_structure {
         $company = $self->create_and_get($data)
             or die "unable to create company";
 
-        $self->dbi->unlock("company");
+        $self->dbi->unlock;
 
         ## ****** 24 x 7 ******
         my $timeperiod = $self->schema->timeperiod->create_and_get(
@@ -327,7 +326,7 @@ sub create_new_structure {
     };
 
     if ($@) {
-        $self->dbi->unlock("company");
+        eval { $self->dbi->unlock };
         eval { $self->dbi->rollback };
         if ($@ =~ /^duplicate company/) {
             $company = { status => "dup", data => "company" };
@@ -338,7 +337,6 @@ sub create_new_structure {
         $company = { status => "ok", data => $company };
     }
 
-    $self->dbi->autocommit($old);
     return $company;
 }
 

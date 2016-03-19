@@ -58,7 +58,7 @@ sub log {
     my ($self, $action, $log) = @_;
     my $c = $self->c;
 
-    if (!$c->config->{webapp}->{enable_user_tracking}) {
+    if ($c->config->{webapp}->{enable_user_tracking} == 0) {
         return 1;
     }
 

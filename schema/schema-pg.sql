@@ -428,6 +428,7 @@ CREATE TABLE "service" (
     "highest_attempt_status"    VARCHAR(10) NOT NULL DEFAULT 'OK',  -- save the highest status
     "flapping"                  CHAR(1) NOT NULL DEFAULT 0,         -- is the services flapping or not
     "scheduled"                 CHAR(1) NOT NULL DEFAULT 0,         -- has the service a scheduled downtime or not
+    "agent_dead"                CHAR(1) NOT NULL DEFAULT 0,         -- is the agent dead?
     "next_check"                BIGINT NOT NULL DEFAULT 0,          -- next check of the service
     "next_timeout"              BIGINT NOT NULL DEFAULT 0,          -- next timeout of the service
     "last_event"                BIGINT NOT NULL DEFAULT date_part('epoch', now()), -- when the last event was stored

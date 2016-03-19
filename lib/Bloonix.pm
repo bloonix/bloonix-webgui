@@ -172,11 +172,16 @@ sub _validate_webapp {
             type => Params::Validate::SCALAR,
             regex => qr/^(yes|no|0|1)\z/,
             default => 0
+        },
+        enable_check_token => {
+            type => Params::Validate::SCALAR,
+            regex => qr/^(yes|no|0|1)\z/,
+            default => 1
         }
     });
 
-    foreach my $key (qw/cloudapp show_cost_info show_locations is_demo allow_simple_usernames/) {
-        $config{$key} = $config{$key} =~ /0|no/ ? 0 : "yes";
+    foreach my $key (qw/cloudapp show_cost_info show_locations is_demo allow_simple_usernames check_token enable_user_tracking/) {
+        $config{$key} = $config{$key} =~ /0|no/ ? 0 : 1;
     }
 
     if ($config{hostname} eq "yourdomain.test") {

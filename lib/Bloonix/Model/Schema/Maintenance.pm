@@ -550,14 +550,20 @@ sub v12 {
 sub v13 {
     my $self = shift;
 
-    $self->update("alter table host drop column hw_manufacturer");
-    $self->update("alter table host drop column hw_product");
-    $self->update("alter table host drop column os_manufacturer");
-    $self->update("alter table host drop column os_product");
-    $self->update("alter table host drop column virt_manufacturer");
-    $self->update("alter table host drop column virt_product");
-    $self->update("alter table host drop column location");
-    $self->update("alter table location drop column authkey");
+    $self->upgrade("alter table host drop column hw_manufacturer");
+    $self->upgrade("alter table host drop column hw_product");
+    $self->upgrade("alter table host drop column os_manufacturer");
+    $self->upgrade("alter table host drop column os_product");
+    $self->upgrade("alter table host drop column virt_manufacturer");
+    $self->upgrade("alter table host drop column virt_product");
+    $self->upgrade("alter table host drop column location");
+    $self->upgrade("alter table location drop column authkey");
+}
+
+sub v14 {
+    my $self = shift;
+
+    $self->upgrade("alter table service add column agent_dead char(1) default '0'");
 }
 
 1;

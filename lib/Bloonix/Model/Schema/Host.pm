@@ -300,7 +300,6 @@ sub by_user_id {
             a => "host.ipaddr", ipaddr => "host.ipaddr",
             s => "host.status", status => "host.status",
             g => "host.sysgroup", sysgroup => "host.sysgroup",
-            l => "host.location", location => "host.location",
             c => "host.coordinates", coordinates => "host.coordinates",
             host_class => "host.host_class",
             system_class => "host.system_class",
@@ -311,7 +310,7 @@ sub by_user_id {
         },
         concat => [
             "host.id", "host.hostname", "host.ipaddr", "host.description",
-            "host.status", "host.sysgroup", "host.location"
+            "host.status", "host.sysgroup"
         ],
         delimiter => " ",
         count => "host.id",
