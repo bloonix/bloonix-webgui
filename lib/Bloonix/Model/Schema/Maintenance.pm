@@ -8,7 +8,7 @@ use base qw(Bloonix::DBI::CRUD);
 sub init {
     my $self = shift;
 
-    $self->{schema_version} = 13;
+    $self->{schema_version} = 14;
     $self->log->warning("start database upgrade");
     $self->dbi->reconnect;
     $self->run_upgrade;

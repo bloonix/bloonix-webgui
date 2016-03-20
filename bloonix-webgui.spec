@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.80
+Version: 0.81
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Sun Mar 20 2016 Jonny Schulz <js@bloonix.de> - 0.81-1
+- Improved transaction handling.
+- New column table service: agent_dead
 * Fri Feb 12 2016 Jonny Schulz <js@bloonix.de> - 0.80-1
 - Kicked field "authkey" for locations. The database column
   will be dropped.

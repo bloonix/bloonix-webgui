@@ -1,3 +1,10 @@
+bloonix-webgui (0.81-1) unstable; urgency=low
+
+    * Improved transaction handling.
+    * New column table service: agent_dead
+
+ -- Jonny Schulz <js@bloonix.de>  Sun, 20 Mar 2016 15:36:11 +0100
+
 bloonix-webgui (0.80-1) unstable; urgency=low
 
     * Kicked field "authkey" for locations. The database column
