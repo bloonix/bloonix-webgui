@@ -395,8 +395,7 @@ CREATE TABLE "service_parameter" (
     "fd_enabled"                CHAR(1) NOT NULL DEFAULT 1,
     "fd_time_range"             INTEGER NOT NULL DEFAULT 1800,
     "fd_flap_count"             INTEGER NOT NULL DEFAULT 8,
-    "is_volatile"               CHAR(1) NOT NULL DEFAULT 0, -- is this a volatile status
-    "volatile_retain"           INTEGER NOT NULL DEFAULT 0  -- the volatile retain time
+    "is_volatile"               CHAR(1) NOT NULL DEFAULT 0 -- is this a volatile status
 );
 
 CREATE INDEX "service_parameter_ref_id_index" ON "service_parameter" ("ref_id");

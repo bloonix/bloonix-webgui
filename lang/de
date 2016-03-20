@@ -979,7 +979,6 @@ schema.service.attr.next_check: Nächste Prüfung
 schema.service.attr.last_event: Letzes Ereignis
 schema.service.attr.is_volatile: Ist der Service flüchtig (volatile)
 schema.service.attr.volatile_status: Der aktuelle flüchtige Status (volatile)
-schema.service.attr.volatile_retain: Vorhaltezeit des flüchtigen Status (volatile)
 schema.service.attr.volatile_since: Seit wann ist der Status flüchtig (volatile)
 schema.service.attr.status: Status
 schema.service.attr.message: Status Informationen
@@ -1012,7 +1011,6 @@ schema.service.desc.fd_enabled: Diese Option aktiviert oder deaktiviert die Erke
 schema.service.desc.fd_time_range: Dies ist der Zeitbereich, in dem die Statuswechsel gemessen werden.
 schema.service.desc.fd_flap_count: Dies ist die maximale Anzahl von Statuswelchseln, die in einem bestimmten Zeitraum auftreten dürfen.
 schema.service.desc.is_volatile: Mit dieser Option können Sie bestimmen, ob es sich bei diesem Service um einen flüchten Services handelt. Einige Services haben die Besonderheit, dass Sie nur für einen sehr kurzen Zeitraum kritisch sind. Dies können zum Beispiel Logdateien-Checks sein, in denen nach dem Vorhandensein bestimmter Strings gesucht wird, zum Beispiel Strings wie <i>possible break-in attempt</i>. Wenn beim nächsten Logdateien Check dieser String nicht mehr vorhanden ist, würde der Service wieder in den OK Status wechseln und man würde den Einbruch-Versuch nicht bemerken. Ein Service, der dagegen als ein flüchtiger Service konfiguriert ist, bleibt solange in einem nicht-OK Status, bis der Status aufgehoben wurde.
-schema.service.desc.volatile_retain: Mit dieser Option kann konfiguriert werden, ob der flüchtige Status eines Services nach einer bestimmten Zeit automatisch aufgehoben wird.
 schema.service.desc.host_alive_check: Ein Host-Alive-Check ist ein Check der feststellt, ob ein Host UP oder DOWN ist. Wenn dieser Service Check einen kritischen Status liefert erhalten Sie eine besondere Nachricht. Wenn andere Services des Hosts ebenfalls in einem kritischen Status sind, während der Host-Alive-Check kritisch ist, dann werden die Benachrichtiungen anderer Services unterdrückt. Es wird empfohlen einen Ping-Check als Host-Alive-Check zu definieren.
 schema.service.desc.passive_check: Ein passiver Check ist ein Check, der nicht von Bloonix selbst geprüft wird, sondern von einem externen Service oder Skriptund haben keinen Timeout. Passive Checks eignen sich zum Beispiel für SNMP Traps. Dabei meldet ein externer Service einen kritischen Status an den Bloonix-Agenten, dieser wiederrum meldet den Status an den Bloonix-Server.
 schema.service.text.services: Services
@@ -1181,7 +1179,7 @@ schema.location.attr.description: Beschreibung
 schema.location.text.list: Lokationen
 schema.location.text.create: Eine neue Lokation erstellen
 schema.location.text.view: Lokation %s
-schema.location.text.delete: Lokation %s löschen
+schema.location.text.delete: Lokation löschen
 
 site.wtrm.action.doAuth: Set auth basic <b>username</b> and <b>password</b>
 site.wtrm.action.doUserAgent: Set the <b>user agent</b> for the request

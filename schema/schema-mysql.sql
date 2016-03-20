@@ -398,7 +398,6 @@ CREATE TABLE `service_parameter` (
     `fd_time_range`             INTEGER NOT NULL DEFAULT 1800,
     `fd_flap_count`             INTEGER NOT NULL DEFAULT 8,
     `is_volatile`               CHAR(1) NOT NULL DEFAULT 0, -- is this a volatile status
-    `volatile_retain`           INTEGER NOT NULL DEFAULT 0, -- the volatile retain time
     FOREIGN KEY (`host_template_id`) REFERENCES `host_template`(`id`) ON DELETE CASCADE,
     FOREIGN KEY (`plugin_id`) REFERENCES `plugin`(`id`)
 ) ENGINE=InnoDB;

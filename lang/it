@@ -978,7 +978,6 @@ schema.service.attr.next_check: Prossimo controllo
 schema.service.attr.last_event: Ultimo evento
 schema.service.attr.is_volatile: Il servizio è discontinuo
 schema.service.attr.volatile_status: L'attuale stato discontinuo del servizio
-schema.service.attr.volatile_retain: Tempo ritenuta discontinuità
 schema.service.attr.volatile_since: Da quando lo stato è discontinuo
 schema.service.attr.status: Stato
 schema.service.attr.message: Informazioni sullo stato
@@ -1011,7 +1010,6 @@ schema.service.desc.fd_enabled: Questa opzione abilita o disabilita il rilevamen
 schema.service.desc.fd_time_range: Questo è l'orario in cui il rilevamento del flapping controlla i cambi di stato.
 schema.service.desc.fd_flap_count: Questa è la soglia per il rilevamento del flapping. Se lo stato cambia più di x volte nell'arco di tempo, una notifica verrà attivata.
 schema.service.desc.is_volatile: Con questa impostazione si può definire se il controllo dev'essere discontinuo. Alcuni controlli hanno la peculiarità di essere nello stato CRITICO solo per un breve periodo. Ad esempio se si cerca in un file di log la presenza di una stringa specifica, tipo <i>possibile tentativo d'intrusione</i> ed il controllo restituisce uno stato CRITICO, sarà molto probabile che nella ricerca successiva non verrà più ritrovata la stringa fornendo quindi uno stato OK. In questo caso probabilmente non ci si accorgerà mai che qualcuno ha cercato d'introdursi. Per questo motivo si può impostare il servizio come <i>discontinuo</i> mantenendo lo stato del servizio in CRITICO o ALLERTA fino a quando non lo si azzeri manualmente.
-schema.service.desc.volatile_retain: Imposta un tempo dopo il quale lo stato discontinuo viene automaticamente azzerato.
 schema.service.desc.host_alive_check: Un controllo di host operativo determina se un host è giù o attivo. Se questo controllo restituisce uno stato critico, allora si riceve una notifica particolare. Se un successivo controllo di servizio restituisce ancora uno stato critico, allora le notifiche vengono soppresse. Si raccomanda di usare il controllo del ping come controllo per host operativo.
 schema.service.desc.passive_check: Un controllo passivo è una verifica che non viene effettuata da Bloonix, bensì da un servizio o script esterno. I controlli passivi non hanno timeout e sono molto utili, per esempio nel caso di SNMP trap (notifiche senza ACK). Il servizio esterno deve fornire uno stato critico all'agente Bloonix, che di conseguenza lo girerà al server Bloonix.
 schema.service.text.services: Servizi

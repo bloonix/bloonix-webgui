@@ -1641,17 +1641,6 @@ Bloonix.createServiceForm = function(o) {
             name: "is_volatile",
             checked: this.values.is_volatile
         });
-
-        this.form.createElement({
-            text: Text.get("schema.service.attr.volatile_retain"),
-            desc: Text.get("schema.service.desc.volatile_retain"),
-            element: "slider",
-            name: "volatile_retain",
-            options: this.options.volatile_retain,
-            checked: this.values.volatile_retain,
-            secondsToFormValues: true,
-            nullString: Text.get("text.never")
-        });
     };
 
     object.createSubmitButton = function() {

@@ -8,6 +8,6 @@ Homepage: http://www.bloonix.de/
 
 Package: bloonix-webgui
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, bloonix-webgui-core (>= 0.15)
+Depends: ${shlibs:Depends}, ${misc:Depends}, bloonix-webgui-core (>= 0.16)
 Description: Bloonix WebGUI
  This is the web application of Bloonix.

@@ -978,7 +978,6 @@ schema.service.attr.next_check: Next check
 schema.service.attr.last_event: Last event
 schema.service.attr.is_volatile: Is the service volatile
 schema.service.attr.volatile_status: The current volatile status of the service
-schema.service.attr.volatile_retain: The volatile retain time
 schema.service.attr.volatile_since: Since the status is volatile
 schema.service.attr.status: Status
 schema.service.attr.message: Status information
@@ -1011,7 +1010,6 @@ schema.service.desc.fd_enabled: This option enables or disables the flap detecti
 schema.service.desc.fd_time_range: This is the period the flap detection checks for status switches.
 schema.service.desc.fd_flap_count: This is the threshold for the flap detection. If more than x-times the status switched in a given time a notificaton is triggered.
 schema.service.desc.is_volatile: With this option you can define if the check is <i>volatile</i>. Some checks has the peculiarity that they are only for a very short time in a CRITICAL status. As example if you check a logfile for specific strings, like <i>possible break-in attempt</i> and the check returns a CRITICAL status because the string were found, then it's possible that the next check does not find the string any more and would return the status OK. In this case maybe you would never notice that someone tried to break in. For this purpose you can define that the service is <i>volatile</i>. That means that the service stays in a CRITICAL or WARNING state until you clear the volatile status manually.
-schema.service.desc.volatile_retain: Set a time after the volatile status is automatically cleared.
 schema.service.desc.host_alive_check: A host alive check is a check that determines if a host is down or alive. If this check returns a critical status then you get a special notification. If another service checks returns a critical status at the same time then the notifications will be suppressed. It's recommended you use the ping check as host alive check.
 schema.service.desc.passive_check: A passive check is a check which is not checked by Bloonix itself, but by an external service or script. Passive checks have no timeout and are very useful, for example, for SNMP traps. The external service has to report a critical state to the Bloonix-Agent, which in turn reports the state to the Bloonix-Server.
 schema.service.text.services: Services
@@ -1176,7 +1174,7 @@ schema.location.attr.description: Description
 schema.location.text.list: Locations
 schema.location.text.create: Create a new location
 schema.location.text.view: Location %s
-schema.location.text.delete: Delete location %s
+schema.location.text.delete: Delete location
 
 site.wtrm.action.doAuth: Set auth basic <b>username</b> and <b>password</b>
 site.wtrm.action.doUserAgent: Set the <b>user agent</b> for the request

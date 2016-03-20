@@ -564,6 +564,7 @@ sub v14 {
     my $self = shift;
 
     $self->upgrade("alter table service add column agent_dead char(1) default '0'");
+    $self->upgrade("alter table service_parameter drop column volatile_retain");
 }
 
 1;

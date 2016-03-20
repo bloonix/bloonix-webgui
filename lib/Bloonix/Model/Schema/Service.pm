@@ -49,10 +49,6 @@ sub set {
             options => [ 0, 1 ],
             default => 0
         },
-        volatile_retain => {
-            options => [ 0, 300, 900, 1800, 2700, 3600, 7200, 14400, 28800, 43200, 57600, 86400, 172800 ],
-            default => 0
-        },
         fd_enabled => {
             options => [ 0, 1 ],
             default => 1
