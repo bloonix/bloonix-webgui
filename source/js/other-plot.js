@@ -69,6 +69,7 @@ Bloonix.other.plotChart = function(o) {
             mode: o.mode,
             timezone: "browser",
             tickLength: 0,
+            //timeformat: "%H:%M",
             font: {
                 size: 12,
                 lineHeight: 12,

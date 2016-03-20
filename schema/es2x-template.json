@@ -1,0 +1,60 @@
+{
+    "template": "bloonix-*",
+    "settings" : {
+        "index.number_of_shards" : 4,
+        "index.number_of_replicas" : 1
+    },
+    "mappings": {
+        "stats" : {
+            "properties" : {
+                "time" : { "type" : "date", "index" : "not_analyzed" },
+                "host_id" : { "type" : "long", "index" : "not_analyzed" },
+                "service_id" : { "type" : "long", "index" : "not_analyzed" },
+                "plugin" : { "type" : "string", "index" : "not_analyzed" },
+                "subkey" : { "type" : "string", "index" : "not_analyzed" },
+                "data" : {
+                    "type" : "object",
+                    "enabled" : false
+                }
+            }
+        },
+        "event" : {
+            "properties" : {
+                "time" : { "type" : "date", "index" : "not_analyzed" },
+                "host_id" : { "type" : "long", "index" : "not_analyzed" },
+                "service_id" : { "type" : "long", "index" : "not_analyzed" },
+                "last_status" : { "type" : "string", "index" : "not_analyzed" },
+                "status" : { "type" : "string", "index" : "not_analyzed" },
+                "message" : { "type" : "string" },
+                "attempts" : { "type" : "string", "index" : "not_analyzed" },
+                "tags" : { "type" : "string" },
+                "duration" : { "type" : "long", "index" : "not_analyzed" },
+                "result" : {
+                    "type" : "object",
+                    "properties": {
+                        "time" : { "type" : "string", "index" : "no" },
+                        "duration" : { "type" : "string", "index" : "no" }
+                    }
+                },
+                "debug" : {
+                    "type" : "object",
+                    "enabled" : false
+                }
+            }
+        },
+        "results" : {
+            "properties" : {
+                "time" : { "type" : "date", "index" : "not_analyzed" },
+                "host_id" : { "type" : "long", "index" : "not_analyzed" },
+                "service_id" : { "type" : "long", "index" : "not_analyzed" },
+                "status" : { "type" : "string", "index" : "not_analyzed" },
+                "message" : { "type" : "string" },
+                "attempts" : { "type" : "string", "index" : "not_analyzed" },
+                "data" : {
+                    "type" : "object",
+                    "enabled" : false
+                }
+            }
+        }
+    }
+}
