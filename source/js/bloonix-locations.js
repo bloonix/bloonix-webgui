@@ -14,7 +14,32 @@ Bloonix.listLocations = function() {
         deletable: {
             title: Text.get("schema.location.text.delete"),
             url: "/administration/locations/:id/delete/",
-            result: [ "id", "continent", "country", "city" ]
+            result: [ "id", "continent", "country", "city" ],
+            statusCallback: {
+                "err-428": function(result) {
+                    var div = Utils.create("div")
+                        .addClass("info-err");
+
+                    Utils.create("h4")
+                        .text(Text.get("err-428"))
+                        .appendTo(div);
+
+                    console.log(result);
+
+                    $.each(result.data.failed, function(i, service) {
+                        var errmsg = "Host: "+ service["hostname"]
+                            +" ("+ service["host_id"] +") "
+                            + "- Service: "+ service["service_name"]
+                            +" ("+ service["id"] +")";
+
+                        Utils.create("p")
+                            .text(errmsg)
+                            .appendTo(div)
+                    });
+                    $("#content").html(div);
+                    //throw new Error();
+                }
+            }
         },
         reloadable: true,
         columns: [

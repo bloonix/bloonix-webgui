@@ -73,8 +73,10 @@ sub update {
 sub delete {
     my ($self, $c, $opts) = @_;
 
-    if ($c->model->database->service_parameter->find_location($opts->{id})) {
-        return $c->plugin->error->cannot_delete_location;
+    my $services = $c->model->database->service->find_configured_location($opts->{id});
+
+    if (@$services) {
+        return $c->plugin->error->cannot_delete_location($services);
     }
 
     $c->plugin->action->delete(location => $c->stash->object);

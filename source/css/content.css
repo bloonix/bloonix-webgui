@@ -621,7 +621,7 @@
 .info-simple {
     background-color: #D6F7FF;
 }
-.info-err, .info-err h4 {
+.info-err, .info-err h4, .info-err p {
     color: #a61512;
 }
 .info-err {

@@ -1,3 +1,8 @@
+bloonix-webgui (0.82) released at 2016-03-21
+
+    * Delete location: list hosts and services which have the
+      location configured.
+
 bloonix-webgui (0.81) released at 2016-02-29
 
     * Improved transaction handling.

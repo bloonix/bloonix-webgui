@@ -651,7 +651,9 @@ Table.prototype.createDeleteOverlay = function(row, o) {
                     async: false,
                     token: true,
                     success: function(result) {
-                        if (result.status == "ok") {
+                        if (o.statusCallback && o.statusCallback[result.status]) {
+                            o.statusCallback[result.status](result);
+                        } else if (result.status == "ok") {
                             if (o.successCallback != undefined) {
                                 o.successCallback();
                             } else {

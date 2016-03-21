@@ -22,6 +22,7 @@ Bloonix.initAjax = function() {
     };
 
     Ajax.defaults.ignoreErrors = {
+        "err-428": true,
         "err-605": true,
         "err-610": true,
         "err-620": true,

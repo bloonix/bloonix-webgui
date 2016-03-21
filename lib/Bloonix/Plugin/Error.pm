@@ -94,8 +94,12 @@ sub cannot_delete_host_template_object {
 }
 
 sub cannot_delete_location {
-    my $self = shift;
-    $self->_error("err-428");
+    my ($self, $services) = @_;
+    my $c = $self->{c};
+    $c->stash->{status} = "err-428";
+    $c->stash->{data}->{message} = $c->lang->get("err-428");
+    $c->stash->{data}->{failed} = $services;
+    return $c->view->render->json;
 }
 
 sub internal_error {

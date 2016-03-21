@@ -541,6 +541,41 @@ sub by_user_id {
     return ($count, $services);
 }
 
+sub find_configured_location {
+    my ($self, $id) = @_;
+
+    my ($stmt, @bind) = $self->sql->select(
+        distinct => 1,
+        table => [
+            service => [ "id", "host_id" ],
+            service_parameter => "service_name",
+            host => "hostname"
+        ],
+        join => [
+            inner => {
+                table => "service_parameter",
+                left => "service.service_parameter_id",
+                right => "service_parameter.ref_id"
+            },
+            inner => {
+                table => "host",
+                left => "service.host_id",
+                right => "host.id"
+            }
+        ],
+        condition => [
+            where => {
+                table => "service_parameter",
+                column => "location_options",
+                op => "like",
+                value => '%"'. $id .'"%'
+            }
+        ]
+    );
+
+    return $self->dbi->fetch($stmt, @bind);
+}
+
 sub by_host_and_user_id {
     my ($self, $host_id, $user_id) = @_;
 
