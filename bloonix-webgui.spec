@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.81
+Version: 0.82
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Mar 21 2016 Jonny Schulz <js@bloonix.de> - 0.82-1
+- Delete location: list hosts and services which have the
+  location configured.
 * Sun Mar 20 2016 Jonny Schulz <js@bloonix.de> - 0.81-1
 - Improved transaction handling.
 - New column table service: agent_dead

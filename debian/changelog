@@ -1,3 +1,10 @@
+bloonix-webgui (0.82-1) unstable; urgency=low
+
+    * Delete location: list hosts and services which have the
+      location configured.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 21 Mar 2016 02:09:01 +0100
+
 bloonix-webgui (0.81-1) unstable; urgency=low
 
     * Improved transaction handling.
