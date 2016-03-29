@@ -102,7 +102,7 @@ if ($opts->{postgres}) {
     print $fh "CREATE ROLE $user WITH LOGIN PASSWORD '$sql_quoted_password';\n";
     print $fh "CREATE DATABASE $user OWNER $user;\n";
 } else {
-    print $fh "CREATE DATABASE $user;\n";
+    print $fh "CREATE DATABASE $user DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;\n";
     print $fh "GRANT ALL PRIVILEGES ON $user.* to $user\@localhost IDENTIFIED BY '$sql_quoted_password';\n";
     print $fh "FLUSH PRIVILEGES;\n";
 }
@@ -118,6 +118,19 @@ if ($opts->{postgres}) {
     system("psql -U $user -h localhost -f /srv/bloonix/webgui/schema/schema-pg.sql");
     $ENV{PGPASSWORD} = "";
 } else {
+    print "\nCreate the table schema for mysql\n\n";
+    open my $fh, "<", "/srv/bloonix/webgui/schema/table-order.txt" or die $!;
+    open my $out, ">", "/srv/bloonix/webgui/schema/mysql/.all.sql" or die $!;
+    my @tables = <$fh>;
+    close $fh;
+    chomp @tables;
+    push @tables, "data";
+    foreach my $table (@tables) {
+        open my $in, "<", "/srv/bloonix/webgui/schema/mysql/$table.sql" or die $!;
+        print $out (<$in>);
+        close $in;
+    }
+    close $out;
     print "Type the root password of the mysql: ";
     ReadMode("noecho");
     chomp(my $password = <STDIN>);
@@ -127,7 +140,7 @@ if ($opts->{postgres}) {
     system("mysql -u root </etc/bloonix/database/create-bloonix-user.sql");
     die $? if $?;
     print "\nInstall bloonix schema\n\n";
-    system("mysql -u root $user </srv/bloonix/webgui/schema/schema-mysql.sql");
+    system("mysql -u root $user </srv/bloonix/webgui/schema/mysql/.all.sql");
     die $? if $?;
     $ENV{MYSQL_PWD} = "";
 }

@@ -112,14 +112,6 @@ INSERT INTO "user_secret" (
     'TYSZ8HM+o8xU05wviSwQUI1avoS816ftBuUy+cxo4n0B3L3SXOC79fARCw2E/Q/2+A9PYgu7MTy3JfluFJS9KA=='
 );
 
--- Target of table company_user: user X is allowed to manage company Y
-
-CREATE TABLE "company_user" (
-    "company_id" BIGINT NOT NULL REFERENCES "company"("id") ON DELETE CASCADE,
-    "user_id"    BIGINT NOT NULL REFERENCES "user"("id") ON DELETE CASCADE,
-    UNIQUE("company_id", "user_id")
-);
-
 -- Session IDs for each user
 
 CREATE TABLE "session" (

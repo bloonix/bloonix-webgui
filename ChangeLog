@@ -1,3 +1,7 @@
+bloonix-webgui (0.83) released at 2016-03-29
+
+    * Splittet the MySQL schema into small files.
+
 bloonix-webgui (0.82) released at 2016-03-21
 
     * Delete location: list hosts and services which have the

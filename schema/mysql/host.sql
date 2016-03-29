@@ -1,0 +1,45 @@
+CREATE TABLE `host` (
+    `id`                    BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `company_id`            BIGINT NOT NULL DEFAULT 1,
+    `hostname`              VARCHAR(100) NOT NULL,
+    `ipaddr`                VARCHAR(159),
+    `ipaddr6`               VARCHAR(45),
+    `description`           VARCHAR(100) NOT NULL,
+    `comment`               VARCHAR(100) NOT NULL DEFAULT '',
+    `active_comment`        VARCHAR(400) DEFAULT 'no comment',
+    `notification_comment`  VARCHAR(400) DEFAULT 'no comment',
+    `facts`                 TEXT NOT NULL,
+    `sysgroup`              VARCHAR(50) NOT NULL DEFAULT '',
+    `sysinfo`               VARCHAR(200) NOT NULL DEFAULT '',
+    `host_class`            VARCHAR(100) NOT NULL DEFAULT '',
+    `system_class`          VARCHAR(100) NOT NULL DEFAULT '',
+    `location_class`        VARCHAR(100) NOT NULL DEFAULT '',
+    `os_class`              VARCHAR(100) NOT NULL DEFAULT '',
+    `hw_class`              VARCHAR(100) NOT NULL DEFAULT '',
+    `env_class`             VARCHAR(100) NOT NULL DEFAULT '',
+    `active`                CHAR(1) NOT NULL DEFAULT 1,
+    `allow_from`            VARCHAR(300) NOT NULL DEFAULT 'all',
+    `max_sms`               INTEGER NOT NULL DEFAULT 0,
+    `status`                VARCHAR(8) NOT NULL DEFAULT 'INFO',
+    `status_since`          BIGINT DEFAULT 0 NOT NULL,
+    `status_nok_since`      BIGINT DEFAULT 0 NOT NULL,
+    `interval`              INTEGER NOT NULL DEFAULT 60,
+    `retry_interval`        INTEGER NOT NULL DEFAULT 60,
+    `timeout`               INTEGER NOT NULL DEFAULT 300,
+    `notification_interval` INTEGER NOT NULL DEFAULT 3600,
+    `notification`          CHAR(1) NOT NULL DEFAULT 1,
+    `last_check`            BIGINT NOT NULL DEFAULT 0,
+    `max_services`          INTEGER NOT NULL DEFAULT 0,
+    `coordinates`           VARCHAR(100) DEFAULT '',
+    `creation_time`         TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `variables`             TEXT NOT NULL,
+    `data_retention`        SMALLINT DEFAULT 3650,
+    `register`              CHAR(1) NOT NULL DEFAULT '0',
+    UNIQUE(`hostname`, `company_id`),
+    FOREIGN KEY (`company_id`) REFERENCES `company`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE INDEX `host_id_index` ON `host` (`id`);
+CREATE INDEX `host_hostname_index` ON `host` (`hostname`);
+CREATE INDEX `host_company_id_index` ON `host` (`company_id`);
+CREATE INDEX `host_status_since_index` ON `host` (`status_since`);
