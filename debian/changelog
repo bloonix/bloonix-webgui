@@ -1,3 +1,9 @@
+bloonix-webgui (0.85-1) unstable; urgency=low
+
+    * Updated ES template for version 2.x.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 29 Mar 2016 17:53:13 +0200
+
 bloonix-webgui (0.84-1) unstable; urgency=low
 
     * Fixed auto increment fields for different tables.

@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.84
+Version: 0.85
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Mar 29 2016 Jonny Schulz <js@bloonix.de> - 0.85-1
+- Updated ES template for version 2.x.
 * Tue Mar 29 2016 Jonny Schulz <js@bloonix.de> - 0.84-1
 - Fixed auto increment fields for different tables.
 * Tue Mar 29 2016 Jonny Schulz <js@bloonix.de> - 0.83-1
