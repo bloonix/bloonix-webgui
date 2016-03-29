@@ -1,3 +1,7 @@
+bloonix-webgui (0.84) released at 2016-03-29
+
+    * Fixed auto increment fields for different tables.
+
 bloonix-webgui (0.83) released at 2016-03-29
 
     * Splittet the MySQL schema into small files.

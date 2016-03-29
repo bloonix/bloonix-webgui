@@ -1,5 +1,5 @@
 CREATE TABLE `chart` (
-    `id`        BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id`        BIGINT NOT NULL PRIMARY KEY,
     `plugin_id` BIGINT NOT NULL DEFAULT 1,
     `title`     VARCHAR(100) NOT NULL,
     `options`   TEXT,

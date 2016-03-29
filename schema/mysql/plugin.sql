@@ -1,5 +1,5 @@
 CREATE TABLE `plugin` (
-    `id`            BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id`            BIGINT NOT NULL PRIMARY KEY,
     `company_id`    BIGINT DEFAULT 1,
     `plugin`        VARCHAR(100) UNIQUE NOT NULL,
     `command`       VARCHAR(100) NOT NULL,

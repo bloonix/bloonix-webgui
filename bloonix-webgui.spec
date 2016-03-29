@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.83
+Version: 0.84
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Mar 29 2016 Jonny Schulz <js@bloonix.de> - 0.84-1
+- Fixed auto increment fields for different tables.
 * Tue Mar 29 2016 Jonny Schulz <js@bloonix.de> - 0.83-1
 - Splittet the MySQL schema into small files.
 * Mon Mar 21 2016 Jonny Schulz <js@bloonix.de> - 0.82-1
