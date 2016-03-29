@@ -1,3 +1,9 @@
+bloonix-webgui (0.83-1) unstable; urgency=low
+
+    * Splittet the MySQL schema into small files.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 29 Mar 2016 09:44:47 +0200
+
 bloonix-webgui (0.82-1) unstable; urgency=low
 
     * Delete location: list hosts and services which have the
