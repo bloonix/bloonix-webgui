@@ -1,3 +1,7 @@
+bloonix-webgui (0.88) released at 2016-03-31
+
+    * Implemented support for Elasticsearch index aliases.
+
 bloonix-webgui (0.87) released at 2016-03-30
 
     * Fixed ES dynamic mapping.

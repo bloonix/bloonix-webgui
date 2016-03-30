@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.87
+Version: 0.88
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Mar 31 2016 Jonny Schulz <js@bloonix.de> - 0.88-1
+- Implemented support for Elasticsearch index aliases.
 * Wed Mar 30 2016 Jonny Schulz <js@bloonix.de> - 0.87-1
 - Fixed ES dynamic mapping.
 * Wed Mar 30 2016 Jonny Schulz <js@bloonix.de> - 0.86-1
