@@ -6,6 +6,18 @@
     },
     "mappings": {
         "stats" : {
+            "dynamic_templates" : [
+                {
+                    "match": {
+                        "match": "*",
+                        "match_mapping_type" : "*",
+                        "mapping" : {
+                            "type": "string",
+                            "index" : "no"
+                        }
+                    }
+                }
+            ],
             "properties" : {
                 "time" : { "type" : "date", "index" : "not_analyzed" },
                 "host_id" : { "type" : "long", "index" : "not_analyzed" },
@@ -19,6 +31,18 @@
             }
         },
         "event" : {
+            "dynamic_templates" : [
+                {
+                    "match": {
+                        "match": "*",
+                        "match_mapping_type" : "*",
+                        "mapping" : {
+                            "type": "string",
+                            "index" : "no"
+                        }
+                    }
+                }
+            ],
             "properties" : {
                 "time" : { "type" : "date", "index" : "not_analyzed" },
                 "host_id" : { "type" : "long", "index" : "not_analyzed" },
@@ -31,10 +55,7 @@
                 "duration" : { "type" : "long", "index" : "not_analyzed" },
                 "result" : {
                     "type" : "object",
-                    "properties": {
-                        "time" : { "type" : "string", "index" : "no" },
-                        "duration" : { "type" : "string", "index" : "no" }
-                    }
+                    "enabled" : false
                 },
                 "debug" : {
                     "type" : "object",
@@ -43,6 +64,18 @@
             }
         },
         "results" : {
+            "dynamic_templates" : [
+                {
+                    "match": {
+                        "match": "*",
+                        "match_mapping_type" : "*",
+                        "mapping" : {
+                            "type": "string",
+                            "index" : "no"
+                        }
+                    }
+                }
+            ],
             "properties" : {
                 "time" : { "type" : "date", "index" : "not_analyzed" },
                 "host_id" : { "type" : "long", "index" : "not_analyzed" },

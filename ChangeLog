@@ -1,3 +1,7 @@
+bloonix-webgui (0.86) released at 2016-03-30
+
+    * Fixed ES mapping for type event.
+
 bloonix-webgui (0.85) released at 2016-03-29
 
     * Updated ES template for version 2.x.
