@@ -1,3 +1,10 @@
+bloonix-webgui (0.89-1) unstable; urgency=low
+
+    * Bugfix: the count of max_services is now calculated correclty
+      if a services is created in a template.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 31 Mar 2016 15:33:55 +0200
+
 bloonix-webgui (0.88-1) unstable; urgency=low
 
     * Implemented support for Elasticsearch index aliases.

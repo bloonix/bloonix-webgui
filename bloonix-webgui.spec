@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.88
+Version: 0.89
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Mar 31 2016 Jonny Schulz <js@bloonix.de> - 0.89-1
+- Bugfix: the count of max_services is now calculated correclty
+  if a services is created in a template.
 * Thu Mar 31 2016 Jonny Schulz <js@bloonix.de> - 0.88-1
 - Implemented support for Elasticsearch index aliases.
 * Wed Mar 30 2016 Jonny Schulz <js@bloonix.de> - 0.87-1

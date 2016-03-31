@@ -1,3 +1,8 @@
+bloonix-webgui (0.89) released at 2016-03-31
+
+    * Bugfix: the count of max_services is now calculated correclty
+      if a services is created in a template.
+
 bloonix-webgui (0.88) released at 2016-03-31
 
     * Implemented support for Elasticsearch index aliases.

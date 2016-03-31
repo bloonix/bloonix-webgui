@@ -241,7 +241,7 @@ sub create_service {
         condition => [ host_template_id => $opts->{id} ]
     );
 
-    if ($c->user->{max_services} && $count_services * scalar @$hosts > $c->user->{max_services}) {
+    if ($c->user->{max_services} && $count_services + scalar @$hosts > $c->user->{max_services}) {
         return $c->plugin->error->limit_error("err-832" => $c->user->{max_services});
     }
 
