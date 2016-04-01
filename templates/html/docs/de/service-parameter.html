@@ -169,22 +169,14 @@ Nehmen wir an, dass der Zeitbereich zur Erkennung von zu häufigen Statuswechsel
 </p>
 </div>
 
-<h2>Formularfelder: %%schema.service.attr.is_volatile%%, %%schema.service.attr.volatile_retain%%</h2>
+<h2>Formularfelder: %%schema.service.attr.is_volatile%%</h2>
 <div>
 <p>
 Ein flüchtiger Service ist ein Service, dessen Status nur für einen sehr kurzen Zeitraum kritisch ist. Dies kann zum Beispiel bei der Prüfung von Logdateien der Fall sein. Nehmen wir zum Beispiel an, es wird eine Logdatei nach kritischen Ereignissen untersucht. Sollte ein Ereignis gefunden und der Status <i>CRITICAL</i> zurückgegeben werden, dann ist es sehr gut möglich, dass der Status bei der nächsten Prüfung der Logdatei nicht mehr vorkommt. Der Status würde also sofort wieder zurück in den Status <i>OK</i> wechseln. Genau für diesen Zweck kann ein Service als <i>flüchtig</i> markiert werden.
 </p>
 
 <p>
-Ist also ein Service als <i>flüchtig</i> markiert, dann bleibt der Service solange im Status <i>WARNING</i>, <i>CRITICAL</i> oder <i>UNKNOWN</i>, bis der Status in der WebGUI manuell zurücksetzt wurde oder bis die Vorhaltezeit abgelaufen ist.
-</p>
-
-<p>
-Die Vorhaltezeit ist eine Zeitangabe in Sekunden, wann der Service-Check automatisch wieder zurück auf <i>OK</i> gesetzt werden soll, nachdem dieser als kritisch markiert wurde. Ein Wert von 0 besagt, dass die Zeit nie abläuft. Der Wert 0 ist auch der Standardwert für diese Option.
-</p>
-
-<p>
-Für das manuelle Zurücksetzen des volatile Status gibt es einen Link, den Sie in der Navigation von Hosts und Services finden.
+Ist also ein Service als <i>flüchtig</i> markiert, dann bleibt der Service solange im Status <i>WARNING</i>, <i>CRITICAL</i> oder <i>UNKNOWN</i>, bis der Status in der WebGUI manuell zurücksetzt wurde. Für das manuelle Zurücksetzen des volatile Status gibt es einen Link, den Sie in der Navigation von Hosts und Services finden.
 </p>
 </div>
 
