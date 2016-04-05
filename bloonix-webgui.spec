@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.89
+Version: 0.91
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Apr 04 2016 Jonny Schulz <js@bloonix.de> - 0.91-1
+- Fixed description of max_sms.
 * Thu Mar 31 2016 Jonny Schulz <js@bloonix.de> - 0.89-1
 - Bugfix: the count of max_services is now calculated correclty
   if a services is created in a template.

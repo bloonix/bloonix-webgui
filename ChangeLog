@@ -1,3 +1,12 @@
+bloonix-webgui (0.92) released at 2016-04-05
+
+    * Reduce the request size to fetch data from elasticsearch
+      from 50000 to 10000.
+
+bloonix-webgui (0.91) released at 2016-04-04
+
+    * Fixed description of max_sms.
+
 bloonix-webgui (0.90) released at 2016-03-31
 
     * Kicked schema.service.attr.volatile_retain from the docs.

@@ -8,7 +8,7 @@ sub get {
 
     my $request = {
         from => 0,
-        size => 105120,
+        size => 10000,
         filter => {
             and => [
                 { term => { service_id => $opts{service_id} } },

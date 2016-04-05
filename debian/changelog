@@ -1,3 +1,9 @@
+bloonix-webgui (0.91-1) unstable; urgency=low
+
+    * Fixed description of max_sms.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 04 Apr 2016 02:30:14 +0200
+
 bloonix-webgui (0.89-1) unstable; urgency=low
 
     * Bugfix: the count of max_services is now calculated correclty

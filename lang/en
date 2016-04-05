@@ -672,7 +672,7 @@ schema.host.desc.location: e.g. New York, Datacenter 3, Room 6, Rack A29
 schema.host.desc.coordinates: Select the location of the host by country code.
 schema.host.desc.active: Active or de-activate the host and all services.
 schema.host.desc.allow_from: With this field it's possible to set a comma separated list of IP addresses from which the Bloonix agents are allowed to deliver host statistics. Set the keyword <i>all</i> to allow all IP addresses.
-schema.host.desc.max_sms: In this field you can define the maximum number of SMS that can be sent per month.
+schema.host.desc.max_sms: In this field you can define the maximum number of SMS that can be sent per month. Set 0 (null) if unlimited.
 schema.host.desc.interval: This is the check interval of all services of the host.
 schema.host.desc.retry_interval: This is the retry interval of all services of the host. If a service is not in OK status then the interval is forced to this value.
 schema.host.desc.timeout: This is the timeout of all services of the host. The timeout counter begins after the interval. If the status of a service is not updated in this time then a critical status is set for the services with the information that it seems that the Bloonix agent is not working.

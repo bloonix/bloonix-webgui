@@ -11,7 +11,7 @@ sub get {
 
     my $request = {
         from => 0,
-        size => 50000,
+        size => 10000,
         filter => {
             and => [
                 { $termkey => { service_id => $opts{service_id} } },
