@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.93
+Version: 0.94
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Apr 14 2016 Jonny Schulz <js@bloonix.de> - 0.94-1
+- Implemented new wtrm action doAddCookie.
 * Thu Apr 14 2016 Jonny Schulz <js@bloonix.de> - 0.93-1
 - Fixed the html view of the wtrm workflow.
 - Fixed the call of /services/:id.
