@@ -12,13 +12,12 @@ sub startup {
     $c->route->map("/hosts/:id/services/:service_id/options")->to("options");
     $c->route->map("/hosts/:id/services/:service_id/update")->to("update");
     $c->route->map("/hosts/:id/services/:service_id/delete")->to("delete");
-
-    $c->route->map("/services/options/:plugin_id")->to("options");
-    $c->route->map("/services/create")->to("create");
-    $c->route->map("/services/:service_id")->to("view");
-    $c->route->map("/services/:service_id/options")->to("options");
-    $c->route->map("/services/:service_id/update")->to("update");
-    $c->route->map("/services/:service_id/delete")->to("delete");
+    #$c->route->map("/services/options/:plugin_id")->to("options");
+    #$c->route->map("/services/create")->to("create");
+    #$c->route->map("/services/:service_id")->to("view");
+    #$c->route->map("/services/:service_id/options")->to("options");
+    #$c->route->map("/services/:service_id/update")->to("update");
+    #$c->route->map("/services/:service_id/delete")->to("delete");
 }
 
 sub auto {
@@ -89,7 +88,8 @@ sub options {
                 "locations"
             );
 
-            $service->{location_options}->{$locations_form_parameter} = delete $service->{location_options}->{locations};
+            $service->{location_options}->{$locations_form_parameter} =
+                delete $service->{location_options}->{locations};
         }
         if ($service->{agent_options}) {
             $service->{agent_options} = $c->json->decode($service->{agent_options});
