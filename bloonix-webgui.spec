@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.91
+Version: 0.93
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Apr 14 2016 Jonny Schulz <js@bloonix.de> - 0.93-1
+- Fixed the html view of the wtrm workflow.
+- Fixed the call of /services/:id.
 * Mon Apr 04 2016 Jonny Schulz <js@bloonix.de> - 0.91-1
 - Fixed description of max_sms.
 * Thu Mar 31 2016 Jonny Schulz <js@bloonix.de> - 0.89-1

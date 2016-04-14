@@ -1192,6 +1192,7 @@ site.wtrm.action.doSwitchToFrame: <b>Passa</b> al frame
 site.wtrm.action.doSwitchToParentFrame: <b>Passa</b> al frame padre
 site.wtrm.action.doSwitchToNewPage: <b>Passa</b> alla nuova pagina creata
 site.wtrm.action.doSwitchToMainPage: <b>Passa</b> alla pagina principale
+site.wtrm.action.doAddCookie: <b>Aggiungere</b> un <b>cookie</b>
 site.wtrm.action.checkUrl: Controlla l'<b>URL</b> nella barra degli indirizzi
 site.wtrm.action.checkIfElementExists: Controlla se un <b>elemento esiste</b>
 site.wtrm.action.checkIfElementNotExists: Controlla se un <b>elemento <i>NON</i> esiste</b>
@@ -1225,6 +1226,7 @@ site.wtrm.attr.text: Testo interno
 site.wtrm.attr.html: HTML interno
 site.wtrm.attr.ms: Millisecondi
 site.wtrm.attr.name: Nome
+site.wtrm.attr.domain: Dominio
 site.wtrm.desc.username: Questo nome utente per l'autenticazione di base.
 site.wtrm.desc.password: Questa password per l'autenticazione di base.
 site.wtrm.desc.userAgent: Questo lo user agent da inviare per tutte le richieste.
@@ -1244,6 +1246,7 @@ site.wtrm.desc.text: Il testo interno ad un elemento che si desidera controllare
 site.wtrm.desc.html: L'HTML interno ad un elemento che si desidera controllare.
 site.wtrm.desc.ms: Questo è il tempo di attesa in millisecondi tra le azioni.
 site.wtrm.desc.name: Questo è il nome dell'elemento.
+site.wtrm.desc.domain: Il nome di dominio deve iniziare con un punto, come .bloonix.de.
 site.wtrm.placeholder.username: Nome utente
 site.wtrm.placeholder.password: Segreto
 site.wtrm.placeholder.userAgent: User-Agent
@@ -1274,6 +1277,7 @@ site.wtrm.command.doSwitchToFrame: Passa al frame <b>%s</b>
 site.wtrm.command.doSwitchToParentFrame: Passa al frame padre
 site.wtrm.command.doSwitchToNewPage: Passa alla nuova pagina creata
 site.wtrm.command.doSwitchToMainPage: Passa alla pagina principale
+site.wtrm.command.doAddCookie: Aggiungere cookie <b>%s=%s</b> dominio <b>%s</b>
 site.wtrm.command.checkUrl: Controlla se l'URL nella barra è <b>%s</b>
 site.wtrm.command.checkUrlWithContentType: Controlla se l'URL <b>%s</b> ha il content type %s
 site.wtrm.command.checkIfElementExists: Controlla se l'elemento <b>%s</b> esiste

@@ -1192,6 +1192,7 @@ site.wtrm.action.doSwitchToFrame: <b>Switch</b> to frame
 site.wtrm.action.doSwitchToParentFrame: <b>Switch</b> to parent frame
 site.wtrm.action.doSwitchToNewPage: <b>Switch</b> to new created page
 site.wtrm.action.doSwitchToMainPage: <b>Switch</b> to main page
+site.wtrm.action.doAddCookie: <b>Add</b> a <b>cookie</b>
 site.wtrm.action.checkUrl: Check the <b>URL</b> in the address bar
 site.wtrm.action.checkIfElementExists: Check if an <b>element exists</b>
 site.wtrm.action.checkIfElementNotExists: Check if an <b>element does <i>NOT</i> exists</b>
@@ -1225,6 +1226,7 @@ site.wtrm.attr.text: Inner text
 site.wtrm.attr.html: Inner HTML
 site.wtrm.attr.ms: Milliseconds
 site.wtrm.attr.name: Name
+site.wtrm.attr.domain: Domain
 site.wtrm.desc.username: This username for the auth basic authentication.
 site.wtrm.desc.password: This password for the auth basic authentication.
 site.wtrm.desc.userAgent: This is the User-Agent to send for all requests.
@@ -1244,6 +1246,7 @@ site.wtrm.desc.text: The inner text of an element you wish to check.
 site.wtrm.desc.html: The inner HTML of an element you wish to check.
 site.wtrm.desc.ms: This is the time in milliseconds to sleep between actions.
 site.wtrm.desc.name: This is the name of the element.
+site.wtrm.desc.domain: The domain name must begin with a dot like .bloonix.de.
 site.wtrm.placeholder.username: Username
 site.wtrm.placeholder.password: Secret
 site.wtrm.placeholder.userAgent: User-Agent
@@ -1274,6 +1277,7 @@ site.wtrm.command.doSwitchToFrame: Switch to frame <b>%s</b>
 site.wtrm.command.doSwitchToParentFrame: Switch to parent frame
 site.wtrm.command.doSwitchToNewPage: Switch to new created page
 site.wtrm.command.doSwitchToMainPage: Switch to main page
+site.wtrm.command.doAddCookie: Add cookie <b>%s=%s</b> domain <b>%s</b>
 site.wtrm.command.checkUrl: Check if the URL in the address bar is <b>%s</b>
 site.wtrm.command.checkUrlWithContentType: Check if the URL <b>%s</b> has content type %s
 site.wtrm.command.checkIfElementExists: Check if the element <b>%s</b> exists

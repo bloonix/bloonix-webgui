@@ -375,10 +375,10 @@ Bloonix.WTRM = function(o) {
             if (item.action == "doUrl") {
                 hasUrl = true;
             } else if (hasUrl === false) {
-                if (item.action != "doAuth" && item.action != "doUserAgent") {
-                    hasErr = "It's not possible to run a test without a <i>URL</i> action at the beginning of the workflow!"
-                        +" The only actions that may be placed in front of the <i>URL</i> action, are the actions"
-                        +" <i>Auth-Basic</i> and <i>User-Agent</i>!";
+                if (item.action != "doAuth" && item.action != "doUserAgent" && item.action != "doAddCookie") {
+                    hasErr = "The first action should be <i>Go to URL</i> at the beginning of the workflow."
+                        +" The only actions that may be placed in front of the <i>Go to URL</i> action"
+                        +" are the actions <i>Auth-Basic</i>, <i>User-Agent</i> and <i>Add Cookie</i>!";
                     return false;
                 }
             }
@@ -625,6 +625,9 @@ Bloonix.WtrmAction = {
     },
     doSwitchToMainPage: function() {
         return Text.get("site.wtrm.command.doSwitchToMainPage");
+    },
+    doAddCookie: function(item) {
+        return Text.get("site.wtrm.command.doAddCookie", [ item.name, item.value, item.domain ]);
     },
     checkUrl: function(item) {
         if (item.contentType) {

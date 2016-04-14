@@ -74,6 +74,11 @@ sub new {
         doSwitchToMainPage => [
             novalue => 0
         ],
+        doAddCookie => [
+            name => 1,
+            value => 1,
+            domain => 1
+        ],
         checkUrl => [
             url => 1,
             status => 0,
@@ -214,7 +219,8 @@ sub validate_step {
             || ($param eq "parent" && defined $step->{$param} && $step->{$param} !~ /^#[^\s]+\z/)
             || ($param eq "element" && defined $step->{$param} && $step->{$param} !~ /^(?:[^\s]+|<\s*[a-zA-Z0-9]{1,16}(?:\[\d{1,2}\]){0,1}(?:\s+[a-zA-Z0-9_\-]+=(?:'[^']*'|"[^"]*"))*\s*>)\z/)
             || ($param eq "novalue" && defined $step->{$param} && length $step->{$param})
-            || ($param eq "event" && defined $step->{$param} && $step->{$param} !~ /^(change|keyup|keydown|keypress|focus)\z/);
+            || ($param eq "event" && defined $step->{$param} && $step->{$param} !~ /^(change|keyup|keydown|keypress|focus)\z/)
+            || ($param eq "domain" && defined $step->{$param} && $step->{$param} !~ /^\.[^\s]+\z/);
     }
 
     return @errors ? \@errors : undef;

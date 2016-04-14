@@ -1,3 +1,10 @@
+bloonix-webgui (0.93-1) unstable; urgency=low
+
+    * Fixed the html view of the wtrm workflow.
+    * Fixed the call of /services/:id.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 14 Apr 2016 16:37:43 +0200
+
 bloonix-webgui (0.91-1) unstable; urgency=low
 
     * Fixed description of max_sms.
