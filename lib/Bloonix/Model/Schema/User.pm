@@ -33,7 +33,7 @@ sub set {
         $username_regex = qr/^[^\s].*[^\s]\z/;
         $username_min_len = 2;
     } else {
-        $username_regex = qr/^(:?[\w\-.]+\@[\w\-.]+\.[a-z]+|admin)\z/;
+        $username_regex = qr/^(:?[\w\-.\+]+\@[\w\-.]+\.[a-z]+|admin)\z/;
         $username_min_len = 5;
     }
 

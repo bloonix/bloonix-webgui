@@ -46,7 +46,6 @@ sub validate {
         $data->{host_id} = $c->stash->object->{host}->{id};
         $data->{message} = "waiting for initialization";
         $data->{status} = "INFO";
-        #$data->{last_check} = time;
     }
 
     $data->{command_options} = $c->json->encode($command_options);
@@ -55,7 +54,11 @@ sub validate {
 
     if (ref $location_options eq "HASH") {
         $data->{location_options} = $c->json->encode($location_options);
-        if ($location_options->{check_type} eq "multiple") {
+        if (
+            $location_options->{check_type} eq "multiple"
+            && exists $location_options->{locations}
+            && ref $location_options->{locations} eq "ARRAY"
+        ) {
             $data->{sum_services} = @{$location_options->{locations}};
         }
     } else {
@@ -140,7 +143,10 @@ sub validate_location_options {
     # Validate location options
     my $locations = $c->model->database->location->as_object;
 
-    if ($location_options->{check_type} && $location_options->{check_type} =~ /^(default|failover|rotate|multiple)\z/) {
+    if (
+        $location_options->{check_type}
+        && $location_options->{check_type} =~ /^(default|failover|rotate|multiple)\z/
+    ) {
         my %seen;
 
         if ($location_options->{check_type} eq "default") {
@@ -152,7 +158,11 @@ sub validate_location_options {
         if ($location_options->{check_type} eq "failover") {
             foreach my $key (qw/fixed_checkpoint first_failover_checkpoint second_failover_checkpoint/) {
                 my $location = $location_options->{$key};
-                if (defined $location_options->{$key} && exists $locations->{$location} && !$seen{$locations->{$location}->{id}}) {
+                if (
+                    defined $location_options->{$key}
+                    && exists $locations->{$location}
+                    && !$seen{$locations->{$location}->{id}}
+                ) {
                     push @{$save_location_options{locations}}, $locations->{$location}->{id};
                     $seen{$locations->{$location}->{id}} = 1;
                 } else {
@@ -162,7 +172,13 @@ sub validate_location_options {
         } elsif ($location_options->{check_type} =~ /^(multiple|rotate)\z/) {
             my $parameter = join("_", $location_options->{check_type}, "locations");
 
-            if ($location_options->{$parameter} && ref $location_options->{$parameter} eq "ARRAY") {
+            if (
+                !exists $location_options->{$parameter}
+                || ref $location_options->{$parameter} ne "ARRAY"
+                || @{$location_options->{$parameter}} < 3
+            ) {
+                push @errors, "command_options:$parameter";
+            } elsif ($location_options->{$parameter} && ref $location_options->{$parameter} eq "ARRAY") {
                 foreach my $location (@{$location_options->{$parameter}}) {
                     if (exists $locations->{$location} && !$seen{$locations->{$location}->{id}}) {
                         push @{$save_location_options{locations}}, $locations->{$location}->{id};
@@ -254,7 +270,10 @@ sub validate_command_options {
         }
 
         if (!$opt->{multiple} && $value_type =~ /^(hash|array)\z/) {
-            if (($value_type eq "hash" && ref $values eq "HASH") || ($value_type eq "array" && ref $values eq "ARRAY")) {
+            if (
+                ($value_type eq "hash" && ref $values eq "HASH")
+                || ($value_type eq "array" && ref $values eq "ARRAY")
+            ) {
                 push @save_options, {
                     option => $option,
                     value => $values

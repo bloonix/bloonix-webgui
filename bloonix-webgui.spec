@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.94
+Version: 0.95
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Apr 19 2016 Jonny Schulz <js@bloonix.de> - 0.95-1
+- Fixed: it's not possible any more to create a location check
+  with less than 2 locations.
 * Thu Apr 14 2016 Jonny Schulz <js@bloonix.de> - 0.94-1
 - Implemented new wtrm action doAddCookie.
 * Thu Apr 14 2016 Jonny Schulz <js@bloonix.de> - 0.93-1

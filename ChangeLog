@@ -1,3 +1,8 @@
+bloonix-webgui (0.95) released at 2016-04-18
+
+    * Fixed: it's not possible any more to create a location check
+      with less than 2 locations.
+
 bloonix-webgui (0.94) released at 2016-04-14
 
     * Implemented new wtrm action doAddCookie.

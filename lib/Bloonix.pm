@@ -145,7 +145,7 @@ sub _validate_webapp {
         },
         check_frequency => {
             type => Params::Validate::SCALAR,
-            regex => qr/^(low|high)\z/,
+            regex => qr/^(low|mid|high)\z/,
             default => "low"
         },
         cloudapp => {

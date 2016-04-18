@@ -86,6 +86,18 @@ sub validator_register_opts {
 sub validator_host_opts {
     my $self = shift;
 
+    my $freq = $self->c->config->{webapp}->{check_frequency};
+    my @interval = (60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
+    my @timeout = (180, 300, 600, 900, 1800, 3600);
+
+    if ($freq eq "high") {
+        unshift @interval, 15, 30;
+        unshift @timeout, 30, 60, 120;
+    } elsif ($freq eq "mid") {
+        unshift @interval, 30;
+        unshift @timeout, 30, 60, 120;
+    }
+
     return (
         hostname =>  {
             regex => qr/^[\w\.\-]{3,64}\z/,
@@ -161,10 +173,7 @@ sub validator_host_opts {
             default => "all"
         },
         interval => {
-            options => [
-                ($self->c->config->{webapp}->{check_frequency} eq "high" ? (15, 30) : ()),
-                60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400
-            ],
+            options => \@interval,
             default => 60
         },
         retry_interval => {
@@ -172,10 +181,7 @@ sub validator_host_opts {
             default => 60
         },
         timeout => {
-            options => [
-                ($self->c->config->{webapp}->{check_frequency} eq "high" ? (30, 60, 120) : ()),
-                180, 300, 600, 900, 1800, 3600
-            ],
+            options => \@timeout,
             default => 300
         },
         max_sms => {

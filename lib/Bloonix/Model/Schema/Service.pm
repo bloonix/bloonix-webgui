@@ -116,6 +116,7 @@ sub set {
 sub get_check_frequency {
     my ($self, $plugin) = @_;
     $plugin->{flags} ||= "";
+    my $freq = $self->c->config->{webapp}->{check_frequency};
 
     # check-linux-updates
     if ($plugin->{id} == 23 || $plugin->{flags} =~ /low-check-frequency/) {
@@ -133,38 +134,48 @@ sub get_check_frequency {
 
     # check-wtrm
     if ($plugin->{id} == 58 || $plugin->{flags} =~ /mid-check-frequency/) {
+        my @interval = (600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
+        my @timeout = (300, 600, 900, 1800, 3600);
+
+        if ($freq eq "high") {
+            unshift @interval, 60, 120, 300;
+            unshift @timeout, 60, 120;
+        }
+
         return (
             interval => {
-                options => [
-                    ($self->c->config->{webapp}->{check_frequency} eq "high" ? (60, 120, 300) : ()),
-                    600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400
-                ],
-                default => 600,
+                options => \@interval,
+                default => 600
             },
             timeout => {
-                options => [
-                    ($self->c->config->{webapp}->{check_frequency} eq "high" ? (60, 120) : ()),
-                    300, 600, 900, 1800, 3600
-                ],
-                default => 300,
+                options => \@timeout,
+                default => 300
             }
         );
     }
 
     # Default frequency
+    my @interval = (60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
+    my @timeout = (180, 300, 600, 900, 1800, 3600);
+
+    if ($freq eq "high") {
+        unshift @interval, 15, 30;
+        unshift @timeout, 30, 60, 120;
+    } elsif ($freq eq "mid") {
+        unshift @interval, 30;
+        unshift @timeout, 30, 60, 120;
+    }
+
+    unshift @interval, 0;
+    unshift @timeout, 0;
+
     return (
         interval => {
-            options => [
-                0, ($self->c->config->{webapp}->{check_frequency} eq "high" ? (15, 30) : ()),
-                60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400
-            ],
+            options => \@interval,
             default => 0,
         },
         timeout => {
-            options => [
-                0, ($self->c->config->{webapp}->{check_frequency} eq "high" ? (30, 60, 120) : ()),
-                180, 300, 600, 900, 1800, 3600
-            ],
+            options => \@timeout,
             default => 0,
         }
     );
