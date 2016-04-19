@@ -1,3 +1,7 @@
+bloonix-webgui (0.96) released at 2016-04-19
+
+    * Changed min timeout for mid frequency to 60s.
+
 bloonix-webgui (0.95) released at 2016-04-18
 
     * Fixed: it's not possible any more to create a location check

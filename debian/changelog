@@ -1,3 +1,9 @@
+bloonix-webgui (0.96-1) unstable; urgency=low
+
+    * Changed min timeout for mid frequency to 60s.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 19 Apr 2016 17:53:29 +0200
+
 bloonix-webgui (0.95-1) unstable; urgency=low
 
     * Fixed: it's not possible any more to create a location check

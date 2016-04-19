@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.95
+Version: 0.96
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Apr 19 2016 Jonny Schulz <js@bloonix.de> - 0.96-1
+- Changed min timeout for mid frequency to 60s.
 * Tue Apr 19 2016 Jonny Schulz <js@bloonix.de> - 0.95-1
 - Fixed: it's not possible any more to create a location check
   with less than 2 locations.
