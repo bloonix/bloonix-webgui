@@ -1,3 +1,7 @@
+bloonix-webgui (0.97) released at 2016-04-24
+
+    * Changed min timeout for mid frequency to 120s.
+
 bloonix-webgui (0.96) released at 2016-04-19
 
     * Changed min timeout for mid frequency to 60s.
