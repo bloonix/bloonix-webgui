@@ -879,6 +879,7 @@ Bloonix.createServiceForm = function(o) {
                     self.selectedLocationType = value;
                 }
                 self.createLocationMap();
+                /*
                 if (Bloonix.user.sla < 3 && Bloonix.user.role != "admin") {
                     if (value == "default") {
                         $("#sla-note").hide();
@@ -886,16 +887,19 @@ Bloonix.createServiceForm = function(o) {
                         $("#sla-note").fadeIn(300);
                     }
                 }
+                */
             },
             appendTo: this.typeSelection
         });
 
+        /*
         Utils.create("div")
             .attr("id", "sla-note")
             .addClass("sla-note")
             .html(Text.get("schema.service.text.sla_requirements"))
             .hide()
             .appendTo(this.typeSelection);
+        */
 
         // To prevent JS errors if this.locationOptions.failover_locations[0]
         // is accessed and does not exists.
