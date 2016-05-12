@@ -23,11 +23,11 @@
 <link rel="stylesheet" href="/public/css/print.css?v=1" media="print" />
 <script src="/public/js/jquery.min.js?v=1"></script>
 % if ($stash->{meta}->{chart_library} eq 'highcharts') {
-<script src="/public/js/highcharts.min.js?v=5"></script>
+<script src="/public/js/highcharts.min.js?v=6"></script>
 % } else {
-<script src="/public/js/other.min.js?v=1"></script>
+<script src="/public/js/other.min.js?v=2"></script>
 % }
-<script src="/public/js/misc.min.js?v=3"></script>
+<script src="/public/js/misc.min.js?v=4"></script>
 % if ($stash->{meta}->{debugjs}) {
 <script src="/public/js/bloonix.src.js?v=<% data.version %>"></script>
 % } else {

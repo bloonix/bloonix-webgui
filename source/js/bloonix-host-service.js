@@ -1077,7 +1077,7 @@ Bloonix.createServiceForm = function(o) {
         var locationCounterBox = Utils.create("div")
             .appendTo(locationCounterBoxContainer);
 
-        if (Bloonix.args.showCostInfo === "yes") {
+        if (Bloonix.args.showCostInfo) {
             Utils.create("br")
                 .appendTo(locationCounterBoxContainer);
             Utils.create("div")

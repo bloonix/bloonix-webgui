@@ -59,6 +59,9 @@
     max-width: 600px;
     font-weight: 300;
 }
+.ui-tooltip-low-z-index {
+    z-index: 10000;
+}
 .tip {
     color: #111;
     width: 139px;

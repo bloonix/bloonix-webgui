@@ -46,7 +46,8 @@ sub by_host_ids {
             $query->{$string} =~ s/^(AND\s+|OR\s+)*//gi;
             $query->{$string} =~ s/(\s+AND|\s+OR)*\z//gi;
             while ($query->{$string} =~ s/(\s+AND\s+(OR|AND)\s+|\s+OR\s+(OR|AND)\s+)/ /gi){}
-            $query->{$string} = join(" ", map { $_ =~ /^(?:AND|OR)\z/ ? $_ : "$_*" } split(/\s+/, $query->{$string}) );
+            #$query->{$string} = join(" ", map { $_ =~ /^(?:AND|OR)\z/ ? $_ : "$_*" } split(/\s+/, $query->{$string}) );
+            $query->{$string} = join(" ", split(/\s+/, $query->{$string}));
 
             push @{$request->{filter}->{and}}, {
                 query => {

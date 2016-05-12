@@ -1,3 +1,10 @@
+bloonix-webgui (0.99-1) unstable; urgency=low
+
+    * Update to Highcharts and Highmaps 4.2.4.
+    * Fixed the event query search.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 12 May 2016 22:45:35 +0200
+
 bloonix-webgui (0.98-1) unstable; urgency=low
 
     * Kicked SLA restriction for location checks.

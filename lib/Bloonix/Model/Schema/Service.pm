@@ -140,6 +140,8 @@ sub get_check_frequency {
         if ($freq eq "high") {
             unshift @interval, 60, 120, 300;
             unshift @timeout, 60, 120;
+        } elsif ($freq eq "mid") {
+            unshift @interval, 300;
         }
 
         return (
@@ -163,7 +165,6 @@ sub get_check_frequency {
         unshift @timeout, 30, 60, 120;
     } elsif ($freq eq "mid") {
         unshift @interval, 30;
-        unshift @timeout, 120;
     }
 
     unshift @interval, 0;

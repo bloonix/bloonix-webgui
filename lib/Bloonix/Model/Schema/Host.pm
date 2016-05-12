@@ -95,7 +95,6 @@ sub validator_host_opts {
         unshift @timeout, 30, 60, 120;
     } elsif ($freq eq "mid") {
         unshift @interval, 30;
-        unshift @timeout, 120;
     }
 
     return (

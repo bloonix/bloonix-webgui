@@ -469,7 +469,8 @@ Table.prototype.createRows = function(rows) {
             tr.tooltip({
                 items: tr,
                 track: true,
-                content: self.tooltip(row)
+                content: self.tooltip(row),
+                tooltipClass: "ui-tooltip-low-z-index"
             });
         }
 

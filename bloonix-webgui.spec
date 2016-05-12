@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.98
+Version: 0.99
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu May 12 2016 Jonny Schulz <js@bloonix.de> - 0.99-1
+- Update to Highcharts and Highmaps 4.2.4.
+- Fixed the event query search.
 * Wed Apr 27 2016 Jonny Schulz <js@bloonix.de> - 0.98-1
 - Kicked SLA restriction for location checks.
 * Sun Apr 24 2016 Jonny Schulz <js@bloonix.de> - 0.97-1

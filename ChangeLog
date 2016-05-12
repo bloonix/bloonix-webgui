@@ -1,3 +1,12 @@
+bloonix-webgui (0.100) released at 2016-XX-XX
+
+    * Fixed tooltip z-index for icons in tables.
+
+bloonix-webgui (0.99) released at 2016-05-12
+
+    * Update to Highcharts and Highmaps 4.2.4.
+    * Fixed the event query search.
+
 bloonix-webgui (0.98) released at 2016-04-27
 
     * Kicked SLA restriction for location checks.
