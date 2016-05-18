@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.100
+Version: 0.101
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,11 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Wed May 18 2016 Jonny Schulz <js@bloonix.de> - 0.101-1
+- Fixed the webgui slider and add the checked value
+  as options if it doesn't exist.
+- Decreased the min timeout for check_frequency high
+  to 60 seconds.
 * Wed May 18 2016 Jonny Schulz <js@bloonix.de> - 0.100-1
 - Fixed tooltip z-index for icons in tables.
 - Added check frequency sleepy.

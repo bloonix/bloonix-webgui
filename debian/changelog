@@ -1,3 +1,12 @@
+bloonix-webgui (0.101-1) unstable; urgency=low
+
+    * Fixed the webgui slider and add the checked value
+      as options if it doesn't exist.
+    * Decreased the min timeout for check_frequency high
+      to 60 seconds.
+
+ -- Jonny Schulz <js@bloonix.de>  Wed, 18 May 2016 20:42:33 +0200
+
 bloonix-webgui (0.100-1) unstable; urgency=low
 
     * Fixed tooltip z-index for icons in tables.
