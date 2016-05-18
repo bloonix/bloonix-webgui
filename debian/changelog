@@ -1,3 +1,10 @@
+bloonix-webgui (0.100-1) unstable; urgency=low
+
+    * Fixed tooltip z-index for icons in tables.
+    * Added check frequency sleepy.
+
+ -- Jonny Schulz <js@bloonix.de>  Wed, 18 May 2016 19:09:25 +0200
+
 bloonix-webgui (0.99-1) unstable; urgency=low
 
     * Update to Highcharts and Highmaps 4.2.4.

@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.99
+Version: 0.100
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Wed May 18 2016 Jonny Schulz <js@bloonix.de> - 0.100-1
+- Fixed tooltip z-index for icons in tables.
+- Added check frequency sleepy.
 * Thu May 12 2016 Jonny Schulz <js@bloonix.de> - 0.99-1
 - Update to Highcharts and Highmaps 4.2.4.
 - Fixed the event query search.

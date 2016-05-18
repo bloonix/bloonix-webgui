@@ -1,6 +1,7 @@
-bloonix-webgui (0.100) released at 2016-XX-XX
+bloonix-webgui (0.100) released at 2016-05-18
 
     * Fixed tooltip z-index for icons in tables.
+    * Added check frequency sleepy.
 
 bloonix-webgui (0.99) released at 2016-05-12
 

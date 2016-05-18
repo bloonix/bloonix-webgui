@@ -66,10 +66,6 @@ sub set {
                 ? [ "localhost", "intranet", "remote" ]
                 : [ "localhost" ],
             default => $plugin->{prefer}
-        },
-        retry_interval => {
-            options => [ 0, 15, 30, 60, 120, 180, 300, 600, 900, 1800, 3600 ],
-            default => 0
         }
     );
 
@@ -159,16 +155,24 @@ sub get_check_frequency {
     # Default frequency
     my @interval = (60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
     my @timeout = (180, 300, 600, 900, 1800, 3600);
+    my @retry_interval = (60, 120, 180, 300, 600, 900, 1800, 3600);
 
     if ($freq eq "high") {
-        unshift @interval, 15, 30;
+        unshift @interval, 15, 30, 60, 120;
         unshift @timeout, 30, 60, 120;
     } elsif ($freq eq "mid") {
-        unshift @interval, 30;
+        unshift @interval, 30, 60, 120;
+    } elsif ($freq eq "low") {
+        unshift @interval, 60, 120;
+    }
+
+    if ($freq ne "sleepy") {
+        unshift @retry_interval, 15, 30;
     }
 
     unshift @interval, 0;
     unshift @timeout, 0;
+    unshift @retry_interval, 0;
 
     return (
         interval => {
@@ -178,6 +182,10 @@ sub get_check_frequency {
         timeout => {
             options => \@timeout,
             default => 0,
+        },
+        retry_interval => {
+            options => \@retry_interval,
+            default => 0
         }
     );
 }
