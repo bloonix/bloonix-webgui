@@ -1004,6 +1004,19 @@ Form.prototype.slider = function(o) {
             .appendTo(this.container);
 
         if (this.secondsToFormValues == true) {
+            if (self.checked !== undefined) {
+                var hit = false;
+                $.each(options, function(i, option) {
+                    console.log(option, "===", self.checked);
+                    if (option == self.checked) {
+                        hit = true;
+                        return false;
+                    }
+                });
+                if (hit === false) {
+                    options.unshift(self.checked);
+                }
+            }
             options = Utils.secondsToFormValues(options, this.nullString)
         }
 

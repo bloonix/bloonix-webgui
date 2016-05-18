@@ -1,3 +1,10 @@
+bloonix-webgui (0.101) released at 2016-05-18
+
+    * Fixed the webgui slider and add the checked value
+      as options if it doesn't exist.
+    * Decreased the min timeout for check_frequency high
+      to 60 seconds.
+
 bloonix-webgui (0.100) released at 2016-05-18
 
     * Fixed tooltip z-index for icons in tables.

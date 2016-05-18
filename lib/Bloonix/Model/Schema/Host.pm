@@ -93,7 +93,7 @@ sub validator_host_opts {
 
     if ($freq eq "high") {
         unshift @interval, 15, 30, 60, 120;
-        unshift @timeout, 30, 60, 120;
+        unshift @timeout, 60, 120;
     } elsif ($freq eq "mid") {
         unshift @interval, 30, 60, 120;
     } elsif ($freq eq "low") {
