@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.101
+Version: 0.102
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu May 19 2016 Jonny Schulz <js@bloonix.de> - 0.102-1
+- Fixed tooltip feature for multiple charts.
 * Wed May 18 2016 Jonny Schulz <js@bloonix.de> - 0.101-1
 - Fixed the webgui slider and add the checked value
   as options if it doesn't exist.
