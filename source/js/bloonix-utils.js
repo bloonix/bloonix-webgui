@@ -48,7 +48,7 @@ Bloonix.clearHTML = function() {
 Bloonix.clearAll = function() {
     Ajax.abortXHRs();
     Bloonix.clearIntervalObjects();
-    Bloonix.destroyChartObjects(Bloonix.cache.charts);
+    Bloonix.destroyChartObjects();
     Bloonix.clearHTML();
     if (Bloonix.destroy != undefined) {
         Bloonix.destroy();

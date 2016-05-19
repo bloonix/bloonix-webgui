@@ -47,16 +47,13 @@ Bloonix.createOrReplaceChart = function(o) {
 };
 
 // Destroy all cached chart objects.
-Bloonix.destroyChartObjects = function(cache) {
-    var cache = Bloonix.cache.charts;
-
-    $.each(cache, function(container, obj) {
-        if (cache[container] != undefined) {
-            if (typeof cache[container].chart == "object") {
-                cache[container].chart.destroy();
+Bloonix.destroyChartObjects = function() {
+    $.each(Bloonix.cache.charts, function(container, obj) {
+        if (obj != undefined) {
+            if (typeof obj.chart == "object") {
+                obj.chart.destroy();
             }
-
-            cache[container] = undefined;
+            delete Bloonix.cache.charts[container];
         }
 
         if ($(container).length > 0) {

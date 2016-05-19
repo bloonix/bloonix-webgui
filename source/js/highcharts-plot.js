@@ -46,6 +46,9 @@ Bloonix.highcharts.syncTooltip = function(e) {
 
         if (selPoint) {
             $.each(Bloonix.cache.charts, function(id, chart) {
+                if (chart === undefined) {
+                    return true;
+                }
                 if (id !== selContainerId) {
                     var point = Bloonix.highcharts.findSeriesPoint(chart.series[0], selPoint.x);
                     if (point) {

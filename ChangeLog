@@ -1,3 +1,7 @@
+bloonix-webgui (0.102) released at 2016-05-19
+
+    * Fixed tooltip feature for multiple charts.
+
 bloonix-webgui (0.101) released at 2016-05-18
 
     * Fixed the webgui slider and add the checked value
