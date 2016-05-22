@@ -1,3 +1,7 @@
+bloonix-webgui (0.103) released at 2016-05-22
+
+    * Implemented parameter sendmail for section email.
+
 bloonix-webgui (0.102) released at 2016-05-19
 
     * Fixed tooltip feature for multiple charts.

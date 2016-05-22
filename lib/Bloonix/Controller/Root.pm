@@ -324,6 +324,7 @@ sub login {
 
     if ($req_pwd && $c->config->{email}->{flags} =~ /password-request/) {
         $c->plugin->util->quickmail(
+            sendmail => $c->config->{email}->{sendmail},
             from => $c->config->{email}->{from},
             to => $c->config->{email}->{to},
             subject => sprintf($c->config->{email}->{subject}, "User request for new password"),
@@ -435,6 +436,7 @@ sub login {
                     my $uname = $username;
                     $uname =~ s/\W/-/g;
                     $c->plugin->util->quickmail(
+                        sendmail => $c->config->{email}->{sendmail},
                         from => $c->config->{email}->{from},
                         to => $c->config->{email}->{to},
                         subject => sprintf($c->config->{email}->{subject}, "User logged in: $uname"),
@@ -473,6 +475,7 @@ sub login {
 
         if ($failed_login && $c->config->{email}->{flags} =~ /failed-login/) {
             $c->plugin->util->quickmail(
+                sendmail => $c->config->{email}->{sendmail},
                 from => $c->config->{email}->{from},
                 to => $c->config->{email}->{to},
                 subject => sprintf($c->config->{email}->{subject}, "WARNING ($hostname)! FAILED LOGIN from $ipaddr"),

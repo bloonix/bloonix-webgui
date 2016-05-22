@@ -83,6 +83,7 @@ sub pwgen {
 
 sub quickmail {
     my ($self, %mail) = @_;
+    my $sendmail = $mail{sendmail} || "/usr/sbin/sendmail -t -oi -oem";
 
     if (!$mail{to} || !$mail{from}) {
         return 1;
@@ -94,7 +95,7 @@ sub quickmail {
         Subject => $mail{subject} || "bloonix quick mail",
         Type => "TEXT",
         Data => $mail{message}
-    )->send("sendmail", "/usr/sbin/sendmail -t -oi -oem");
+    )->send("sendmail", $sendmail);
 
     return 1;
 }

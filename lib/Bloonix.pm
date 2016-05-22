@@ -210,6 +210,10 @@ sub _validate_email {
         flags => {
             type => Params::Validate::SCALAR,
             default => "none"
+        },
+        sendmail => {
+            type => Params::Validate::SCALAR,
+            default => "/usr/sbin/sendmail -t -oi -oem"
         }
     });
 
