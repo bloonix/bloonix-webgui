@@ -1,3 +1,7 @@
+bloonix-webgui (0.104) released at 2016-05-22
+
+    * Fixed retry_interval.
+
 bloonix-webgui (0.103) released at 2016-05-22
 
     * Implemented parameter sendmail for section email.

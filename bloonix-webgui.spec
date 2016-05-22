@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.103
+Version: 0.104
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Sun May 22 2016 Jonny Schulz <js@bloonix.de> - 0.104-1
+- Fixed retry_interval.
 * Sun May 22 2016 Jonny Schulz <js@bloonix.de> - 0.103-1
 - Implemented parameter sendmail for section email.
 * Thu May 19 2016 Jonny Schulz <js@bloonix.de> - 0.102-1

@@ -113,6 +113,13 @@ sub get_check_frequency {
     my ($self, $plugin) = @_;
     $plugin->{flags} ||= "";
     my $freq = $self->c->config->{webapp}->{check_frequency};
+    my @retry_interval = (60, 120, 180, 300, 600, 900, 1800, 3600);
+
+    if ($freq ne "sleepy") {
+        unshift @retry_interval, 15, 30;
+    }
+
+    unshift @retry_interval, 0;
 
     # check-linux-updates
     if ($plugin->{id} == 23 || $plugin->{flags} =~ /low-check-frequency/) {
@@ -124,6 +131,10 @@ sub get_check_frequency {
             timeout => {
                 options => [ 300, 600, 900, 1800, 3600 ],
                 default => 600
+            },
+            retry_interval => {
+                options => \@retry_interval,
+                default => 0
             }
         );
     }
@@ -148,6 +159,10 @@ sub get_check_frequency {
             timeout => {
                 options => \@timeout,
                 default => 300
+            },
+            retry_interval => {
+                options => \@retry_interval,
+                default => 0
             }
         );
     }
@@ -155,7 +170,6 @@ sub get_check_frequency {
     # Default frequency
     my @interval = (60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
     my @timeout = (180, 300, 600, 900, 1800, 3600);
-    my @retry_interval = (60, 120, 180, 300, 600, 900, 1800, 3600);
 
     if ($freq eq "high") {
         unshift @interval, 15, 30, 60, 120;
@@ -166,13 +180,8 @@ sub get_check_frequency {
         unshift @interval, 60, 120;
     }
 
-    if ($freq ne "sleepy") {
-        unshift @retry_interval, 15, 30;
-    }
-
     unshift @interval, 0;
     unshift @timeout, 0;
-    unshift @retry_interval, 0;
 
     return (
         interval => {
