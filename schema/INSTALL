@@ -8,33 +8,13 @@
 
     It's necessary to create a user and database. Just execute
 
-        ./init-database.sh
+        ./init-database.sh [ --mysql | --postgres ]
 
     You will be promted to enter a password for the user 'bloonix'.
     After that the user 'bloonix' with database 'bloonix' will be created.
 
-* You are not familiar with PostgreSQL?
-
-    Write the following line to pg_hba.conf
-
-        host all all 127.0.0.1/32 md5
-
-    Write the following line to postgresq.conf
-
-        listen_addresses = '127.0.0.1'
-
-    Then restart postgres with
-
-        /etc/init.d/postgresql restart
-
-    You can find the configuration files in
-
-    Debian/Ubuntu: /etc/postgresql/9.2/main/
-    CentOS/RedHat: /var/lib/pgsql/9.2/data/
-
 * Questions?
 
-    Contact the Bloonix support or visit our forum at https://forum.bloonix.de/
+    Contact the Bloonix support or visit our forum at https://forum.bloonix.org/
 
     :-)
-
