@@ -1592,6 +1592,11 @@ Bloonix.createServiceForm = function(o) {
             mapValueToLabel: { "0": Text.get("schema.host.info.notification_disabled_short") }
         });
 
+        var notificationIntervalText = Text.get("text.inherited_from_host");
+        if (this.host) {
+            notificationIntervalText += " ("+ Utils.secondsToStringShortReadable(this.host.notification_interval) +")";
+        }
+
         this.form.createElement({
             text: Text.get("schema.service.attr.notification_interval"),
             desc: Text.get("schema.service.desc.notification_interval"),
@@ -1600,7 +1605,7 @@ Bloonix.createServiceForm = function(o) {
             options: this.options.notification_interval,
             checked: this.values.notification_interval,
             secondsToFormValues: true,
-            nullString: Text.get("text.undefined")
+            nullString: notificationIntervalText
         });
 
         this.form.createElement({

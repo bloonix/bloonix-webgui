@@ -35,7 +35,7 @@ sub set {
         },
         notification_interval => {
             options => [ 0, 300, 900, 1800, 2700, 3600, 7200, 14400, 28800, 43200, 57600, 86400, 172800 ],
-            default => 3600
+            default => 0
         },
         attempt_max => {
             options => [ 0 .. 20 ],

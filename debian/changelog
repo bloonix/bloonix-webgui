@@ -1,3 +1,10 @@
+bloonix-webgui (0.106-1) unstable; urgency=low
+
+    * Fixed info text for notification_interval in the host form.
+    * The default value for service -> notification_interval is now 0.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 07 Jul 2016 21:35:21 +0200
+
 bloonix-webgui (0.105-1) unstable; urgency=low
 
     * Fixed: services from a template cannot be updated any more

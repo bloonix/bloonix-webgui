@@ -1,3 +1,8 @@
+bloonix-webgui (0.106) released at 2016-07-07
+
+    * Fixed info text for notification_interval in the host form.
+    * The default value for service -> notification_interval is now 0.
+
 bloonix-webgui (0.105) released at 2016-07-07
 
     * Fixed: services from a template cannot be updated any more

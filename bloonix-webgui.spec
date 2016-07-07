@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.105
+Version: 0.106
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Jul 07 2016 Jonny Schulz <js@bloonix.de> - 0.106-1
+- Fixed info text for notification_interval in the host form.
+- The default value for service -> notification_interval is now 0.
 * Thu Jul 07 2016 Jonny Schulz <js@bloonix.de> - 0.105-1
 - Fixed: services from a template cannot be updated any more
   over the route /host/services.
