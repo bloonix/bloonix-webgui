@@ -88,6 +88,11 @@ sub token_required {
     $self->_error("err-426");
 }
 
+sub cannot_update_host_template_object {
+    my $self = shift;
+    $self->_error("err-427");
+}
+
 sub cannot_delete_host_template_object {
     my $self = shift;
     $self->_error("err-427");

@@ -887,6 +887,12 @@ Bloonix.getHostFormElements = function(o) {
             secondsToFormValues: true,
             nullString: Text.get("text.inherited_from_host")
         },{
+            element: "slider",
+            name: "notification_interval",
+            text: Text.get("schema.host.attr.notification_interval"),
+            desc: Text.get("schema.host.desc.notification_interval"),
+            secondsToFormValues: true
+        },{
             element: "input",
             type: "text",
             name: "data_retention",

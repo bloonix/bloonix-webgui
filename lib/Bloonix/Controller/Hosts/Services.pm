@@ -170,6 +170,10 @@ sub update {
     $c->plugin->token->check
         or return 1;
 
+    if ($c->stash->object->{service}->{host_template_id}) {
+        return $c->plugin->error->cannot_update_host_template_object;
+    }
+
     $c->model->database->user_group->can_update_service(
         $c->user->{id}, $opts->{id}
     ) or return $c->plugin->error->no_privileges_on_action(modify => "service");

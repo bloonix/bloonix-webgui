@@ -31,10 +31,6 @@ use Sys::Hostname;
 sub init {
     my $self = shift;
 
-    #if (!-e "/usr/sbin/sendmail") {
-        #die "no /usr/sbin/sendmail found";
-    #}
-
     $self->_validate;
     $self->_init_plugins;
     $self->_init_routes;

@@ -82,7 +82,7 @@ err-419: Non hai sufficienti privilegi per eliminare gli oggetti.
 err-420: L'azione è fallita.
 err-425: Il tuo token di sessione è scaduto.
 err-426: Questa azione richiede un token.
-err-427: I servizi ereditati da modelli di host non possono venir eliminati.
+err-427: I servizi ereditati da modelli di host non possono venir modificato.
 err-428: La località non può essere rimossa in quanto almeno un servizio è configurato per farne parte.
 err-500: Si è verificato un errore  interno. Si prega di contattare l'amministratore.
 err-600: L'oggetto che hai richiesto non esiste.

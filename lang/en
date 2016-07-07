@@ -82,7 +82,7 @@ err-419: You do not have enough privileges to delete the objects!
 err-420: The action failed!
 err-425: Your session token is expired!
 err-426: This action requires a token!
-err-427: Services that are inherited from a host template can't be deleted!
+err-427: Services that are inherited from a host template can't be updated or deleted!
 err-428: The location cannot be deleted because at least one service has the location configured!
 err-500: An internal error occured! Please contact the administrator!
 err-600: The object you requested does not exist!

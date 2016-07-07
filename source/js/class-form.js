@@ -1007,7 +1007,6 @@ Form.prototype.slider = function(o) {
             if (self.checked !== undefined) {
                 var hit = false;
                 $.each(options, function(i, option) {
-                    console.log(option, "===", self.checked);
                     if (option == self.checked) {
                         hit = true;
                         return false;

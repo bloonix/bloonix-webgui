@@ -82,7 +82,7 @@ err-419: Sie haben nicht genügend Rechte um das Objekt zu löschen!
 err-420: Die Aktion ist fehlgeschlagen!
 err-425: Ihr Session-Token ist abgelaufen!
 err-426: Diese Aktion erfordert ein Session-Token!
-err-427: Services, die von einem Host-Template vererbt wurden, können nicht gelöscht werden!
+err-427: Services, die von einem Host-Template vererbt wurden, können nicht geupdated oder gelöscht werden!
 err-428: Die Lokation kann nicht gelöscht werden, da mindestens ein Service die Lokation konfiguriert hat!
 err-500: Ein interner Fehler ist aufgetreten! Bitten kontaktieren Sie den Administrator!
 err-600: Das angeforderte Objekt existiert nicht!

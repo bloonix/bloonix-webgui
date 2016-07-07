@@ -190,6 +190,10 @@ sub validator_host_opts {
             options => \@timeout,
             default => 300
         },
+        notification_interval => {
+            options => [ 300, 900, 1800, 2700, 3600, 7200, 14400, 28800, 43200, 57600, 86400, 172800 ],
+            default => 3600
+        },
         max_sms => {
             # 0 is not unlimited
             min_val => 0,

@@ -1,3 +1,12 @@
+bloonix-webgui (0.105-1) unstable; urgency=low
+
+    * Fixed: services from a template cannot be updated any more
+      over the route /host/services.
+    * Fixed: added missing parameter notification_interval in the
+      host form.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 07 Jul 2016 13:14:36 +0200
+
 bloonix-webgui (0.104-1) unstable; urgency=low
 
     * Fixed retry_interval.

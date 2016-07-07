@@ -1,3 +1,10 @@
+bloonix-webgui (0.105) released at 2016-07-07
+
+    * Fixed: services from a template cannot be updated any more
+      over the route /host/services.
+    * Fixed: added missing parameter notification_interval in the
+      host form.
+
 bloonix-webgui (0.104) released at 2016-05-22
 
     * Fixed retry_interval.
