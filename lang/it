@@ -677,6 +677,7 @@ schema.host.desc.interval: Questo è l'intervallo di controllo di tutti i serviz
 schema.host.desc.retry_interval: Questo è l'intervallo dei tentativi per tutti i servizi dell'host. Se un servizio non è nello stato OK, allora l'intervallo è forzato a questo valore.
 schema.host.desc.timeout: Questo è il timeout per tutti i servizi dell'host. Il contatore del timeout inizia dopo l'intervallo. Se lo stato del servizio non viene aggiornato entro questo tempo, allora viene impostato a critico assieme all'informazione che sembra che un agente Bloonix non sta funzionando.
 schema.host.desc.notification: Abilita o disabilita le notifiche per tutti i servizi.
+schema.host.desc.notification_interval: Questo è l'intervallo di notifica per l'host.
 schema.host.desc.max_services: Imposta il numero massimo di servizi che possono venir configurati per l'host. 0 significa illimitati.
 schema.host.desc.variables: In questo campo puoi definire le variabili per l'host. Queste variabili possono venir usate come vincoli nelle configurazioni dei controlli sui servizi. Per esempio:<br/><br/>HTTP.PORT=9000<br/><br/>Questa variabile può venir usata nel formato <i>%HTTP.PORT%</i> come vincolo. Si segnala che due variabili sono predefinite: <i>IPADDR</i> e <i>HOSTNAME</i>. Queste variabili sono sostituite con l'indirizzo IP e hostname dell'host. Per ulteriori informazioni leggere l'aiuto.<br/><br/>Caratteri permessi: a-z, A-Z, 0-9, punti e trattini bassi
 schema.host.desc.data_retention: Conservazione in giorni di tutti i dati dell'host e suoi servizi. 
@@ -1004,8 +1005,8 @@ schema.service.desc.attempt_warn2crit: Questa opzione è utile se si vuole che l
 schema.service.desc.attempt_max: Questa opzione gestisce quando ricevere una notifica per i servizi che non sono in stato OK. Per esempio un valore di 3 significa che si riceverà una notifica quando il controllo del servizio restituisce per tre volte di fila uno stato non OK.
 schema.service.desc.active: Questa opzione attiva o disattiva il controllo del servizio.
 schema.service.desc.acknowledged: Questa opzione è utile se un servizio non è OK e si vogliono temporaneamente disattivare le notifiche. Le notifiche torneranno ad abilitarsi se il servizio cambia di nuovo lo stato in OK.
-schema.service.desc.notification: Questa opzione attiva o disattiva le notifiche per email o SMS.
-schema.service.desc.notification_interval: Questo è l'intervallo di notifica per le email. Fino a quando lo stato non è OK si verrà notificati con questo intervallo. Se non è impostato alcun valore, allora l'intervallo dell'host verrà ereditato.
+schema.service.desc.notification: Questa opzione attiva o disattiva le notifiche.
+schema.service.desc.notification_interval: Questo è l'intervallo di notifica per le servizio. Fino a quando lo stato non è OK si verrà notificati con questo intervallo. Se non è impostato alcun valore, allora l'intervallo dell'host verrà ereditato.
 schema.service.desc.fd_enabled: Questa opzione abilita o disabilita il rilevamento del flapping. Il rilevamento del flapping è molto utile per riconoscere i servizi che passano dallo stato OK e non OK in tempi brevi ed il contatore <i>massimo tentativi</i> non viene raggiunto. Il rilevamento del flapping controlla quante volte il servizio ha cambiato stato nel tempo impostato. Se lo stato cambia troppe volte, allora una notifica verrà attivata.
 schema.service.desc.fd_time_range: Questo è l'orario in cui il rilevamento del flapping controlla i cambi di stato.
 schema.service.desc.fd_flap_count: Questa è la soglia per il rilevamento del flapping. Se lo stato cambia più di x volte nell'arco di tempo, una notifica verrà attivata.

@@ -677,6 +677,7 @@ schema.host.desc.interval: Das ist der Prüfungsintervall aller Services des Hos
 schema.host.desc.retry_interval: Das ist der Prüfintervall aller Services des Hosts, aber nur, wenn ein Service nicht im Status OK ist.
 schema.host.desc.timeout: Das ist der Timeout aller Services des Hosts. Der Timeoutzähler beginnt nach dem Intervall. Wenn in dieser Zeit der Status eines Service nicht aktualisiert wurde, dann wird ein kritischer Status gesetzt mit der Information, dass der Bloonix-Agent wohlmöglich ausgefallen ist.
 schema.host.desc.notification: Aktiere oder deaktiviere die Benachrichtigungen aller Services.
+schema.host.desc.notification_interval: Das ist der Benachrichtigungsintervall des Host.
 schema.host.desc.max_services: Konfiguration der maximalen Services, die für diesen Host eingerichtet werden dürfen. 0 heißt unlimitiert.
 schema.host.desc.variables: In diesem Feld können Host Variablen definiert werden. Diese Variablen können für Schwellwerten bei der Konfiguration von Service-Checks verwendet werden. Beispiel:<br/><br/><b>HTTP.PORT=9000</b><br/><br/>Diese Variable kann dann im Format <i>%HTTP.PORT%</i> für Schwellwerte eingesetzt werden. Bitte beachten Sie das zwei Variablen vordefiniert sind: <i>IPADDR</i> und <i>HOSTNAME</i>. Diese Variablen werden mit der IP-Adresse und dem Hostnamen ersetzt. Weitere Informationen hierzu finden Sie in der Hilfe.<br/><br/>Erlaubte Zeichen: a-z, A-Z, 0-9, Punkt und Unterstrich
 schema.host.desc.data_retention: Die Aufbewahrungszeit in Tagen aller Daten des Host und der Services.

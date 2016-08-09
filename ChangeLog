@@ -1,3 +1,8 @@
+bloonix-webgui (0.107) released at 2016-08-09
+
+    * Replaced bloonix own select-boxes with html select.
+    * Added field comment to the service table.
+
 bloonix-webgui (0.106) released at 2016-07-07
 
     * Fixed info text for notification_interval in the host form.

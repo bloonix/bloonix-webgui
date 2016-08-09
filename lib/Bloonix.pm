@@ -144,11 +144,6 @@ sub _validate_webapp {
             regex => qr/^(sleepy|low|mid|high)\z/,
             default => "low"
         },
-        cloudapp => {
-            type => Params::Validate::SCALAR,
-            regex => qr/^(yes|no|0|1)\z/,
-            default => 0
-        },
         show_cost_info => {
             type => Params::Validate::SCALAR,
             regex => qr/^(yes|no|0|1)\z/,
@@ -176,7 +171,7 @@ sub _validate_webapp {
         }
     });
 
-    foreach my $key (qw/cloudapp show_cost_info show_locations is_demo allow_simple_usernames check_token enable_user_tracking/) {
+    foreach my $key (qw/show_cost_info show_locations is_demo allow_simple_usernames check_token enable_user_tracking/) {
         $config{$key} = $config{$key} =~ /0|no/ ? 0 : 1;
     }
 
@@ -212,6 +207,30 @@ sub _validate_email {
             default => "/usr/sbin/sendmail -t -oi -oem"
         }
     });
+
+    return \%config;
+}
+
+sub _validate_docs {
+    my $self = shift;
+
+    my %config = Params::Validate::validate(@_, {
+        server => {
+            type => Params::Validate::SCALAR,
+            default => "bloonix.server.example",
+        },
+        webgui => {
+            type => Params::Validate::SCALAR,
+            default => "bloonix.webgui.example",
+        },
+        cloudapp => {
+            type => Params::Validate::SCALAR,
+            regex => qr/^(yes|no|0|1)\z/,
+            default => 0
+        }
+    });
+
+    $config{cloudapp} = $config{cloudapp} =~ /0|no/ ? 0 : 1;
 
     return \%config;
 }

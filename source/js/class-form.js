@@ -161,13 +161,14 @@ Form.prototype.input = function(o) {
         }
 
         if (this.autocomplete && this.autocomplete[this.name]) {
-            new Autocomplete({
-                format: this.format,
-                source: this.autocomplete[this.name],
-                container: this.container,
-                input: this.input,
-                start: 0
-            }).create();
+            this.input.autocomplete({ source: this.autocomplete[this.name] });
+            //new Autocomplete({
+            //    format: this.format,
+            //    source: this.autocomplete[this.name],
+            //    container: this.container,
+            //    input: this.input,
+            //    start: 0
+            //}).create();
         }
 
         $.each(["id","placeholder","minlength","maxlength","minvalue","maxvalue","pattern"], function(i, key) {
@@ -390,103 +391,68 @@ Form.prototype.select = function(o) {
         return this.containerClass || "select-container";
     };
 
-    object.getDropDownClass = function() {
-        return this.mainClass || "select select-"+ this.format;
-    };
-
-    object.getCaretClass = function() {
-        return this.caretClass || "select-caret";
-    };
-
-    object.getListClass = function() {
-        return this.listClass || "select-list-"+ this.format
+    object.getSelectListClass = function() {
+        return this.listClass || "select select-"+ this.format
     };
 
     object.getSelected = function() {
-        return { option: this.selectSelected.text(), value: this.hiddenInput.val() };
+        return { option: this.getSelectedOption(), value: this.getSelectedValue() };
     };
 
     object.getSelectedOption = function() {
-        return this.selected.data("value");
+        return this.selectList.find("option:selected").text();
     };
 
     object.getSelectedValue = function() {
-        return this.hiddenInput.val();
+        return this.selectList.val();
     };
 
     object.destroy = function() {
         this.container.remove();
     };
 
-    object.toggle = function() {
-        if (this.selectList.is(":hidden")) {
-            this.selectList.show();
-        } else {
-            this.selectList.hide();
-        }
-    };
-
     object.getContainer = function() {
         return this.container;
+    };
+
+    object.addPlaceholder = function() {
+        if (this.placeholder) {
+            this.placeholderOption = Utils.create("option")
+                .attr("value", "")
+                .text(this.placeholder)
+                .appendTo(this.selectList);
+
+            if (this.selected === false) {
+                this.placeholderOption.attr("disabled", "disabled");
+                this.placeholderOption.attr("selected", "selected");
+                this.placeholderOption.attr("hidden", "hidden");
+            }
+        }
     };
 
     object.create = function() {
         var self = this;
 
         this.container = Utils.create("div")
-            .addClass(this.getContainerClass())
-            .click(function() { self.toggle() });
+            .addClass(this.getContainerClass());
 
         if (this.id != false) {
             this.container.attr("id", this.id);
         }
 
-        this.hiddenInput = Utils.create("input")
-            .attr("type", "hidden")
+        this.selectList = Utils.create("select")
             .attr("name", this.name)
+            .addClass(this.getSelectListClass())
             .appendTo(this.container);
 
-        if (this.selected != false) {
-            this.hiddenInput.attr("value", this.selected);
-        }
-
-        this.selectDropDown = Utils.create("div")
-            .attr("data-name", this.name)
-            .addClass(this.getDropDownClass())
-            .appendTo(this.container);
+        this.addPlaceholder();
 
         if (this.title) {
-            this.selectDropDown.attr("title", this.title).tooltip();
+            this.selectList.attr("title", this.title).tooltip();
         }
 
         if (self.required == true) {
-            this.selectDropDown.addClass(this.requiredMarkerClass);
-        }
-
-        this.selectSelected = Utils.create("span")
-            .html(this.placeholder)
-            .appendTo(this.selectDropDown);
-
-        this.selectCaret = Utils.create("span")
-            .addClass(this.getCaretClass())
-            .appendTo(this.selectDropDown);
-
-        this.selectList = Utils.create("ul")
-            .addClass(this.getListClass())
-            .appendTo(this.container);
-
-        if (this.short) {
-            this.selectDropDown.css({ width: "130px" });
-            this.selectList.css({ "min-width": "130px" });
-        }
-
-        if (this.width) {
-            this.selectDropDown.css({ width: this.width });
-            this.selectList.css({ "min-width": this.width });
-        }
-
-        if (this.maxHeight) {
-            this.selectList.css({ "max-height": this.maxHeight });
+            this.selectList.addClass(this.requiredMarkerClass);
         }
 
         if (this.options) {
@@ -502,6 +468,16 @@ Form.prototype.select = function(o) {
         if (this.appendTo) {
             this.container.appendTo(this.appendTo);
         };
+
+        if (self.callback) {
+            this.selectList.change(function() {
+                if (self.passNameValue == true) {
+                    self.callback(self.getSelectedName(), self.getSelectedValue());
+                } else {
+                    self.callback(self.getSelectedValue());
+                }
+            });
+        }
     };
 
     object.addOptions = function(options) {
@@ -522,34 +498,14 @@ Form.prototype.select = function(o) {
                 name = self.getValueName(value);
             }
 
-            var onClick = function() {
-                if (self.store) {
-                    self.store.to[self.store.as] = value;
-                }
-
-                if (self.readOnly == false) {
-                    self.hiddenInput.val(value);
-                    self.selectSelected.html(name);
-                    self.selectList.find("li").removeAttr("selected");
-                    $(this).attr("selected", "selected");
-                    if (self.required == true && self.hiddenInput.val() != undefined) {
-                        self.selectDropDown.removeClass(self.requiredMarkerClass);
-                    }
-                }
-                if (self.callback) {
-                    if (self.passNameValue == true) {
-                        self.callback(name, value);
-                    } else {
-                        self.callback(value);
-                    }
-                }
-            };
-
-            var option = Utils.create("li")
-                .attr("data-value", value)
+            var option = Utils.create("option")
+                .attr("value", value)
                 .html(name)
-                .click(onClick)
                 .appendTo(self.selectList);
+
+            if (value == self.selected) {
+                option.attr("selected", "selected");
+            }
 
             if (self.showValue === true) {
                 Utils.create("span")
@@ -560,31 +516,25 @@ Form.prototype.select = function(o) {
             if (addClass) {
                 option.addClass(addClass);
             }
-
-            if (value == self.selected) {
-                self.hiddenInput.val(value);
-                self.selectSelected.html(name);
-                self.selected = option;
-                option.attr("selected", "selected");
-                if (self.hiddenInput.val() != undefined) {
-                    self.selectDropDown.removeClass(self.requiredMarkerClass);
-                }
-                if (self.store) {
-                    self.store.to[self.store.as] = value;
-                }
-            }
         });
     };
 
     object.replaceOptions = function(o) {
+        var self = this;
+
         this.selectList.html("");
-        this.hiddenInput.val("");
-        if (!o.selected) {
-            this.selectSelected.html(this.placeholder);
-        }
-        this.selected = o.selected;
-        this.options = o.options;
-        this.addOptions(o.options);
+        this.addPlaceholder();
+
+        $.each(o.options, function(i, item) {
+            var option = Utils.create("option")
+                .attr("value", item.value)
+                .html(item.name)
+                .appendTo(self.selectList);
+
+            if (item.value == item.selected) {
+                option.attr("selected", "selected");
+            }
+        });
     };
 
     object.create();

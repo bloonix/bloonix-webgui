@@ -1,3 +1,10 @@
+bloonix-webgui (0.107-1) unstable; urgency=low
+
+    * Replaced bloonix own select-boxes with html select.
+    * Added field comment to the service table.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 09 Aug 2016 14:25:39 +0200
+
 bloonix-webgui (0.106-1) unstable; urgency=low
 
     * Fixed info text for notification_interval in the host form.

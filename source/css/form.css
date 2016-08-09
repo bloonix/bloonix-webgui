@@ -19,10 +19,17 @@
     -webkit-box-shadow: 0 0 3px 3px #f7efe1;
     box-shadow: 0 0 3px 3px #f7efe1;
 }
+.select {
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
 .select-container {
     position: relative;
     display: inline-block;
 }
+/* select-container ul is needed by Autocomplete */
 .select-container ul {
     overflow-y: scroll;
     display: none;
@@ -68,51 +75,6 @@
 .select-container ul li:hover {
     background-color: #009ac8;
     color: #ffffff !important;
-}
-.select-caret {
-    width: 0;
-    height: 0;
-    display: inline-block;
-    content: "";
-    vertical-align: top;
-    float: right;
-}
-.select-tiny .select-caret, .select-small .select-caret {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top-width: 4px;
-    border-top-style: solid;
-    margin-top: 4px;
-    margin-left: 2px;
-}
-.select-medium .select-caret, .select-default .select-caret {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top-width: 5px;
-    border-top-style: solid;
-    margin-top: 5px;
-    margin-left: 3px;
-}
-.select-tall .select-caret, .select-large .select-caret {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top-width: 6px;
-    border-top-style: solid;
-    margin-top: 6px;
-    margin-left: 4px;
-}
-.select-huge .select-caret, .select-giant .select-caret {
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top-width: 6px;
-    border-top-style: solid;
-    margin-top: 10px;
-    margin-left: 4px;
-}
-.select-icon {
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
 }
 .select-list-tiny {
     min-width: 100px;

@@ -286,6 +286,10 @@ Bloonix.listServices = function(o) {
                     text: Text.get("schema.service.attr.description"),
                     hide: true
                 },{
+                    name: "comment",
+                    text: Text.get("schema.service.attr.comment"),
+                    hide: true
+                },{
                     name: "active",
                     text: Text.get("schema.service.attr.active"),
                     hide: true,

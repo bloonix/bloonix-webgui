@@ -68,9 +68,10 @@ sub get {
     my $html = do { local $/; <$fh> };
     close $fh;
 
-    if ($c->config->{docs}->{SERVER}) {
-        my $server = $c->config->{docs}->{SERVER};
-        $html =~ s/\@\@SERVER\@\@/$server/eg;
+    foreach my $key (qw/server webgui/) {
+        my $value = $c->config->{docs}->{$key};
+        my $search = uc($key);
+        $html =~ s/\@\@$search\@\@/$value/eg;
     }
 
     if ($c->config->{docs}->{cloudapp}) {

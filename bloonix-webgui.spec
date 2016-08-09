@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.106
+Version: 0.107
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Aug 09 2016 Jonny Schulz <js@bloonix.de> - 0.107-1
+- Replaced bloonix own select-boxes with html select.
+- Added field comment to the service table.
 * Thu Jul 07 2016 Jonny Schulz <js@bloonix.de> - 0.106-1
 - Fixed info text for notification_interval in the host form.
 - The default value for service -> notification_interval is now 0.

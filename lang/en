@@ -677,6 +677,7 @@ schema.host.desc.interval: This is the check interval of all services of the hos
 schema.host.desc.retry_interval: This is the retry interval of all services of the host. If a service is not in OK status then the interval is forced to this value.
 schema.host.desc.timeout: This is the timeout of all services of the host. The timeout counter begins after the interval. If the status of a service is not updated in this time then a critical status is set for the services with the information that it seems that the Bloonix agent is not working.
 schema.host.desc.notification: Enable or disable the notifications of all services.
+schema.host.desc.notification_interval: This is the notification interval of the host.
 schema.host.desc.max_services: Set the maximum number of services that can be configured for the host. 0 means unlimited.
 schema.host.desc.variables: In this field you can define host variables. These variables can be used for thresholds by the configuration of service checks. Example:<br/><br/>HTTP.PORT=9000<br/><br/>This variable could be used in the format <i>%HTTP.PORT%</i> for thresholds. Please note that two variables are pre-defined: <i>IPADDR</i> and <i>HOSTNAME</i>. These variables are replaced with the IP address and the hostname of the host. For further information read the help.<br/><br/>Allowed signs: a-z, A-Z, 0-9, dot and underscore
 schema.host.desc.data_retention: The retention in days of all data of the host and services. 
@@ -1004,8 +1005,8 @@ schema.service.desc.attempt_warn2crit: This option is useful if you want that th
 schema.service.desc.attempt_max: This option controls when you get a notification of services that are not in status OK. As example a value of 3 means that you get a notification first if the service check returns 3 times in a row a not OK status.
 schema.service.desc.active: This option activates or de-activates the service check.
 schema.service.desc.acknowledged: This option is useful if a service is not OK and if you want to disable the notifications temporary. The notifications will be enabled again if the services switched to the status OK.
-schema.service.desc.notification: This option activates or de-activates the notifications per email or SMS.
-schema.service.desc.notification_interval: This is the notification interval for emails. As long as the service is not OK you will be re-notified in this interval. If no value is set, then the interval of the host is inherited.
+schema.service.desc.notification: This option activates or de-activates the notification system.
+schema.service.desc.notification_interval: This is the notification interval for the service. As long as the service is not OK you will be re-notified in this interval. If no value is set, then the interval of the host is inherited.
 schema.service.desc.fd_enabled: This option enables or disables the flap detection. The flap detection is very useful to detect services that switches between OK and not OK in a very short time and when the counter of <i>attempt max</i> is never reached. The flap detection checkes how many times a service switched between different states in a given time. If the status switched too many times, then a notification will be triggered.
 schema.service.desc.fd_time_range: This is the period the flap detection checks for status switches.
 schema.service.desc.fd_flap_count: This is the threshold for the flap detection. If more than x-times the status switched in a given time a notificaton is triggered.
