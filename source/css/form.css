@@ -24,6 +24,7 @@
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
+    padding: 0;
 }
 .select-container {
     position: relative;
@@ -112,49 +113,89 @@
     width: 100px;
     line-height: 14px;
     font-size: 12px;
-    padding: 5px 8px;
 }
 .input-small, .select-small, .textarea-small {
     width: 200px;
     line-height: 15px;
     font-size: 13px;
-    padding: 6px 10px;
 }
 .input-medium, .select-medium, .textarea-medium {
     width: 250px;
     line-height: 15px;
     font-size: 13px;
-    padding: 8px 12px;
 }
 .input-default, .select-default, .textarea-default {
     width: 300px;
     line-height: 17px;
     font-size: 14px;
-    padding: 8px 14px;
 }
 .input-tall, .select-tall, .textarea-tall {
     width: 350px;
     line-height: 17px;
     font-size: 14px;
-    padding: 8px 14px;
 }
 .input-large, .select-large, .textarea-large {
     width: 400px;
     line-height: 16px;
     font-size: 15px;
-    padding: 8px 14px;
 }
 .input-huge, .select-huge, .textarea-huge {
     width: 500px;
     line-height: 18px;
     font-size: 16px;
-    padding: 8px 14px;
 }
 .input-giant, .select-giant, .textarea-giant {
     width: 600px;
     line-height: 20px;
     font-size: 18px;
+}
+.input-tiny, .textarea-tiny {
+    padding: 5px 8px;
+}
+.input-small, .textarea-small {
+    padding: 6px 10px;
+}
+.input-medium, .textarea-medium {
+    padding: 8px 12px;
+}
+.input-default, .textarea-default {
     padding: 8px 14px;
+}
+.input-tall, .textarea-tall {
+    padding: 8px 14px;
+}
+.input-large, .textarea-large {
+    padding: 8px 14px;
+}
+.input-huge, .textarea-huge {
+    padding: 8px 14px;
+}
+.input-giant, .textarea-giant {
+    padding: 8px 14px;
+}
+.select-tiny {
+    height: 24px;
+}
+.select-small {
+    height: 27px;
+}
+.select-medium {
+    height: 31px;
+}
+.select-default {
+    height: 33px;
+}
+.select-tall {
+    height: 33px;
+}
+.select-large {
+    height: 32px;
+}
+.select-huge {
+    height: 34px;
+}
+.select-giant {
+    height: 36px;
 }
 .textarea-tiny {
     height: 60px;

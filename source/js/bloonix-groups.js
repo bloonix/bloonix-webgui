@@ -262,6 +262,7 @@ Bloonix.createUserGroupMemberForm = function(o) {
                             }
                         );
                     },
+                    resetPlaceholderAfterCallback: true,
                     passNameValue: true
                 });
             }

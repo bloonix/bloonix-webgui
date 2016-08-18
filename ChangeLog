@@ -1,3 +1,23 @@
+bloonix-webgui (0.112) released at 2016-08-18
+
+    * Fixed bug in username selection in group->user->members.
+
+bloonix-webgui (0.111) released at 2016-08-18
+
+    * Fixed red marked select fields.
+
+bloonix-webgui (0.110) released at 2016-08-12
+
+    * Fixed nfs4 chart "file operations".
+
+bloonix-webgui (0.109) released at 2016-08-12
+
+    * Increased max_result_window to 1000000 by default.
+
+bloonix-webgui (0.108) released at 2016-08-09
+
+    * Fixed css select height.
+
 bloonix-webgui (0.107) released at 2016-08-09
 
     * Replaced bloonix own select-boxes with html select.

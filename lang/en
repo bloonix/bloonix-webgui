@@ -172,6 +172,7 @@ action.operate_as: Operate as
 action.generate_string: Generate a random string
 action.redirect: Redirect
 action.save: Save
+action.add_action: Add a action
 
 bool.yesno.0: no
 bool.yesno.1: yes

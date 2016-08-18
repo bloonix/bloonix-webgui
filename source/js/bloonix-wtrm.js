@@ -92,11 +92,11 @@ Bloonix.WTRM = function(o) {
         this.selectBox = Utils.create("div").appendTo(this.form.getContainer());
 
         this.select = this.form.select({
-            placeholder: "Add an action",
+            placeholder: Text.get("action.add_action"),
             appendTo: this.selectBox,
             options: actions,
             readOnly: true,
-            callback: function(action) { self.createOrUpdateStep(action) }
+            callback: function(action) { self.createOrUpdateStep(action); self.resetSelectedItem(); }
         });
 
         this.button = Utils.create("div")
@@ -112,6 +112,10 @@ Bloonix.WTRM = function(o) {
             .html(Text.get("site.wtrm.text.quick_check"))
             .appendTo(this.selectBox)
             .click(function() { self.runTest(true) });
+    };
+
+    object.resetSelectedItem = function() {
+        this.select.unselectAll();
     };
 
     object.createResultBoxes = function() {
@@ -133,6 +137,10 @@ Bloonix.WTRM = function(o) {
 
     object.createOrUpdateStep = function(action, id) {
         this.infoBox.hide();
+
+        if (action === "") {
+            return;
+        }
 
         if (action === "doSwitchToParentFrame" || action === "doSwitchToNewPage" || action === "doSwitchToMainPage") {
             this.addStep(action, {});

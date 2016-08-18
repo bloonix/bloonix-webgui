@@ -172,6 +172,7 @@ action.operate_as: Opera come
 action.generate_string: Generate una stringa casuale
 action.redirect: Reindirizza
 action.save: Salva
+action.add_action: Aggiungere un'azione
 
 bool.yesno.0: no
 bool.yesno.1: si

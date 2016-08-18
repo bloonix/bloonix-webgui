@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.107
+Version: 0.112
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,16 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Thu Aug 18 2016 Jonny Schulz <js@bloonix.de> - 0.112-1
+- Fixed bug in username selection in group->user->members.
+* Thu Aug 18 2016 Jonny Schulz <js@bloonix.de> - 0.111-1
+- Fixed red marked select fields.
+* Fri Aug 12 2016 Jonny Schulz <js@bloonix.de> - 0.110-1
+- Fixed nfs4 chart "file operations".
+* Fri Aug 12 2016 Jonny Schulz <js@bloonix.de> - 0.109-1
+- Increased max_result_window to 1000000 by default.
+* Tue Aug 09 2016 Jonny Schulz <js@bloonix.de> - 0.108-1
+- Fixed css select height.
 * Tue Aug 09 2016 Jonny Schulz <js@bloonix.de> - 0.107-1
 - Replaced bloonix own select-boxes with html select.
 - Added field comment to the service table.

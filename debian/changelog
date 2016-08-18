@@ -1,3 +1,33 @@
+bloonix-webgui (0.112-1) unstable; urgency=low
+
+    * Fixed bug in username selection in group->user->members.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 18 Aug 2016 17:21:39 +0200
+
+bloonix-webgui (0.111-1) unstable; urgency=low
+
+    * Fixed red marked select fields.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 18 Aug 2016 15:02:53 +0200
+
+bloonix-webgui (0.110-1) unstable; urgency=low
+
+    * Fixed nfs4 chart "file operations".
+
+ -- Jonny Schulz <js@bloonix.de>  Fri, 12 Aug 2016 20:25:36 +0200
+
+bloonix-webgui (0.109-1) unstable; urgency=low
+
+    * Increased max_result_window to 1000000 by default.
+
+ -- Jonny Schulz <js@bloonix.de>  Fri, 12 Aug 2016 20:02:31 +0200
+
+bloonix-webgui (0.108-1) unstable; urgency=low
+
+    * Fixed css select height.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 09 Aug 2016 18:15:04 +0200
+
 bloonix-webgui (0.107-1) unstable; urgency=low
 
     * Replaced bloonix own select-boxes with html select.

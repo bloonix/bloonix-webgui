@@ -8,7 +8,7 @@ use base qw(Bloonix::DBI::CRUD);
 sub init {
     my $self = shift;
 
-    $self->{schema_version} = 15;
+    $self->{schema_version} = 16;
     $self->log->warning("start database upgrade");
     $self->dbi->reconnect;
     $self->run_upgrade;
@@ -572,6 +572,12 @@ sub v15 {
 
     $self->upgrade("update host set timeout = '60' where timeout < '60'");
     $self->upgrade("update service_parameter set timeout = '60' where timeout < '60' and timeout > '0'");
+}
+
+sub v16 {
+    my $self = shift;
+
+    $self->upgrade("delete from chart where id = 310004")
 }
 
 1;

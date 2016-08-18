@@ -444,6 +444,14 @@ Bloonix.listServices = function(o) {
                     text: Text.get("schema.service.attr.agent_id"),
                     hide: true
                 },{
+                    name: "description",
+                    text: Text.get("schema.service.attr.description"),
+                    hide: true
+                },{
+                    name: "comment",
+                    text: Text.get("schema.service.attr.comment"),
+                    hide: true
+                },{
                     name: "status",
                     text: Text.get("schema.service.attr.status"),
                     wrapValueClass: true

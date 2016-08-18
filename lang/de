@@ -172,6 +172,7 @@ action.operate_as: Operiere als
 action.generate_string: String generieren
 action.redirect: Umleiten
 action.save: Speichern
+action.add_action: Eine Aktion hinzufügen
 
 bool.yesno.0: Nein
 bool.yesno.1: Ja

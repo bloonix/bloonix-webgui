@@ -373,16 +373,14 @@ Form.prototype.select = function(o) {
         callback: false,
         required: false,
         passNameValue: false,
+        resetPlaceholderAfterCallback: false,
         containerClass: false,
-        dropDownClass: false,
-        selectedClass: false,
         caretClass: false,
         listClass: false,
         getValueName: false,
         requiredMarkerClass: "rwb",
         short: false,
         width: false,
-        fontSize: false,
         readOnly: false,
         store: false
     }, o);
@@ -396,15 +394,19 @@ Form.prototype.select = function(o) {
     };
 
     object.getSelected = function() {
-        return { option: this.getSelectedOption(), value: this.getSelectedValue() };
+        return { option: this.getSelectedText(), value: this.getSelectedValue() };
     };
 
-    object.getSelectedOption = function() {
+    object.getSelectedText = function() {
         return this.selectList.find("option:selected").text();
     };
 
     object.getSelectedValue = function() {
         return this.selectList.val();
+    };
+
+    object.unselectAll = function() {
+        this.selectList.find("option:selected").removeAttr("selected");
     };
 
     object.destroy = function() {
@@ -419,14 +421,14 @@ Form.prototype.select = function(o) {
         if (this.placeholder) {
             this.placeholderOption = Utils.create("option")
                 .attr("value", "")
+                .attr("placeholder", "placeholder")
                 .text(this.placeholder)
                 .appendTo(this.selectList);
-
-            if (this.selected === false) {
-                this.placeholderOption.attr("disabled", "disabled");
-                this.placeholderOption.attr("selected", "selected");
-                this.placeholderOption.attr("hidden", "hidden");
-            }
+            //if (this.selected === false) {
+            //    this.placeholderOption.attr("disabled", "disabled");
+            //    this.placeholderOption.attr("selected", "selected");
+            //    this.placeholderOption.attr("hidden", "hidden");
+            //}
         }
     };
 
@@ -445,15 +447,27 @@ Form.prototype.select = function(o) {
             .addClass(this.getSelectListClass())
             .appendTo(this.container);
 
+        if (this.short) {
+            this.selectList.css({ width: "130px" });
+        }
+
+        if (this.width) {
+            this.selectList.css({ width: this.width });
+        }
+
+        if (this.maxHeight) {
+            this.selectList.css({ "max-height": this.maxHeight });
+        }
+
         this.addPlaceholder();
 
         if (this.title) {
             this.selectList.attr("title", this.title).tooltip();
         }
 
-        if (self.required == true) {
-            this.selectList.addClass(this.requiredMarkerClass);
-        }
+        //if (this.required == true) {
+        //    this.selectList.addClass(this.requiredMarkerClass);
+        //}
 
         if (this.options) {
             if (this.secondsToFormValues == true) {
@@ -472,9 +486,12 @@ Form.prototype.select = function(o) {
         if (self.callback) {
             this.selectList.change(function() {
                 if (self.passNameValue == true) {
-                    self.callback(self.getSelectedName(), self.getSelectedValue());
+                    self.callback(self.getSelectedText(), self.getSelectedValue());
                 } else {
                     self.callback(self.getSelectedValue());
+                }
+                if (self.resetPlaceholderAfterCallback == true) {
+                    self.unselectAll();
                 }
             });
         }

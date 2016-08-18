@@ -36,10 +36,29 @@ sub new {
         };
         if ($@) {
             $self->log->error("unable to update elasticsearch template", $@);
+        } else {
+            $self->fix_max_result_window_size;
         }
     }
 
     return $self;
+}
+
+sub fix_max_result_window_size {
+    my $self = shift;
+    my $result = $self->{rest}->get(path => "_aliases");
+
+    foreach my $index (keys %$result) {
+        next unless $index =~ /^bloonix-\d\d\d\d-\d\d\z/;
+        $self->{rest}->put(
+            path => "/$index/_settings",
+            data => {
+                index => {
+                    max_result_window => 1000000
+                }
+            }
+        );
+    }
 }
 
 sub _load {
