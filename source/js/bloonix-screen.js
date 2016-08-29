@@ -211,9 +211,8 @@ Bloonix.viewScreen = function(o) {
                 $.each(data.data.service_status_by_host, function(x, host) {
                     if (host.services.length) {
                         var outerBox = Utils.create("a")
-                            .addClass("screen-box-remove screen-box-outer screen-box-"+ host["status"])
-                            .click(function() { self.goBack("monitoring/hosts/"+ host.id) })
-                            .appendTo(self.screenBoxContent);
+                            .addClass("screen-box-remove screen-box-outer")
+                            .click(function() { self.goBack("monitoring/hosts/"+ host.id) });
 
                         var box = Utils.create("div")
                             .addClass("screen-box")
@@ -222,10 +221,14 @@ Bloonix.viewScreen = function(o) {
                         var messagesByStatus = { OK:[], INFO:[], WARNING:[], CRITICAL:[], UNKNOWN:[] },
                             messages = [],
                             status = [],
-                            statusCount = { OK:0, WARNING:0, CRITICAL:0, UNKNOWN:0 };
+                            statusCount = { OK:0, INFO:0, WARNING:0, CRITICAL:0, UNKNOWN:0 };
 
                         $.each(host.services, function(y, service) {
                             statusCount[service.status] = statusCount[service.status] + 1;
+
+                            if (stash.show_acknowledged == "0" && service.acknowledged == "1") {
+                                return true;
+                            }
 
                             if (host.services.length > 1) {
                                 messagesByStatus[service.status].push(service.service_name);
@@ -249,10 +252,15 @@ Bloonix.viewScreen = function(o) {
                         }
 
                         messages = messages.join(", ");
+                        var backgroundColorSet = false;
 
                         $.each([ "UNKNOWN", "CRITICAL", "WARNING", "INFO", "OK" ], function(i, s) {
                             if (statusCount[s] > 0) {
                                 status.push(statusCount[s] +" "+ s);
+                            }
+                            if (backgroundColorSet === false && messagesByStatus[s].length > 0 && s != "OK") {
+                                outerBox.addClass("screen-box-"+ s).appendTo(self.screenBoxContent);
+                                backgroundColorSet = true;
                             }
                         });
 
@@ -410,14 +418,14 @@ Bloonix.viewScreen = function(o) {
             text: Text.get("site.screen.attr.sort_by_sla")
         });
 
-        /*
         form.createElement({
             element: "radio-yes-no",
             name: "show_acknowledged",
-            checked: stash.show_acknowledged,
+            checked: stash.show_acknowledged || "1",
             text: Text.get("site.screen.attr.show_acknowledged"),
         });
 
+        /*
         form.createElement({
             element: "input",
             type: "text",

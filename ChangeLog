@@ -1,3 +1,8 @@
+bloonix-webgui (0.114) released at 2016-08-29
+
+    * Implemented the new feature to hide acknowledged services
+      from the notification screen.
+
 bloonix-webgui (0.113) released at 2016-08-29
 
     * Fixed: the notification screen now shows only services that

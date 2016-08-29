@@ -433,6 +433,7 @@ sub save_screen_config {
         show_sla
         show_services
         show_service_summary
+        show_acknowledged
     /) {
         if (defined $data->{$key} && $data->{$key} =~ /^[01]\z/) {
             $stash->{$key} = $data->{$key}

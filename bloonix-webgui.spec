@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.113
+Version: 0.114
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Aug 29 2016 Jonny Schulz <js@bloonix.de> - 0.114-1
+- Implemented the new feature to hide acknowledged services
+  from the notification screen.
 * Mon Aug 29 2016 Jonny Schulz <js@bloonix.de> - 0.113-1
 - Fixed: the notification screen now shows only services that
   are affected by the status.

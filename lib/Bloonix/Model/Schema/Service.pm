@@ -808,7 +808,7 @@ sub warnings_by_user_id {
 
     my ($stmt, @bind) = $self->sql->select(
         table => [
-            service => [qw(id host_id last_check message status)],
+            service => [qw(id host_id last_check message status acknowledged)],
             service_parameter => [qw(service_name)]
         ],
         join => [

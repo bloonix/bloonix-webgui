@@ -1,3 +1,10 @@
+bloonix-webgui (0.114-1) unstable; urgency=low
+
+    * Implemented the new feature to hide acknowledged services
+      from the notification screen.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 29 Aug 2016 16:58:34 +0200
+
 bloonix-webgui (0.113-1) unstable; urgency=low
 
     * Fixed: the notification screen now shows only services that
