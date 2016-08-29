@@ -1,3 +1,10 @@
+bloonix-webgui (0.113-1) unstable; urgency=low
+
+    * Fixed: the notification screen now shows only services that
+      are affected by the status.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 29 Aug 2016 16:20:55 +0200
+
 bloonix-webgui (0.112-1) unstable; urgency=low
 
     * Fixed bug in username selection in group->user->members.

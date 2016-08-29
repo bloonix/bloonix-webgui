@@ -219,7 +219,8 @@ Bloonix.viewScreen = function(o) {
                             .addClass("screen-box")
                             .appendTo(outerBox);
 
-                        var messages = [],
+                        var messagesByStatus = { OK:[], INFO:[], WARNING:[], CRITICAL:[], UNKNOWN:[] },
+                            messages = [],
                             status = [],
                             statusCount = { OK:0, WARNING:0, CRITICAL:0, UNKNOWN:0 };
 
@@ -227,11 +228,25 @@ Bloonix.viewScreen = function(o) {
                             statusCount[service.status] = statusCount[service.status] + 1;
 
                             if (host.services.length > 1) {
-                                messages.push(service.service_name);
+                                messagesByStatus[service.status].push(service.service_name);
                             } else {
-                                messages.push(service.service_name +" - "+ service.message);
+                                messagesByStatus[service.status].push(service.service_name +" - "+ service.message);
                             }
                         });
+
+                        $.each([ "UNKNOWN", "CRITICAL", "WARNING" ], function(i, s) {
+                            if (messagesByStatus[s].length > 0) {
+                                messages.push(messagesByStatus[s].join(", "));
+                            }
+                        });
+
+                        if (messages.length == 0) {
+                            $.each([ "INFO", "OK" ], function(i, s) {
+                                if (messagesByStatus[s].length > 0) {
+                                    messages.push(messagesByStatus[s].join(", "));
+                                }
+                            });
+                        }
 
                         messages = messages.join(", ");
 
