@@ -1,3 +1,7 @@
+bloonix-webgui (0.115) released at 2016-08-31
+
+    * Created schema/quick-install for Ansible/Saltstack/... rockstars.
+
 bloonix-webgui (0.114) released at 2016-08-29
 
     * Implemented the new feature to hide acknowledged services
