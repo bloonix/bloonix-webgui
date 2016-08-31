@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.114
+Version: 0.115
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Wed Aug 31 2016 Jonny Schulz <js@bloonix.de> - 0.115-1
+- Created schema/quick-install for Ansible/Saltstack/... rockstars.
 * Mon Aug 29 2016 Jonny Schulz <js@bloonix.de> - 0.114-1
 - Implemented the new feature to hide acknowledged services
   from the notification screen.
