@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Bloonix::Config;
+
+my $run = $ARGV[0] || "no";
+my $config = Bloonix::Config->parse("/etc/bloonix/database/main.conf");
+
+if ($run ne "--run") {
+    print "\nUsage: $0 --run\n\n";
+    print "This scripts installs the bloonix schema! Please configure /etc/bloonix/database/main.conf for the connection data first.\n\n";
+    exit 1;
+}
+
+print "\nReinstall bloonix schema\n\n";
+
+if ($config->{driver} eq "Pg") {
+    $ENV{PGPASSWORD} = $config->{password};
+    system("psql -U $config->{user} -h $config->{host} -d $config->{database} -f /srv/bloonix/webgui/schema/schema-pg.sql");
+    $ENV{PGPASSWORD} = "";
+} else {
+    open my $fh, "<", "/srv/bloonix/webgui/schema/table-order.txt" or die $!;
+    open my $out, ">", "/srv/bloonix/webgui/schema/mysql/.all.sql" or die $!;
+    my @tables = <$fh>;
+    close $fh;
+    chomp @tables;
+    push @tables, "data";
+    foreach my $table (@tables) {
+        open my $in, "<", "/srv/bloonix/webgui/schema/mysql/$table.sql" or die $!;
+        print $out (<$in>);
+        close $in;
+    }
+    close $out;
+    $ENV{MYSQL_PWD} = $config->{password};
+    system("mysql -u $config->{user} -h $config->{host} $config->{database} </srv/bloonix/webgui/schema/mysql/.all.sql");
+    die $? if $?;
+    $ENV{MYSQL_PWD} = "";
+}
+
+print "Done.\n";
