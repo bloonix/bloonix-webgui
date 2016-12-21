@@ -1,3 +1,20 @@
+bloonix-webgui (0.119) released at 2016-12-20
+
+    * Fixed documentation to global check timeout for the bloonix agent.
+
+bloonix-webgui (0.118) released at 2016-11-24
+
+    * Fixed duplicate entries for host and service intervals.
+
+bloonix-webgui (0.117) released at 2016-09-21
+
+    * Fixed: drop selected hosts if the registration was successful.
+
+bloonix-webgui (0.116) released at 2016-09-05
+
+    * Changed param --force to --run in quick-install.
+    * Fixed notification screen: OK boxes are now shows.
+
 bloonix-webgui (0.115) released at 2016-08-31
 
     * Created schema/quick-install for Ansible/Saltstack/... rockstars.

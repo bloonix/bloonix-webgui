@@ -39,6 +39,7 @@ Bloonix.listRegisteredHosts = function(o) {
             onSuccess: function() {
                 Bloonix.getRegisteredHostCount();
                 overlay.close();
+                self.table.clearSelectedRows();
                 self.table.getData();
             },
             appendTo: content,

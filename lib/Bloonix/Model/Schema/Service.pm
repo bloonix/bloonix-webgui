@@ -172,12 +172,12 @@ sub get_check_frequency {
     my @timeout = (180, 300, 600, 900, 1800, 3600);
 
     if ($freq eq "high") {
-        unshift @interval, 15, 30, 60, 120;
+        unshift @interval, 15, 30;
         unshift @timeout, 60, 120;
     } elsif ($freq eq "mid") {
-        unshift @interval, 30, 60, 120;
-    } elsif ($freq eq "low") {
-        unshift @interval, 60, 120;
+        unshift @interval, 30;
+    #} elsif ($freq eq "low") {
+    #    unshift @interval, 60, 120;
     }
 
     unshift @interval, 0;

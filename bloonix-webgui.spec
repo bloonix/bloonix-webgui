@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.115
+Version: 0.119
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -61,6 +61,15 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Tue Dec 20 2016 Jonny Schulz <js@bloonix.de> - 0.119-1
+- Fixed documentation to global check timeout for the bloonix agent.
+* Thu Nov 24 2016 Jonny Schulz <js@bloonix.de> - 0.118-1
+- Fixed duplicate entries for host and service intervals.
+* Wed Sep 21 2016 Jonny Schulz <js@bloonix.de> - 0.117-1
+- Fixed: drop selected hosts if the registration was successful.
+* Mon Sep 05 2016 Jonny Schulz <js@bloonix.de> - 0.116-1
+- Changed param --force to --run in quick-install.
+- Fixed notification screen: OK boxes are now shows.
 * Wed Aug 31 2016 Jonny Schulz <js@bloonix.de> - 0.115-1
 - Created schema/quick-install for Ansible/Saltstack/... rockstars.
 * Mon Aug 29 2016 Jonny Schulz <js@bloonix.de> - 0.114-1

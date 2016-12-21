@@ -73,7 +73,7 @@ sub log {
     if ($log->{data} && $log->{old}) {
         my %diff = ();
         my $old = $log->{old};
-        my $new = $log->{new};
+        my $new = $log->{data};
         my @keys = keys %$old;
 
         foreach my $key (@keys) {
@@ -85,7 +85,7 @@ sub log {
         }
 
         $data = $self->json->encode({
-            data => $new,
+            new => $new,
             old => $old,
             diff => \%diff,
         });

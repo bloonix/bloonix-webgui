@@ -1,3 +1,28 @@
+bloonix-webgui (0.119-1) unstable; urgency=low
+
+    * Fixed documentation to global check timeout for the bloonix agent.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 20 Dec 2016 19:26:40 +0100
+
+bloonix-webgui (0.118-1) unstable; urgency=low
+
+    * Fixed duplicate entries for host and service intervals.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 24 Nov 2016 14:30:09 +0100
+
+bloonix-webgui (0.117-1) unstable; urgency=low
+
+    * Fixed: drop selected hosts if the registration was successful.
+
+ -- Jonny Schulz <js@bloonix.de>  Wed, 21 Sep 2016 20:39:18 +0200
+
+bloonix-webgui (0.116-1) unstable; urgency=low
+
+    * Changed param --force to --run in quick-install.
+    * Fixed notification screen: OK boxes are now shows.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 05 Sep 2016 19:02:58 +0200
+
 bloonix-webgui (0.115-1) unstable; urgency=low
 
     * Created schema/quick-install for Ansible/Saltstack/... rockstars.

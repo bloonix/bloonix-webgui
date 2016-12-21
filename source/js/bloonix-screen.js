@@ -258,7 +258,7 @@ Bloonix.viewScreen = function(o) {
                             if (statusCount[s] > 0) {
                                 status.push(statusCount[s] +" "+ s);
                             }
-                            if (backgroundColorSet === false && messagesByStatus[s].length > 0 && s != "OK") {
+                            if (backgroundColorSet === false && messagesByStatus[s].length > 0) {
                                 outerBox.addClass("screen-box-"+ s).appendTo(self.screenBoxContent);
                                 backgroundColorSet = true;
                             }

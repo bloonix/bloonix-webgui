@@ -992,7 +992,7 @@ schema.service.attr.scheduled: Indisponibilità
 schema.service.attr.host_alive_check: È un controllo di host operativo?
 schema.service.attr.passive_check: È un controllo passivo?
 schema.service.attr.agent_options.timeout: Timeout controllo globale
-schema.service.desc.agent_options.timeout: Questo è il timeout globale di esecuzione del controllo: dopo il timeout il controllo viene soppresso e attivato lo stato CRITICO. Questo è molto utile per i controlli appesi che non riescono a fermarsi.<br/><br/>Predefinito: 30 secondi
+schema.service.desc.agent_options.timeout: Questo è il timeout globale di esecuzione del controllo: dopo il timeout il controllo viene soppresso e attivato lo stato CRITICO. Questo è molto utile per i controlli appesi che non riescono a fermarsi.<br/><br/>Predefinito: 60 secondi
 schema.service.attr.agent_options.set_tags: Imposta tag
 schema.service.desc.agent_options.set_tags: Quale tag deve venir impostato se il controllo restituisce uno stato ALLERTA, CRITICO o SCONOSCIUTO.
 schema.service.desc.agent_id: Questa è l'ubicazione da dove viene eseguito il controllo.

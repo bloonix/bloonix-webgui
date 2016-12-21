@@ -87,17 +87,17 @@ sub validator_host_opts {
     my $self = shift;
 
     my $freq = $self->c->config->{webapp}->{check_frequency};
-    my @interval = (300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
+    my @interval = (60, 120, 300, 600, 900, 1800, 3600, 7200, 14400, 28800, 43200, 57600, 86400);
     my @timeout = (180, 300, 600, 900, 1800, 3600);
     my @retry_interval = (60, 120, 180, 300, 600, 900, 1800, 3600);
 
     if ($freq eq "high") {
-        unshift @interval, 15, 30, 60, 120;
+        unshift @interval, 15, 30;
         unshift @timeout, 60, 120;
     } elsif ($freq eq "mid") {
-        unshift @interval, 30, 60, 120;
-    } elsif ($freq eq "low") {
-        unshift @interval, 60, 120;
+        unshift @interval, 30;
+    #} elsif ($freq eq "low") {
+    #    unshift @interval, 60, 120;
     }
 
     if ($freq ne "sleepy") {

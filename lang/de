@@ -993,7 +993,7 @@ schema.service.attr.scheduled: Hat eine Downtime
 schema.service.attr.host_alive_check: Ist dies ein Host-Alive-Check?
 schema.service.attr.passive_check: Ist dies ein passiver Check?
 schema.service.attr.agent_options.timeout: Globaler Check Timeout
-schema.service.desc.agent_options.timeout: Das ist der globale Timeout zur Ausführung des Checks. Nach dem Timeout wird der Check hart beendet und der Status des Servcice auf CRITICAL gesetzt. Dies kann sehr sinnvoll für Checks sein die hängen und sich selbst nicht mehr beenden können.<br/><br/>Standard: 30 Sekunden
+schema.service.desc.agent_options.timeout: Das ist der globale Timeout zur Ausführung des Checks. Nach dem Timeout wird der Check hart beendet und der Status des Servcice auf CRITICAL gesetzt. Dies kann sehr sinnvoll für Checks sein die hängen und sich selbst nicht mehr beenden können.<br/><br/>Standard: 60 Sekunden
 schema.service.attr.agent_options.set_tags: Flags setzen
 schema.service.desc.agent_options.set_tags: Welche Flags sollen gesetzt werden, wenn der Check einen WARNING oder CRITICAL Status liefert.
 schema.service.desc.agent_id: Standort der Prüfung
