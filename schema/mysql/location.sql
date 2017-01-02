@@ -1,6 +1,7 @@
 CREATE TABLE `location` (
     `id`           BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `ipaddr`       VARCHAR(159) NOT NULL,
+    `port`         SMALLINT NOT NULL DEFAULT '5464',
     `hostname`     VARCHAR(50) NOT NULL,
     `city`         VARCHAR(50) NOT NULL,
     `country`      VARCHAR(50) NOT NULL,

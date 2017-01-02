@@ -1,3 +1,9 @@
+bloonix-webgui (0.120-1) unstable; urgency=low
+
+    * Implemented port number for satellites.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 02 Jan 2017 16:23:55 +0100
+
 bloonix-webgui (0.119-1) unstable; urgency=low
 
     * Fixed documentation to global check timeout for the bloonix agent.

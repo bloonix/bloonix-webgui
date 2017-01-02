@@ -461,6 +461,7 @@ CREATE SEQUENCE "location_id_seq" START WITH 1 INCREMENT BY 1 NO MAXVALUE NO MIN
 CREATE TABLE "location" (
     "id"           BIGINT PRIMARY KEY DEFAULT nextval('location_id_seq'),
     "ipaddr"       VARCHAR(159) NOT NULL,
+    "port"         INTEGER NOT NULL DEFAULT '5464',
     "hostname"     VARCHAR(50) NOT NULL,
     "city"         VARCHAR(50) NOT NULL,
     "country"      VARCHAR(50) NOT NULL,

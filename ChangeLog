@@ -1,3 +1,7 @@
+bloonix-webgui (0.120) released at 2017-01-02
+
+    * Implemented port number for satellites.
+
 bloonix-webgui (0.119) released at 2016-12-20
 
     * Fixed documentation to global check timeout for the bloonix agent.

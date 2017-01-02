@@ -55,6 +55,9 @@ Bloonix.listLocations = function() {
                 name: "ipaddr",
                 text: Text.get("schema.location.attr.ipaddr")
             },{
+                name: "port",
+                text: Text.get("schema.location.attr.port")
+            },{
                 name: "continent",
                 text: Text.get("schema.location.attr.continent")
             },{
@@ -113,6 +116,13 @@ Bloonix.getLocationFormElements = function() {
             name: "ipaddr",
             text: Text.get("schema.location.attr.ipaddr"),
             maxlength: 39,
+            required: true
+        },{
+            element: "input",
+            type: "text",
+            name: "port",
+            text: Text.get("schema.location.attr.port"),
+            maxlength: 5,
             required: true
         },{
             element: "select",

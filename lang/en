@@ -1164,6 +1164,7 @@ schema.user_chart.text.click_to_add_metric: Click to add the metric
 
 schema.location.attr.id: ID
 schema.location.attr.ipaddr: IP address
+schema.location.attr.port: Port number
 schema.location.attr.hostname: Hostname
 schema.location.attr.city: City
 schema.location.attr.country: Country

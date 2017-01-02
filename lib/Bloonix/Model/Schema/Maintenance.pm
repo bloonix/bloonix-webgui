@@ -8,7 +8,7 @@ use base qw(Bloonix::DBI::CRUD);
 sub init {
     my $self = shift;
 
-    $self->{schema_version} = 16;
+    $self->{schema_version} = 17;
     $self->log->warning("start database upgrade");
     $self->dbi->reconnect;
     $self->run_upgrade;
@@ -578,6 +578,16 @@ sub v16 {
     my $self = shift;
 
     $self->upgrade("delete from chart where id = 310004")
+}
+
+sub v17 {
+    my $self = shift;
+
+    if ($self->dbi->{driver} eq "Pg") {
+        $self->upgrade("alter table location add column port integer not null default '5464'");
+    } else {
+        $self->upgrade("alter table location add column port smallint not null default '5464'");
+    }
 }
 
 1;

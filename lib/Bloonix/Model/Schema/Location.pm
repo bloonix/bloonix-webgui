@@ -12,6 +12,10 @@ sub init {
         ipaddr => {
             regex => $self->validator->regex->ipaddr
         },
+        port => {
+            regex => $self->validator->regex->port,
+            default => 5464
+        },
         hostname => {
             regex => qr/^[\w\.\-]{3,64}\z/
         },

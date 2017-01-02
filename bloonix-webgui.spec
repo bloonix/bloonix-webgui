@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.119
+Version: 0.120
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -14,6 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Source0: http://download.bloonix.de/sources/%{name}-%{version}.tar.gz
 Requires: bloonix-webgui-core >= 0.16
+Requires: bloonix-core >= 0.41
 AutoReqProv: no
 
 %description
@@ -61,6 +62,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Jan 02 2017 Jonny Schulz <js@bloonix.de> - 0.120-1
+- Implemented port number for satellites.
 * Tue Dec 20 2016 Jonny Schulz <js@bloonix.de> - 0.119-1
 - Fixed documentation to global check timeout for the bloonix agent.
 * Thu Nov 24 2016 Jonny Schulz <js@bloonix.de> - 0.118-1
