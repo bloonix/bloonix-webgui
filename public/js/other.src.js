@@ -6557,6 +6557,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         - this.labelHeight/2;
             offsets.y = box.height/2 + box.top;
         }
+        offsets.x = Math.round(offsets.x);
+        offsets.y = Math.round(offsets.y);
+
         return offsets;
     };
 

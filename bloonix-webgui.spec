@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.120
+Version: 0.121
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -62,6 +62,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Wed Jan 25 2017 Jonny Schulz <js@bloonix.de> - 0.121-1
+- Fixed stacked area charts with negative values.
 * Mon Jan 02 2017 Jonny Schulz <js@bloonix.de> - 0.120-1
 - Implemented port number for satellites.
 * Tue Dec 20 2016 Jonny Schulz <js@bloonix.de> - 0.119-1

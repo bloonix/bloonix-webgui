@@ -1,3 +1,7 @@
+bloonix-webgui (0.121) released at 2017-01-25
+
+    * Fixed stacked area charts with negative values.
+
 bloonix-webgui (0.120) released at 2017-01-02
 
     * Implemented port number for satellites.

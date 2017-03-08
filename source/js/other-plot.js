@@ -103,7 +103,9 @@ Bloonix.other.plotChart = function(o) {
     }
 
     if (o.chart.type === "area") {
-        object.opts.series.stack = true;
+        if (o.hasNegativeValues == false) {
+            object.opts.series.stack = true;
+        }
         object.opts.series.lines = { fill: .7, lineWidth: 1 };
     }
 

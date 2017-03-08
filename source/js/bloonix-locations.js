@@ -24,8 +24,6 @@ Bloonix.listLocations = function() {
                         .text(Text.get("err-428"))
                         .appendTo(div);
 
-                    console.log(result);
-
                     $.each(result.data.failed, function(i, service) {
                         var errmsg = "Host: "+ service["hostname"]
                             +" ("+ service["host_id"] +") "

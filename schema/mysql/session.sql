@@ -3,6 +3,7 @@ CREATE TABLE `session` (
     `user_id`   BIGINT NOT NULL,
     `expire`    BIGINT NOT NULL,
     `stash`     TEXT,
+    UNIQUE(`sid`),
     FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 

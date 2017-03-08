@@ -275,7 +275,7 @@ Bloonix.listCharts = function(o) {
             name: "chart_view",
             id: "chart-view-list",
             options: options,
-            callback: function(id) { console.log("FOOBAR", id); self.loadChartView(id) },
+            callback: function(id) { self.loadChartView(id) },
             appendTo: this.saveChartBox,
             showValue: true
         });

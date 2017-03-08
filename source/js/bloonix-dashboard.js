@@ -1534,7 +1534,6 @@ Bloonix.dashboard = function(o) {
                     url: "/hosts/charts/data",
                     data: data,
                     success: function(result) {
-                        console.log(result);
                         var service = result.data.service,
                             stats = result.data.stats,
                             title = service.hostname +" :: "+ service.title,
