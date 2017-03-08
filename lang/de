@@ -702,7 +702,7 @@ schema.host.text.multiple_edit: Die Konfiguration mehrerer Hosts editieren
 schema.host.text.multiple_edit_info: Leere Felder werden ignoriert!
 schema.host.text.add_hosts_to_group: Füge die selektierte Hosts einer Gruppe hinzu
 schema.host.text.delete_reg_hosts: Hosts löschen
-schema.host.text.mtr_output: MTR Ergebis von Host %s
+schema.host.text.mtr_output: MTR Ergebnis von Host %s
 schema.host.text.mtr_chart: MTR Chart
 schema.host.text.report_title: Bericht für Host %s
 schema.host.text.add_hosts_to_group: Die Hosts einer Gruppe hinzufügen
