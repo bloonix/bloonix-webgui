@@ -1,3 +1,9 @@
+bloonix-webgui (0.122-1) unstable; urgency=low
+
+    * Fixed umlaut issues (utf8) on the dashboard.
+
+ -- Jonny Schulz <js@bloonix.de>  Wed, 08 Mar 2017 23:22:31 +0100
+
 bloonix-webgui (0.121-1) unstable; urgency=low
 
     * Fixed stacked area charts with negative values.
