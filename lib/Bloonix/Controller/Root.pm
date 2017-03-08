@@ -87,7 +87,7 @@ sub auto {
             }
         }
 
-        $user->{stash} = $c->json->decode($user->{stash});
+        $user->{stash} = $c->json->utf8->decode($user->{stash});
         $user->{stash}->{table_config} //= {};
         $user->{company_data_retention} = $company->{data_retention};
 

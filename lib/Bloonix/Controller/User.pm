@@ -98,7 +98,7 @@ sub last_open_dashboard {
         $stash->{last_open_dashboard} = $data;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->encode($stash) }
+            { stash => $c->json->utf8->encode($stash) }
         );
     }
 }
@@ -122,7 +122,7 @@ sub rename_dashboard {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->encode($stash) }
+        { stash => $c->json->utf8->encode($stash) }
     );
 
     $c->view->render->json;
@@ -145,7 +145,7 @@ sub delete_dashboard {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->encode($stash) }
+        { stash => $c->json->utf8->encode($stash) }
     );
 
     $c->view->render->json;
@@ -267,7 +267,7 @@ sub save_dashboard_data {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->encode($stash) }
+        { stash => $c->json->utf8->encode($stash) }
     );
 
     $c->stash->data($data);
@@ -402,7 +402,7 @@ sub save_table_config {
         $stash->{table_config}->{$table}->{$column} = $action;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->encode($stash) }
+            { stash => $c->json->utf8->encode($stash) }
         );
     }
 }
@@ -414,7 +414,7 @@ sub host_class_view {
         $c->user->{stash}->{host_class_view} = $data;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->encode($c->user->{stash}) }
+            { stash => $c->json->utf8->encode($c->user->{stash}) }
         );
     }
 
@@ -452,7 +452,7 @@ sub save_screen_config {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->encode($c->user->{stash}) }
+        { stash => $c->json->utf8->encode($c->user->{stash}) }
     );
 
     $c->stash->data($data);
@@ -461,8 +461,9 @@ sub save_screen_config {
 
 sub stash {
     my ($self, $c) = @_;
-
-    $c->stash->data($c->user->{stash});
+    my $stash = JSON->new->utf8->encode($c->user->{stash});
+    $stash = JSON->new->decode($stash);
+    $c->stash->data($stash);
     $c->view->render->json;
 }
 

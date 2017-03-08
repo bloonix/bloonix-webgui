@@ -270,6 +270,9 @@ Bloonix.saveUserConfig = function(key, data, updateInfo) {
         success: function(result) {
             if (result.status == "ok") {
                 if (key === "dashboard") {
+                    if (Bloonix.user.stash[key] == undefined) {
+                        Bloonix.user.stash[key] = {};
+                    }
                     Bloonix.user.stash[key][data.name] = data.data;
                 } else {
                     Bloonix.user.stash[key] = result.data;
