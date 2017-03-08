@@ -1,3 +1,7 @@
+bloonix-webgui (0.122) released at 2017-03-08
+
+    * Fixed umlaut issues (utf8) on the dashboard.
+
 bloonix-webgui (0.121) released at 2017-01-25
 
     * Fixed stacked area charts with negative values.
