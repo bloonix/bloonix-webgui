@@ -197,9 +197,9 @@ sub service_options {
 
     if ($opts && $opts->{ref_id}) {
         my $service = $c->stash->object->{service};
-        $service->{command_options} = $c->json->decode($service->{command_options});
+        $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
         if ($service->{location_options}) {
-            $service->{location_options} = $c->json->decode($service->{location_options});
+            $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
 
             my $locations_form_parameter = join("_",
                 $service->{location_options}->{check_type},
@@ -209,7 +209,7 @@ sub service_options {
             $service->{location_options}->{$locations_form_parameter} = delete $service->{location_options}->{locations};
         }
         if ($service->{agent_options}) {
-            $service->{agent_options} = $c->json->decode($service->{agent_options});
+            $service->{agent_options} = $c->json->utf8(0)->decode($service->{agent_options});
         } else {
             $service->{agent_options} = {};
         }
@@ -262,10 +262,10 @@ sub create_service {
     eval {
         local $SIG{__DIE__} = "DEFAULT";
         $service = $c->model->database->service_parameter->create_and_get($data);
-        $service->{command_options} = $c->json->decode($service->{command_options});
+        $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
 
         if ($service->{location_options}) {
-            $service->{location_options} = $c->json->decode($service->{location_options});
+            $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
         }
 
         $c->plugin->log_action->create(
@@ -332,10 +332,10 @@ sub update_service {
         condition => [ ref_id => $opts->{ref_id} ]
     );
 
-    $service->{command_options} = $c->json->decode($service->{command_options});
+    $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
 
     if ($service->{location_options}) {
-        $service->{location_options} = $c->json->decode($service->{location_options});
+        $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
     }
 
     $c->plugin->log_action->update(

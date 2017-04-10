@@ -655,6 +655,9 @@ Bloonix.WtrmAction = {
     checkIfElementHasNotText: function(item) {
         return Text.get("site.wtrm.command.checkIfElementHasNotText", [ Bloonix.getWtrmElement(item), item.text ]);
     },
+    checkIfElementMatchText: function(item) {
+        return Text.get("site.wtrm.command.checkIfElementMatchText", [ Bloonix.getWtrmElement(item), item.text ]);
+    },
     checkIfElementHasHTML: function(item) {
         return Text.get("site.wtrm.command.checkIfElementHasHTML", [ Bloonix.getWtrmElement(item), item.html ]);
     },

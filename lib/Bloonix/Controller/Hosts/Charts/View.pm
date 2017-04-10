@@ -61,7 +61,7 @@ sub view {
         ]
     ) or return $c->plugin->error->object_does_not_exists;
 
-    my $options = $chart_view->{options} = $c->json->decode($chart_view->{options});
+    my $options = $chart_view->{options} = $c->json->utf8(0)->decode($chart_view->{options});
     my $charts = {};
     my @plugin_ids;
 
@@ -84,7 +84,7 @@ sub view {
                 ) or next;
             }
 
-            $charts->{$chart_key}->{options} = $c->json->decode($charts->{$chart_key}->{options});
+            $charts->{$chart_key}->{options} = $c->json->utf8(0)->decode($charts->{$chart_key}->{options});
 
             if (!$sel->{service_id}) {
                 foreach my $opt (@{$charts->{$chart_key}->{options}}) {
@@ -132,7 +132,7 @@ sub save {
 
     my $alias = delete $data->{alias};
     my $public = delete $data->{public};
-    my $options = $c->json->encode($data);
+    my $options = $c->json->utf8(1)->encode($data);
 
     my $chart_view = $c->model->database->chart_view->find(
         condition => [

@@ -45,7 +45,7 @@ sub view {
         ]
     ) or return $c->plugin->error->object_does_not_exists;
 
-    $data->{options} = $c->json->decode($data->{options});
+    $data->{options} = $c->json->utf8(0)->decode($data->{options});
 
     my @service_ids = (0);
     my @plugin_ids = (0);
@@ -96,7 +96,7 @@ sub list {
     my @plugin_ids = (0);
 
     foreach my $row (@$rows) {
-        $row->{options} = $c->json->decode($row->{options});
+        $row->{options} = $c->json->utf8(0)->decode($row->{options});
 
         foreach my $opt (@{$row->{options}}) {
             push @plugin_ids, $opt->{plugin_id};
@@ -153,7 +153,7 @@ sub store {
         ) or return $c->plugin->error->form_parse_errors("options");
     }
 
-    $data->{options} = $c->json->encode($data->{options});
+    $data->{options} = $c->json->utf8(1)->encode($data->{options});
     $data->{user_id} = $c->user->{id};
 
     my $result = $c->stash->object

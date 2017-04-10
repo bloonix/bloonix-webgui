@@ -27,7 +27,7 @@ sub validate {
     my $form = $self->validate_base_settings($service, $plugin, $service ? "update" : "create", $template)
         or return;
 
-    my $plugin_info = $c->json->decode($plugin->{info});
+    my $plugin_info = $c->json->utf8(0)->decode($plugin->{info});
     my $plugin_options = $plugin_info->{options};
     my $command_options = $self->validate_command_options($plugin, $plugin_info, $plugin_options)
         or return;
@@ -48,12 +48,12 @@ sub validate {
         $data->{status} = "INFO";
     }
 
-    $data->{command_options} = $c->json->encode($command_options);
-    $data->{agent_options} = $c->json->encode($agent_options);
+    $data->{command_options} = $c->json->utf8(1)->encode($command_options);
+    $data->{agent_options} = $c->json->utf8(1)->encode($agent_options);
     $data->{sum_services} = 1;
 
     if (ref $location_options eq "HASH") {
-        $data->{location_options} = $c->json->encode($location_options);
+        $data->{location_options} = $c->json->utf8(1)->encode($location_options);
         if (
             $location_options->{check_type} eq "multiple"
             && exists $location_options->{locations}
@@ -351,7 +351,7 @@ sub validate_agent_options {
     my @errors;
 
     my $service_agent_options = ref $service eq "HASH" && $service->{agent_options}
-        ? $c->json->decode($service->{agent_options})
+        ? $c->json->utf8(0)->decode($service->{agent_options})
         : {};
 
     my $agent_options = $c->req->param("agent_options");

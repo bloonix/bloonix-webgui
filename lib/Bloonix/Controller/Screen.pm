@@ -34,7 +34,7 @@ sub auto {
 sub index {
     my ($self, $c) = @_;
 
-    $c->stash->{data}->{init} = $c->json->encode({
+    $c->stash->{data}->{init} = $c->json->utf8(1)->encode({
         version => $c->version->{js},
         screen => 1,
         dashboard => 1,
@@ -47,7 +47,7 @@ sub index {
 
 sub stats {
     my ($self, $c) = @_;
-    my $stash = $c->user->{stash}->{screen} // {};
+    my $stash = $c->json->utf8(1)->decode($c->user->{stash})->{screen} // {};
 
     my $status = {
         OK => 0,
@@ -83,7 +83,7 @@ sub stats {
 sub charts {
     my ($self, $c, $opts) = @_;
 
-    $c->stash->{data}->{init} = $c->json->encode({
+    $c->stash->{data}->{init} = $c->json->utf8(1)->encode({
         version => $c->version->{js},
         screen => 1,
         charts => 1,
@@ -104,9 +104,9 @@ sub chart_view {
         ]
     ) or return $c->plugin->error->object_does_not_exists;
 
-    #$chart_view->{options} = $c->json->decode($chart_view->{options});
+    #$chart_view->{options} = $c->json->utf8(0)->decode($chart_view->{options});
 
-    my $options = $chart_view->{options} = $c->json->decode($chart_view->{options});
+    my $options = $chart_view->{options} = $c->json->utf8(0)->decode($chart_view->{options});
     my $selected = delete $options->{selected};
     $options->{selected} = { };
 
@@ -116,7 +116,7 @@ sub chart_view {
         ) or next;
 
         my $chart_key = join(":", $chart_opts->{service_id}, $chart_opts->{chart_id});
-        $chart_opts->{options} = $c->json->decode($chart_opts->{options});
+        $chart_opts->{options} = $c->json->utf8(0)->decode($chart_opts->{options});
         $options->{selected}->{$chart_key} = $chart_opts;
     }
 

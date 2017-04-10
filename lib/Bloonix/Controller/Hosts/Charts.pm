@@ -68,7 +68,7 @@ sub list {
 
     foreach my $chart (@$data) {
         if ($chart->{options}) {
-            $chart->{options} = $c->json->decode($chart->{options});
+            $chart->{options} = $c->json->utf8(0)->decode($chart->{options});
         }
     }
 
@@ -163,7 +163,7 @@ sub get_service_chart_data {
     my $plugin_stats = $c->model->database->plugin_stats->get_plugin_by_statkey($chart->{plugin_id});
 
     $chart->{subkey} = $subkey;
-    $chart->{options} = $c->json->decode($chart->{options});
+    $chart->{options} = $c->json->utf8(0)->decode($chart->{options});
 
     if ($c->log->is_debug) {
         $c->log->debug("request chart data for:");
@@ -216,7 +216,7 @@ sub get_user_chart_data {
         ]
     ) or return $c->plugin->error->form_parse_errors("chart_id");
 
-    $chart->{options} = $c->json->decode($chart->{options});
+    $chart->{options} = $c->json->utf8(0)->decode($chart->{options});
 
     my (%time, %services);
 

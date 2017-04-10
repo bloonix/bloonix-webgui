@@ -102,6 +102,11 @@ sub new {
             element => 1,
             text => 1
         ],
+        checkIfElementMatchText => [
+            parent => 0,
+            element => 1,
+            text => 1
+        ],
         checkIfElementHasHTML => [
             parent => 0,
             element => 1,

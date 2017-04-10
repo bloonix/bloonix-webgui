@@ -1,3 +1,13 @@
+bloonix-webgui (0.124) released at 2017-04-10
+
+    * Fixed screen bug.
+
+bloonix-webgui (0.123) released at 2017-03-29
+
+    * Implemented checkIfElementMatchText for web transactions.
+    * Further utf8 fixes for all strings which are stored as
+      utf8 in the database.
+
 bloonix-webgui (0.122) released at 2017-03-08
 
     * Fixed umlaut issues (utf8) on the dashboard.

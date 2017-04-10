@@ -68,20 +68,16 @@ sub options {
         $c->user->{id}, $opts->{id}
     ) or return $c->plugin->error->no_privileges_on_action(modify => "service");
 
-    #if ($c->stash->object->{service}->{host_template_id}) {
-    #    $c->model->database->service->set_small;
-    #} else {
-        $c->model->database->service->set(
-            $c->stash->object->{plugin},
-            $c->stash->object->{service} ? "update" : "create"
-        );
-    #}
+    $c->model->database->service->set(
+        $c->stash->object->{plugin},
+        $c->stash->object->{service} ? "update" : "create"
+    );
 
     if ($opts && $opts->{service_id}) {
         my $service = $c->stash->object->{service};
-        $service->{command_options} = $c->json->decode($service->{command_options});
+        $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
         if ($service->{location_options}) {
-            $service->{location_options} = $c->json->decode($service->{location_options});
+            $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
 
             my $locations_form_parameter = join("_",
                 $service->{location_options}->{check_type}, 
@@ -92,7 +88,7 @@ sub options {
                 delete $service->{location_options}->{locations};
         }
         if ($service->{agent_options}) {
-            $service->{agent_options} = $c->json->decode($service->{agent_options});
+            $service->{agent_options} = $c->json->utf8(0)->decode($service->{agent_options});
         } else {
             $service->{agent_options} = {};
         }
@@ -149,10 +145,10 @@ sub create {
     my $service = $c->model->database->service->create_new_service($data)
         or return $c->plugin->error->action_failed;
 
-    $service->{command_options} = $c->json->decode($service->{command_options});
+    $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
 
     if ($service->{location_options}) {
-        $service->{location_options} = $c->json->decode($service->{location_options});
+        $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
     }
 
     $c->plugin->log_action->create(
@@ -223,10 +219,10 @@ sub update {
         or return $c->plugin->error->action_failed;
 
     $service = $c->model->database->service->by_service_id($service->{id});
-    $service->{command_options} = $c->json->decode($service->{command_options});
+    $service->{command_options} = $c->json->utf8(0)->decode($service->{command_options});
 
     if ($service->{location_options}) {
-        $service->{location_options} = $c->json->decode($service->{location_options});
+        $service->{location_options} = $c->json->utf8(0)->decode($service->{location_options});
     }
 
     $c->plugin->log_action->update(

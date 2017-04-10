@@ -531,7 +531,7 @@ sub v12 {
 
     while (my $row = $sth->fetchrow_hashref) {
         if ($row->{location_options}) {
-            my $location_options = $self->c->json->decode($row->{location_options});
+            my $location_options = $self->c->json->utf8(0)->decode($row->{location_options});
             if ($location_options->{check_type} eq "multiple") {
                 my $sum = @{$location_options->{locations}};
                 if ($sum > 1) {

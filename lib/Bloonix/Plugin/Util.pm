@@ -7,6 +7,7 @@ use Digest::SHA qw(sha256_hex sha512_hex hmac_sha512);
 use MIME::Base64;
 use MIME::Lite;
 use Time::ParseDate;
+use Encode;
 use base qw(Bloonix::Accessor);
 
 __PACKAGE__->mk_accessors(qw/c/);
@@ -291,11 +292,11 @@ sub pv_to_json {
     }
 
     if ($key) {
-        $data->{$key} = $c->json->encode($to_json);
+        $data->{$key} = $c->json->utf8(1)->encode($to_json);
         return $data;
     }
 
-    return $c->json->encode($to_json);
+    return $c->json->utf8(1)->encode($to_json);
 }
 
 sub json_to_pv {
@@ -310,8 +311,8 @@ sub json_to_pv {
 
     my $c = $self->c;
     my $variables = $key
-        ? $c->json->decode($data->{$key})
-        : $c->json->decode($data);
+        ? $c->json->utf8(0)->decode($data->{$key})
+        : $c->json->utf8(0)->decode($data);
 
     my $to_pv = "";
 

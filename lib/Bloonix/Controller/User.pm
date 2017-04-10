@@ -55,6 +55,12 @@ sub new {
     return $self;
 }
 
+sub begin {
+    my ($self, $c) = @_;
+
+    $self->{stash} = $c->json->utf8(1)->decode($c->user->{stash});
+}
+
 sub save {
     my ($self, $c) = @_;
 
@@ -69,7 +75,7 @@ sub save {
 
     my $key = $jsondata->{key};
     my $data = $jsondata->{data};
-    my $stash = $c->user->{stash};
+    my $stash = $self->{stash};
     my $dashboard = $stash->{dashboard};
 
     if ($key eq "dashboard") {
@@ -91,21 +97,21 @@ sub save {
 
 sub last_open_dashboard {
     my ($self, $c, $data) = @_;
-    my $stash = $c->user->{stash};
+    my $stash = $self->{stash};
     my $dashboard = $stash->{dashboard};
 
     if ($dashboard && exists $dashboard->{$data}) {
         $stash->{last_open_dashboard} = $data;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->utf8->encode($stash) }
+            { stash => $c->json->utf8(1)->encode($stash) }
         );
     }
 }
 
 sub rename_dashboard {
     my ($self, $c, $data) = @_;
-    my $stash = $c->user->{stash};
+    my $stash = $self->{stash};
     my $dashboard = $stash->{dashboard};
 
     if (ref $data ne "HASH") {
@@ -122,7 +128,7 @@ sub rename_dashboard {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->utf8->encode($stash) }
+        { stash => $c->json->utf8(1)->encode($stash) }
     );
 
     $c->view->render->json;
@@ -130,7 +136,7 @@ sub rename_dashboard {
 
 sub delete_dashboard {
     my ($self, $c, $data) = @_;
-    my $stash = $c->user->{stash};
+    my $stash = $self->{stash};
     my $dashboard = $stash->{dashboard};
 
     if (ref $data ne "HASH") {
@@ -145,7 +151,7 @@ sub delete_dashboard {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->utf8->encode($stash) }
+        { stash => $c->json->utf8(1)->encode($stash) }
     );
 
     $c->view->render->json;
@@ -154,8 +160,8 @@ sub delete_dashboard {
 sub save_dashboard_data {
     my ($self, $c, $data) = @_;
     my $dashboards = $self->{dashboards};
-    my $stash = $c->user->{stash};
-    my $user_dashboards = $c->user->{stash}->{dashboard};
+    my $stash = $self->{stash};
+    my $user_dashboards = $self->{stash}->{dashboard};
 
     if (ref $data ne "HASH") {
         return $c->plugin->error->form_parse_errors("data");
@@ -267,7 +273,7 @@ sub save_dashboard_data {
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->utf8->encode($stash) }
+        { stash => $c->json->utf8(1)->encode($stash) }
     );
 
     $c->stash->data($data);
@@ -392,7 +398,7 @@ sub passwd {
 sub save_table_config {
     my ($self, $c) = @_;
 
-    my $stash = $c->user->{stash};
+    my $stash = $self->{stash};
     my $table = $c->req->param("table") // "";
     my $column = $c->req->param("column") // "";
     my $action = $c->req->param("action") // "";
@@ -402,7 +408,7 @@ sub save_table_config {
         $stash->{table_config}->{$table}->{$column} = $action;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->utf8->encode($stash) }
+            { stash => $c->json->utf8(1)->encode($stash) }
         );
     }
 }
@@ -411,10 +417,10 @@ sub host_class_view {
     my ($self, $c, $data) = @_;
 
     if ($data =~ /^(host|system|location|os|hw|env)\z/) {
-        $c->user->{stash}->{host_class_view} = $data;
+        $self->{stash}->{host_class_view} = $data;
         $c->model->database->user->update(
             $c->user->{id},
-            { stash => $c->json->utf8->encode($c->user->{stash}) }
+            { stash => $c->json->utf8(1)->encode($self->{stash}) }
         );
     }
 
@@ -424,7 +430,7 @@ sub host_class_view {
 
 sub save_screen_config {
     my ($self, $c, $data) = @_;
-    my $stash = $c->user->{stash}->{screen} || {};
+    my $stash = $self->{stash}->{screen} || {};
 
     foreach my $key (qw/
         show_hostname
@@ -448,11 +454,11 @@ sub save_screen_config {
         $stash->{scale} = $data->{scale};
     }
 
-    $c->user->{stash}->{screen} = $stash;
+    $self->{stash}->{screen} = $stash;
 
     $c->model->database->user->update(
         $c->user->{id},
-        { stash => $c->json->utf8->encode($c->user->{stash}) }
+        { stash => $c->json->utf8(1)->encode($self->{stash}) }
     );
 
     $c->stash->data($data);
@@ -461,9 +467,7 @@ sub save_screen_config {
 
 sub stash {
     my ($self, $c) = @_;
-    my $stash = JSON->new->utf8->encode($c->user->{stash});
-    $stash = JSON->new->decode($stash);
-    $c->stash->data($stash);
+    $c->stash->data($c->json->utf8(0)->decode($c->user->{stash}));
     $c->view->render->json;
 }
 

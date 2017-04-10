@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.122
+Version: 0.124
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -62,6 +62,14 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Apr 10 2017 Jonny Schulz <js@bloonix.de> - 0.124-1
+- Fixed screen bug.
+* Mon Apr 10 2017 Jonny Schulz <js@bloonix.de> - 0.123-1
+- Implemented checkIfElementMatchText for web transactions.
+- Further utf8 fixes for all strings which are stored as
+  utf8 in the database.
+* Wed Mar 29 2017 Jonny Schulz <js@bloonix.de> - 0.123-1
+- Implemented checkIfElementMatchText for web transactions.
 * Wed Mar 08 2017 Jonny Schulz <js@bloonix.de> - 0.122-1
 - Fixed umlaut issues (utf8) on the dashboard.
 * Wed Jan 25 2017 Jonny Schulz <js@bloonix.de> - 0.121-1

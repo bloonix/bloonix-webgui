@@ -29,7 +29,7 @@ sub list {
     );
 
     foreach my $plugin (@$data) {
-        $plugin->{info} = $c->json->decode($plugin->{info});
+        $plugin->{info} = $c->json->utf8(0)->decode($plugin->{info});
     }
 
     $c->stash->offset($request->{offset});
@@ -48,7 +48,7 @@ sub view {
         ]
     ) or return $c->plugin->error->object_does_not_exists;
 
-    $plugin->{info} = $c->json->decode($plugin->{info});
+    $plugin->{info} = $c->json->utf8(0)->decode($plugin->{info});
     $c->stash->data($plugin);
     $c->view->render->json;
 }

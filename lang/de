@@ -1206,6 +1206,7 @@ site.wtrm.action.checkIfElementExists: Check if an <b>element exists</b>
 site.wtrm.action.checkIfElementNotExists: Check if an <b>element does <i>NOT</i> exists</b>
 site.wtrm.action.checkIfElementHasText: Check if an <b>element</b> contains <b>text</b>
 site.wtrm.action.checkIfElementHasNotText: Check if an <b>element does <i>NOT</i></b> contain <b>text</b>
+site.wtrm.action.checkIfElementMatchText: Check if an <b>element</b> match <b>text</b>
 site.wtrm.action.checkIfElementHasHTML: Check if an <b>element</b> contains <b>HTML</b>
 site.wtrm.action.checkIfElementHasNotHTML: Check if an <b>element does <i>NOT</i></b> contain <b>HTML</b>
 site.wtrm.action.checkIfElementHasValue: Check the <b>value</b> of an <b>input</b> field or <b>textarea</b>
@@ -1292,6 +1293,7 @@ site.wtrm.command.checkIfElementExists: Check if the element <b>%s</b> exists
 site.wtrm.command.checkIfElementNotExists: Check if the element <b>%s</b> does <i>NOT</i> exists
 site.wtrm.command.checkIfElementHasText: Check if the element <b>%s</b> contains <b>%s</b>
 site.wtrm.command.checkIfElementHasNotText: Check if the element <b>%s</b> does <i>NOT</i> contain <b>%s</b>
+site.wtrm.command.checkIfElementMatchText: Check if the element <b>%s</b> match <b>%s</b>
 site.wtrm.command.checkIfElementHasHTML: Check if the element <b>%s</b> contains <b>%s</b>
 site.wtrm.command.checkIfElementHasNotHTML: Check if the element <b>%s</b> does <i>NOT</i> contain <b>%s</b>
 site.wtrm.command.checkIfElementHasValue: Check if the input field or textarea with element <b>%s</b> contains <b>%s</b>

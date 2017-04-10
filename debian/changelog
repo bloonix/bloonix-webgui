@@ -1,3 +1,23 @@
+bloonix-webgui (0.124-1) unstable; urgency=low
+
+    * Fixed screen bug.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 10 Apr 2017 23:00:40 +0200
+
+bloonix-webgui (0.123-1) unstable; urgency=low
+
+    * Implemented checkIfElementMatchText for web transactions.
+    * Further utf8 fixes for all strings which are stored as
+      utf8 in the database.
+
+ -- Jonny Schulz <js@bloonix.de>  Mon, 10 Apr 2017 20:59:42 +0200
+
+bloonix-webgui (0.123-1) unstable; urgency=low
+
+    * Implemented checkIfElementMatchText for web transactions.
+
+ -- Jonny Schulz <js@bloonix.de>  Wed, 29 Mar 2017 21:22:30 +0200
+
 bloonix-webgui (0.122-1) unstable; urgency=low
 
     * Fixed umlaut issues (utf8) on the dashboard.

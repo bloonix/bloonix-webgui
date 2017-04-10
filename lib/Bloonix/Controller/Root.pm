@@ -2,6 +2,7 @@ package Bloonix::Controller::Root;
 
 use strict;
 use warnings;
+use Encode;
 use Time::HiRes;
 
 sub auto {
@@ -87,8 +88,6 @@ sub auto {
             }
         }
 
-        $user->{stash} = $c->json->utf8->decode($user->{stash});
-        $user->{stash}->{table_config} //= {};
         $user->{company_data_retention} = $company->{data_retention};
 
         # Delete secrets!
@@ -210,7 +209,7 @@ sub index {
             : "index.tt";
 
         $c->stash->{data} = {
-            init => $c->json->encode({
+            init => $c->json->utf8(1)->encode({
                 chartLibrary => $c->config->{webapp}->{chart_library},
                 version => $c->version->{js},
                 showCostInfo => $c->config->{webapp}->{show_cost_info}
@@ -244,6 +243,8 @@ sub whoami {
     my %clone = %{$c->user};
     delete $clone{sid};
     delete $clone{comment};
+    $clone{stash} = $c->json->utf8(0)->decode($clone{stash});
+    $clone{stash}{table_config} //= {};
 
     $c->stash->data(\%clone);
     $c->view->render->json;
@@ -285,7 +286,7 @@ sub operateas {
     $c->model->database->session->update(
         data => {
             user_id => $opts->{id},
-            stash => $c->json->encode({ admin_id => $c->user->{id} })
+            stash => $c->json->utf8(1)->encode({ admin_id => $c->user->{id} })
         },
         condition => [
             sid => $c->user->{sid}

@@ -58,7 +58,7 @@ sub services {
         $service->{nok_time_delta} = time - $service->{status_nok_since};
         foreach my $key (qw/result debug command_options location_options/) {
             if ($service->{$key} && $service->{$key} =~ /^[\[\{].*[\]\}]$/) {
-                $service->{$key} = $c->json->decode($service->{$key});
+                $service->{$key} = $c->json->utf8(0)->decode($service->{$key});
                 if ($key eq "result" && ref $service->{result} eq "ARRAY" && ref $service->{result}->[0] eq "ARRAY") {
                     # bug fix for check-by-satellite from bloonix-plugins-basic 0.42
                     $service->{result} = $service->{result}->[0];
@@ -520,7 +520,7 @@ sub _de_serialize {
         if (exists $host->{$key}) {
             eval {
                 local $SIG{__DIE__};
-                $host->{$key} = $c->json->decode($host->{$key});
+                $host->{$key} = $c->json->utf8(0)->decode($host->{$key});
             };
         }
     }

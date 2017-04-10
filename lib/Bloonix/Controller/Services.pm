@@ -49,7 +49,7 @@ sub list {
         $service->{nok_time_delta} = time - $service->{status_nok_since};
         foreach my $key (qw/result debug command_options location_options/) {
             if ($service->{$key} && $service->{$key} =~ /^[\[\{].*[\]\}]$/) {
-                $service->{$key} = $c->json->decode($service->{$key});
+                $service->{$key} = $c->json->utf8(0)->decode($service->{$key});
             }
         }
         my $host_template_id = $service->{host_template_id};
@@ -146,7 +146,7 @@ sub get {
 
     foreach my $key (qw/command_options location_options agent_options/) {
         if ($service->{$key}) {
-            $service->{$key} = $c->json->decode($service->{$key});
+            $service->{$key} = $c->json->utf8(0)->decode($service->{$key});
         }
     }
 

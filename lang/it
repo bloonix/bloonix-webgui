@@ -1201,6 +1201,7 @@ site.wtrm.action.checkIfElementExists: Controlla se un <b>elemento esiste</b>
 site.wtrm.action.checkIfElementNotExists: Controlla se un <b>elemento <i>NON</i> esiste</b>
 site.wtrm.action.checkIfElementHasText: Controlla se un <b>elemento</b> contiene <b>testo</b> 
 site.wtrm.action.checkIfElementHasNotText: Controlla se un <b>elemento <i>NON</i></b> contiene <b>testo</b>
+site.wtrm.action.checkIfElementMatchText: Controlla se un <b>elemento</b> incontro <b>testo</b> 
 site.wtrm.action.checkIfElementHasHTML: Controlla se un <b>elemento</b> contiene <b>HTML</b>
 site.wtrm.action.checkIfElementHasNotHTML: Controlla se un <b>elemento <i>NON</i></b> contiene <b>HTML</b>
 site.wtrm.action.checkIfElementHasValue: Controlla il <b>valore</b> di un campo di <b>input</b> o <b>area di testo</b>
@@ -1287,6 +1288,7 @@ site.wtrm.command.checkIfElementExists: Controlla se l'elemento <b>%s</b> esiste
 site.wtrm.command.checkIfElementNotExists: Controlla se l'elemento <b>%s</b> <i>NON</i> esiste
 site.wtrm.command.checkIfElementHasText: Controlla se l'elemento <b>%s</b> contiene <b>%s</b>
 site.wtrm.command.checkIfElementHasNotText: Controlla se l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
+site.wtrm.command.checkIfElementMatchText: Controlla se l'elemento <b>%s</b> incontro <b>%s</b>
 site.wtrm.command.checkIfElementHasHTML: Controlla se l'elemento <b>%s</b> contiene <b>%s</b>
 site.wtrm.command.checkIfElementHasNotHTML: Controlla se l'elemento <b>%s</b> <i>NON</i> contiene <b>%s</b>
 site.wtrm.command.checkIfElementHasValue: Controlla se il campo d'input o area di testo con l'elemento <b>%s</b> contiene <b>%s</b>

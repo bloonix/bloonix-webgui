@@ -12,7 +12,7 @@ sub new {
 
     my $self = bless {
         c => $c,
-        json => JSON->new,
+        json => JSON->new->utf8,
     }, $class;
 
     return $self;
