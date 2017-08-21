@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.127
+Version: 0.128
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -62,6 +62,8 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Mon Aug 21 2017 Jonny Schulz <js@bloonix.de> - 0.128-1
+- Bloonix-WebGUI is ready for Elasticsearch 5.x.
 * Sun Aug 06 2017 Jonny Schulz <js@bloonix.de> - 0.127-1
 - Fixed show/hide chart legend in dashlets.
 * Thu Aug 03 2017 Jonny Schulz <js@bloonix.de> - 0.126-1
