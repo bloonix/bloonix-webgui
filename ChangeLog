@@ -1,3 +1,21 @@
+bloonix-webgui (0.128) released at 2017-08-21
+
+    * Bloonix-WebGUI is ready for Elasticsearch 5.x.
+
+bloonix-webgui (0.127) released at 2017-08-06
+
+    * Fixed show/hide chart legend in dashlets.
+
+bloonix-webgui (0.126) released at 2017-08-03
+
+    * Fixed a bug with sid handling if /screen is called
+      username and authkey.
+
+bloonix-webgui (0.125) released at 2017-08-01
+
+    * Added the possibility to zoom the screen. Only supported
+      for webkit based browsers.
+
 bloonix-webgui (0.124) released at 2017-04-10
 
     * Fixed screen bug.

@@ -1,3 +1,23 @@
+bloonix-webgui (0.127-1) unstable; urgency=low
+
+    * Fixed show/hide chart legend in dashlets.
+
+ -- Jonny Schulz <js@bloonix.de>  Sun, 06 Aug 2017 19:17:33 +0200
+
+bloonix-webgui (0.126-1) unstable; urgency=low
+
+    * Fixed a bug with sid handling if /screen is called
+      username and authkey.
+
+ -- Jonny Schulz <js@bloonix.de>  Thu, 03 Aug 2017 13:52:00 +0200
+
+bloonix-webgui (0.125-1) unstable; urgency=low
+
+    * Added the possibility to zoom the screen. Only supported
+      for webkit based browsers.
+
+ -- Jonny Schulz <js@bloonix.de>  Tue, 01 Aug 2017 17:21:41 +0200
+
 bloonix-webgui (0.124-1) unstable; urgency=low
 
     * Fixed screen bug.

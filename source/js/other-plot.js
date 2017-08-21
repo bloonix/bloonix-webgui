@@ -46,6 +46,10 @@ Bloonix.other.plotChart = function(o) {
         .addClass("chart-legend")
         .appendTo(chartOuterBox);
 
+    if (o.legend && o.legend.enabled === false) {
+        chartLegend.hide();
+    }
+
     if (o.mode === undefined) {
         o.mode = "time";
     }
@@ -168,7 +172,13 @@ Bloonix.other.plotChart = function(o) {
     });
 
     var resizeContent = function() {
-        var chartContentHeight = $(chartOuterBox).height() - chartHeader.outerHeight() - chartLegend.outerHeight() - 1;
+        var chartContentHeight;
+
+        if (o.legend === undefined || o.legend.enabled === true) {
+           chartContentHeight = $(chartOuterBox).height() - chartHeader.outerHeight() - chartLegend.outerHeight() - 1;
+        } else {
+           chartContentHeight = $(chartOuterBox).height() - chartHeader.outerHeight() - 1;
+        }
 
         chartContent.css({
             height: chartContentHeight +"px"

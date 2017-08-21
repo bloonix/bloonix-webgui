@@ -56,6 +56,7 @@ html,body,table,tr,th,td,div,p,ul,ol,li,form,pre,a,img,h1,h2,h3,h4,h5,h6 {
 html,body {
     /* min-width: 1200px; */
     /* min-height: 700px; */
+    width: 100%;
     height: 100%;
 }
 body {

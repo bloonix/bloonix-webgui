@@ -1,6 +1,6 @@
 Summary: Bloonix WebGUI
 Name: bloonix-webgui
-Version: 0.124
+Version: 0.127
 Release: 1%{dist}
 License: Commercial
 Group: Utilities/System
@@ -62,6 +62,14 @@ rm -rf %{buildroot}
 %{srvdir}/*
 
 %changelog
+* Sun Aug 06 2017 Jonny Schulz <js@bloonix.de> - 0.127-1
+- Fixed show/hide chart legend in dashlets.
+* Thu Aug 03 2017 Jonny Schulz <js@bloonix.de> - 0.126-1
+- Fixed a bug with sid handling if /screen is called
+  username and authkey.
+* Tue Aug 01 2017 Jonny Schulz <js@bloonix.de> - 0.125-1
+- Added the possibility to zoom the screen. Only supported
+  for webkit based browsers.
 * Mon Apr 10 2017 Jonny Schulz <js@bloonix.de> - 0.124-1
 - Fixed screen bug.
 * Mon Apr 10 2017 Jonny Schulz <js@bloonix.de> - 0.123-1

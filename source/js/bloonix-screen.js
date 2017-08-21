@@ -29,35 +29,38 @@ Bloonix.viewScreen = function(o) {
     };
 
     object.create = function() {
-        this.checkUser();
+        this.parseUrl();
         this.hideElements();
         this.showContent();
     };
 
-    object.checkUser = function() {
+    object.parseUrl = function() {
         var self = this;
 
-        if (Bloonix.user == undefined) {
-            var parts = window.document.URL.toString().split("?");
-            if (parts[1] != undefined) {
-                var pairs = parts[1].split(/[;&]/);
-                var username, authkey;
-                $.each(pairs, function(i, pair) {
-                    var pv = pair.split("=");
-                    if (pv[0] != undefined && pv[1] != undefined) {
-                        var key = pv[0], value = pv[1];
-                        self.opts[key] = value;
-                    }
-                });
-                if (this.opts.username != undefined && this.opts.authkey != undefined) {
-                    this.postdata = {
-                        username: this.opts.username,
-                        authkey: this.opts.authkey
-                    };
-                    Bloonix.initUser(this.postdata);
+        var parts = window.document.URL.toString().replace(/#.*/, "").split("?");
+
+        if (parts[1] != undefined) {
+            var pairs = parts[1].split(/[;&]/);
+            $.each(pairs, function(i, pair) {
+                var pv = pair.split("=");
+                if (pv[0] != undefined && pv[1] != undefined) {
+                    var key = pv[0], value = pv[1];
+                    self.opts[key] = value;
                 }
+            });
+        }
+
+        if (Bloonix.user == undefined) {
+            if (this.opts.username != undefined && this.opts.authkey != undefined) {
+                this.postdata = {
+                    username: this.opts.username,
+                    authkey: this.opts.authkey
+                };
+                Bloonix.initUser(this.postdata);
             }
         }
+
+        console.log("opts", self.opts);
     };
 
     object.hideElements = function() {
@@ -122,6 +125,10 @@ Bloonix.viewScreen = function(o) {
             .addClass("screen-container")
             .appendTo(this.body);
 
+        if (self.opts.zoom !== undefined) {
+            this.screenContainer.css("zoom", self.opts.zoom +"%");
+        }
+
         this.screenCounterContent = Utils.create("div")
             .addClass("screen-counter-content")
             .appendTo(this.screenContainer)
@@ -170,10 +177,6 @@ Bloonix.viewScreen = function(o) {
                 .addClass("gicons-white gicons cogwheels")
                 .appendTo(this.configButton);
         }
-
-        Utils.create("div")
-            .addClass("clear")
-            .appendTo(this.screenCounterContent);
 
         this.refreshStatusDashboard();
 

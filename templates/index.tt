@@ -19,7 +19,7 @@
 <meta name="robots" content="noindex, nofollow" />
 <link rel="shortcut icon" href="/public/img/favicon.ico" />
 <link rel="stylesheet" href="/public/css/misc.min.css" />
-<link rel="stylesheet" href="/public/css/bloonix.min.css?v=16" media="screen" />
+<link rel="stylesheet" href="/public/css/bloonix.min.css?v=18" media="screen" />
 <link rel="stylesheet" href="/public/css/print.css?v=1" media="print" />
 <script src="/public/js/jquery.min.js?v=1"></script>
 % if ($stash->{meta}->{chart_library} eq 'highcharts') {
@@ -34,6 +34,11 @@
 <script src="/public/js/bloonix.min.js?v=<% data.version %>"></script>
 % }
 <script>$(document).ready(function(){Bloonix.init(<% data.init %>)});</script>
+<meta name="viewport" content="width=device-width,
+    initial-scale=1,
+    minimum-scale=1,
+    maximum-scale=1,
+    user-scalable=no"/>
 </head>
 <body>
 </body>

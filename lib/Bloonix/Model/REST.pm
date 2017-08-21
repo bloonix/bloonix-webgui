@@ -16,13 +16,23 @@ sub new {
         c => $c,
     }, $class;
 
+    my $rest_version;
+    my $es_version = $self->{rest}->get("/")->{version}->{number};
     $self->{rest}->utf8(1);
 
+    if ($es_version =~ /^2/) {
+        $rest_version = "REST2";
+    } elsif ($es_version =~ /^5/) {
+        $rest_version = "REST5";
+    } else {
+        die "unable to determine elasticsearch version";
+    }
+
     $self->_load(
-        base => "Bloonix::Model::REST::Base",
-        event => "Bloonix::Model::REST::Event",
-        stats => "Bloonix::Model::REST::Stats",
-        results => "Bloonix::Model::REST::Results",
+        base => "Bloonix::Model::${rest_version}::Base",
+        event => "Bloonix::Model::${rest_version}::Event",
+        stats => "Bloonix::Model::${rest_version}::Stats",
+        results => "Bloonix::Model::${rest_version}::Results",
     );
 
     if (open my $fh, "<", "/srv/bloonix/webgui/schema/es-template.json") {
