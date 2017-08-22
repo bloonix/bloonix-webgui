@@ -1,3 +1,7 @@
+bloonix-webgui (0.129) released at 2017-08-22
+
+    * Fix to support ES 1.x.
+
 bloonix-webgui (0.128) released at 2017-08-21
 
     * Bloonix-WebGUI is ready for Elasticsearch 5.x.

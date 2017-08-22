@@ -20,7 +20,7 @@ sub new {
     my $es_version = $self->{rest}->get("/")->{version}->{number};
     $self->{rest}->utf8(1);
 
-    if ($es_version =~ /^2/) {
+    if ($es_version =~ /^(1|2)/) {
         $rest_version = "REST2";
     } elsif ($es_version =~ /^5/) {
         $rest_version = "REST5";
